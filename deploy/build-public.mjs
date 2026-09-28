@@ -144,11 +144,11 @@ locale = replaceRequiredRegex(locale,
   'app origins');
 locale = replaceRequired(locale,
   "    if (hostLocale) return hostLocale;\n    return queryLang(locationLike && locationLike.search) || storageLang(storage) || 'en';",
-  "    return queryLang(locationLike && locationLike.search) || browserCookieLang() || storageLang(storage) || hostLocale || 'pt';",
+  "    const browser = typeof navigator === 'undefined' ? [] : [...(navigator.languages || []), navigator.language];\n    const detected = browser.map(value => String(value || '').toLowerCase().split('-')[0]).find(value => SUPPORTED_LANGS.includes(value));\n    return queryLang(locationLike && locationLike.search) || browserCookieLang() || detected || 'en';",
   'initial locale order');
 locale = replaceRequired(locale,
   "  function htmlLangForLocale(locale) {",
-  "  function browserCookieLang() {\n    if (typeof document === 'undefined') return null;\n    const value = document.cookie.match(/(?:^|;\\s*)allybi_lang=(en|pt|es)(?:;|$)/);\n    return value ? value[1] : null;\n  }\n\n  function htmlLangForLocale(locale) {",
+  "  function browserCookieLang() {\n    if (typeof document === 'undefined' || !/(?:^|;\\s*)allybi_lang_explicit=1(?:;|$)/.test(document.cookie)) return null;\n    const value = document.cookie.match(/(?:^|;\\s*)allybi_lang=(en|pt|es)(?:;|$)/);\n    return value ? value[1] : null;\n  }\n\n  function htmlLangForLocale(locale) {",
   'language cookie reader');
 locale = replaceRequired(locale,
   "    return origin + canonicalPath(pathname);",
@@ -156,7 +156,7 @@ locale = replaceRequired(locale,
   'localized canonical');
 locale = replaceRequired(locale,
   "      try {\n        if (options.persist) localStorage.setItem('language', lang);\n      } catch (_err) {\n        // localStorage can be unavailable in private browsing or test contexts.\n      }",
-  "      if (options.persist) {\n        try { localStorage.setItem('language', lang); } catch (_err) {}\n        document.cookie = 'allybi_lang=' + lang + '; Path=/; Max-Age=31536000; SameSite=Lax' +\n          (window.location.protocol === 'https:' ? '; Secure' : '');\n      }",
+  "      if (options.persist) {\n        try { localStorage.setItem('allybiExplicitLanguage', lang); } catch (_err) {}\n        document.cookie = 'allybi_lang=' + lang + '; Path=/; Max-Age=31536000; SameSite=Lax' +\n          (window.location.protocol === 'https:' ? '; Secure' : '');\n        document.cookie = 'allybi_lang_explicit=1; Path=/; Max-Age=31536000; SameSite=Lax' +\n          (window.location.protocol === 'https:' ? '; Secure' : '');\n      }",
   'language persistence');
 await fs.writeFile(path.join(output, 'language-switcher.js'), locale);
 
@@ -175,11 +175,11 @@ server = replaceRequired(server,
   'post-decode publication boundary');
 server = replaceRequired(server,
   "      res.writeHead(200, { 'Content-Type': contentType + (extname === '.html' ? '; charset=UTF-8' : '') });",
-  "      res.writeHead(200, {\n        'Content-Type': contentType + (extname === '.html' ? '; charset=UTF-8' : ''),\n        'X-Content-Type-Options': 'nosniff',\n        ...(extname === '.html' ? { 'Cache-Control': 'private, no-store', Vary: 'Cookie' } : {}),\n      });",
+  "      res.writeHead(200, {\n        'Content-Type': contentType + (extname === '.html' ? '; charset=UTF-8' : ''),\n        'X-Content-Type-Options': 'nosniff',\n        ...(extname === '.html' ? { 'Cache-Control': 'private, no-store', Vary: 'Cookie, Accept-Language' } : {}),\n      });",
   'localized HTML caching');
 server = replaceRequired(server,
   "  const hostLocale = domainLocale.localeForHost(req.headers.host);\n  const locale = hostLocale || 'en';",
-  "  const requested = new URL(req.url, 'http://landing.invalid').searchParams.get('lang');\n  const cookieMatch = (req.headers.cookie || '').match(/(?:^|;\\s*)allybi_lang=(en|pt|es)(?:;|$)/);\n  const locale = ['en', 'pt', 'es'].includes(requested) ? requested :\n    (cookieMatch ? cookieMatch[1] : (domainLocale.localeForHost(req.headers.host) || 'pt'));",
+  "  const requested = new URL(req.url, 'http://landing.invalid').searchParams.get('lang');\n  const cookies = req.headers.cookie || '';\n  const cookieMatch = /(?:^|;\\s*)allybi_lang_explicit=1(?:;|$)/.test(cookies) && cookies.match(/(?:^|;\\s*)allybi_lang=(en|pt|es)(?:;|$)/);\n  const preferences = String(req.headers['accept-language'] || '').split(',').map(entry => { const [tag, ...params] = entry.trim().split(';'); const q = params.find(p => p.trim().startsWith('q=')); return { lang: tag.toLowerCase().split('-')[0], q: q ? Number(q.trim().slice(2)) : 1 }; }).filter(p => p.q > 0 && p.q <= 1 && ['en','pt','es'].includes(p.lang)).sort((a,b) => b.q-a.q);\n  const locale = ['en', 'pt', 'es'].includes(requested) ? requested :\n    (cookieMatch ? cookieMatch[1] : preferences[0]?.lang || 'en');",
   'server locale selection');
 server = replaceRequiredRegex(server,
   /function replaceAppOrigins\(html, locale\) \{[\s\S]*?\n\}/,
