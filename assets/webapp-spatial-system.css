@@ -1,0 +1,135 @@
+/* Canonical physical layer for the authenticated Allybi workspace.
+   Component styles own layout and content; this file owns material and depth. */
+:root {
+  --workspace-ink: #15181d;
+  --workspace-graphite: #303641;
+  --workspace-muted: #69727f;
+  --workspace-muted-shell: #69717c;
+  --workspace-line: rgba(104, 115, 130, 0.2);
+  --workspace-line-shell: rgba(89, 97, 109, 0.2);
+  --workspace-line-soft: rgba(132, 144, 159, 0.14);
+  --workspace-canvas: #eaedf1;
+  --workspace-canvas-material:
+    radial-gradient(ellipse 76% 54% at 50% -18%, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0) 72%),
+    linear-gradient(180deg, #eef1f4 0%, var(--workspace-canvas) 54%, #e6eaee 100%);
+  --workspace-surface-side:
+    linear-gradient(148deg, rgba(252, 253, 254, 0.965) 0%, rgba(246, 248, 250, 0.92) 64%, rgba(238, 242, 246, 0.86) 100%);
+  --workspace-surface-work:
+    linear-gradient(148deg, rgba(255, 255, 255, 0.985), rgba(250, 251, 252, 0.95));
+  --workspace-surface-object:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(239, 243, 247, 0.76));
+  --workspace-surface-popover:
+    linear-gradient(112deg, rgba(255, 255, 255, 0.44), rgba(255, 255, 255, 0) 42%),
+    radial-gradient(ellipse 84% 58% at 18% -12%, #ffffff, rgba(255, 255, 255, 0) 72%),
+    linear-gradient(148deg, #fdfefe 0%, #f7f9fb 58%, #eff3f7 100%);
+  --workspace-surface-overlay: rgba(250, 252, 254, 0.92);
+
+  /* A surrounding distance cue is independent of the card's directional light.
+     Keep the same two outer layers across levels so transitions interpolate;
+     paired tasks share the foreground recipe rather than dimming a peer. */
+  --workspace-surround-panel:
+    0 0 0 1px rgba(46, 57, 72, 0.025),
+    0 0 12px rgba(24, 31, 42, 0.04);
+  --workspace-surround-focus:
+    0 0 0 1px rgba(46, 57, 72, 0.085),
+    0 0 24px rgba(24, 31, 42, 0.12);
+
+  /* Local curvature belongs to the surface, not its distance from the canvas.
+     The panel edge paints this pair above route backgrounds; the material and
+     its two-layer order stay stable as the whole panel moves between planes. */
+  --workspace-bevel-panel:
+    inset 1px 1px 1.5px rgba(255, 255, 255, 0.92),
+    inset -1px -1px 2px rgba(62, 75, 93, 0.14);
+
+  --workspace-shadow-panel:
+    inset 0 1px 0 rgba(255, 255, 255, 0.98),
+    inset 0 -1px 0 rgba(75, 84, 96, 0.045),
+    0 1px 2px rgba(19, 24, 33, 0.045),
+    0 16px 34px rgba(19, 24, 33, 0.06);
+  --workspace-shadow-work:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    0 2px 3px rgba(19, 24, 33, 0.035),
+    0 18px 38px rgba(19, 24, 33, 0.07);
+  --workspace-shadow-object:
+    inset 0 1px 0 rgba(255, 255, 255, 0.94),
+    0 2px 4px rgba(19, 24, 33, 0.045),
+    0 12px 25px rgba(19, 24, 33, 0.07);
+  --workspace-rim-popover: inset 0 1px 0 rgba(255, 255, 255, 0.98);
+  --workspace-depth-popover: inset 0 -1px 0 rgba(79, 89, 103, 0.055);
+  --workspace-shadow-contact-popover: 0 2px 5px rgba(19, 24, 33, 0.065);
+  --workspace-shadow-ambient-popover: 0 20px 46px rgba(19, 24, 33, 0.14);
+  --workspace-shadow-popover:
+    var(--workspace-rim-popover),
+    var(--workspace-depth-popover),
+    var(--workspace-shadow-contact-popover),
+    var(--workspace-shadow-ambient-popover);
+  --workspace-rim-action-sheet: inset 0 1px 0 rgba(255, 255, 255, 0.98);
+  --workspace-depth-action-sheet: inset 0 -1px 0 rgba(79, 89, 103, 0.055);
+  --workspace-shadow-contact-action-sheet: 0 -3px 8px rgba(19, 24, 33, 0.075);
+  --workspace-shadow-ambient-action-sheet: 0 -22px 52px rgba(19, 24, 33, 0.17);
+  --workspace-shadow-action-sheet:
+    var(--workspace-rim-action-sheet),
+    var(--workspace-depth-action-sheet),
+    var(--workspace-shadow-contact-action-sheet),
+    var(--workspace-shadow-ambient-action-sheet);
+  --workspace-shadow-overlay:
+    inset 0 1px 0 rgba(255, 255, 255, 0.94),
+    0 24px 64px rgba(24, 31, 43, 0.18);
+
+  --workspace-radius-panel: 17px;
+  --workspace-radius-object: 15px;
+  --workspace-radius-popover: 17px;
+  --workspace-radius-overlay: 20px;
+  --workspace-edge-popover: rgba(255, 255, 255, 0.9);
+  --workspace-scrim-temporary: rgba(24, 31, 43, 0.48);
+  --workspace-focus-ring: rgba(89, 97, 109, 0.72);
+  --workspace-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --workspace-ease-enter: cubic-bezier(0, 0, 0, 1);
+  --workspace-motion-feedback: 120ms;
+  --workspace-motion-local: 160ms;
+  --workspace-motion-state-duration: 180ms;
+  --workspace-motion-state-distance: 16px;
+  --workspace-motion-state-exit-distance: 10px;
+  --workspace-popover-motion-duration: 150ms;
+  --workspace-popover-motion-offset: -6px;
+  --workspace-popover-motion-scale: .985;
+  --workspace-dropdown-motion-duration: 300ms;
+  --workspace-dropdown-motion-ease: cubic-bezier(.32, 0, .68, 1);
+  --workspace-action-sheet-scrim-duration: 80ms;
+  --workspace-action-sheet-motion-duration: 160ms;
+  --workspace-action-sheet-motion-delay: 80ms;
+  --workspace-action-sheet-motion-offset: 18px;
+}
+
+.workspace-popover-surface {
+  border: 1px solid var(--workspace-edge-popover);
+  border-radius: var(--workspace-radius-popover);
+  background: var(--workspace-surface-popover);
+  background-clip: padding-box;
+  box-shadow: var(--workspace-shadow-popover);
+  isolation: isolate;
+}
+
+.workspace-action-sheet-surface {
+  border: 1px solid var(--workspace-edge-popover);
+  border-bottom: 0;
+  border-radius: var(--workspace-radius-popover) var(--workspace-radius-popover) 0 0;
+  background: var(--workspace-surface-popover);
+  background-clip: padding-box;
+  box-shadow: var(--workspace-shadow-action-sheet);
+  isolation: isolate;
+}
+
+@media (forced-colors: active) {
+  .workspace-popover-surface {
+    border-color: CanvasText;
+    background: Canvas;
+    box-shadow: none;
+  }
+
+  .workspace-action-sheet-surface {
+    border-color: CanvasText;
+    background: Canvas;
+    box-shadow: none;
+  }
+}

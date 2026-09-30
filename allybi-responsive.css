@@ -1,0 +1,1475 @@
+/* ==========================================================================
+   Allybi Responsive Polish Layer
+   Loaded AFTER all other CSS to provide pixel-perfect responsive behavior
+   across iPhone, iPad, tablet, laptop, and large desktop.
+   ========================================================================== */
+
+/* ==========================================================================
+   A. GLOBAL FOUNDATION
+   ========================================================================== */
+
+/* Prevent horizontal overflow everywhere.
+   `clip` (not `hidden`) avoids creating a containing block — required so
+   `position: sticky` continues to work for descendants like .s-pain-stack. */
+html, body {
+  overflow-x: clip;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure safe area support */
+@supports (padding: env(safe-area-inset-top)) {
+  .allybi-header-inner {
+    padding-left: max(var(--allybi-gutter), env(safe-area-inset-left));
+    padding-right: max(var(--allybi-gutter), env(safe-area-inset-right));
+  }
+}
+
+/* ==========================================================================
+   B. LARGE DESKTOP (1440px+)
+   ========================================================================== */
+@media (min-width: 1440px) {
+  .s-hero__grid {
+    column-gap: 80px;
+    row-gap: 0;
+  }
+
+  .s-hero__h1 {
+    font-size: 64px;
+  }
+
+  .s-workflow__steps {
+    gap: 4px;
+  }
+
+  .s-proof__grid,
+  .s-integrations__grid {
+    gap: 28px;
+  }
+}
+
+/* ==========================================================================
+   C. STANDARD DESKTOP (1195px – 1439px)
+   ========================================================================== */
+@media (min-width: 1195px) and (max-width: 1439px) {
+  .s-hero__grid {
+    column-gap: 56px; row-gap: 0;
+  }
+}
+
+/* ==========================================================================
+   D. SMALL LAPTOP / TABLET LANDSCAPE (835px – 1194px)
+   ========================================================================== */
+@media (min-width: 835px) and (max-width: 1194px) {
+  /* Header refinements */
+  .allybi-header-inner {
+    height: 56px;
+  }
+
+  .nav-link,
+  .nav-dropdown-trigger {
+    padding: 7px 10px;
+    font-size: 13px;
+  }
+
+  .header-btn {
+    height: 34px;
+    padding: 0 14px;
+    font-size: 12px;
+  }
+
+  /* Hero — tighter but still side-by-side */
+  .s-hero {
+    padding: 120px 0 64px;
+    min-height: auto;
+  }
+
+  .s-hero__grid {
+    column-gap: 40px; row-gap: 0;
+  }
+
+  .s-hero__h1 {
+    font-size: clamp(30px, 4vw, 48px);
+  }
+
+  .s-hero__sub {
+    font-size: 15px;
+    max-width: 400px;
+  }
+
+  .hero-scene {
+    max-width: 480px;
+  }
+
+  .hero-scene__body {
+    padding: 18px;
+  }
+
+  .hero-scene__query {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+
+  .hero-scene__result {
+    font-size: 13px;
+  }
+
+  .hero-scene__confirm-detail {
+    font-size: 11px;
+  }
+
+  /* Workflow — keep 5 cols but tighter */
+  .s-workflow__steps {
+    gap: 2px;
+  }
+
+  .s-workflow__step {
+    padding: 24px 16px;
+  }
+
+  .s-workflow__step h3 {
+    font-size: 14px;
+  }
+
+  .s-workflow__step p {
+    font-size: 12px;
+  }
+
+  /* Integration grid — 2 col */
+  .s-integrations__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Use case split */
+  .s-cases__split {
+    gap: 40px;
+  }
+
+  /* Security grid — keep 3 cols + line dividers */
+  .s-security__grid {
+    gap: 0;
+  }
+
+  .s-security__point {
+    padding: 32px 24px;
+    gap: 14px;
+  }
+
+  /* Proof cards */
+  .s-proof__card {
+    padding: 28px;
+  }
+
+  .s-proof__card p {
+    font-size: 13px;
+  }
+
+  /* Footer — keep 4 cols but tighter */
+  .footer-columns {
+    gap: 24px;
+  }
+}
+
+/* ==========================================================================
+   E. TABLET PORTRAIT (768px – 834px)
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 834px) {
+  /* Hero — stack vertically on small tablets */
+  .s-hero__grid {
+    grid-template-columns: 1fr;
+    column-gap: 36px; row-gap: 0;
+  }
+
+  .s-hero__visual {
+    order: 2;
+  }
+
+  .s-hero {
+    min-height: auto;
+    padding: 110px 0 56px;
+  }
+
+  .s-hero__text {
+    max-width: 560px;
+  }
+
+  .hero-scene {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* Workflow — 3 cols on tablet */
+  .s-workflow__steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .s-workflow__step:nth-child(n+4) {
+    border-radius: 0;
+  }
+
+  .s-workflow__step:nth-child(3)::after {
+    display: none;
+  }
+
+  /* Integration grid — 2 col */
+  .s-integrations__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Use case — stack */
+  .s-cases__split {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .s-cases__mock {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* Security — 2 col with line dividers; 7th centered across both cols */
+  .s-security__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+  .s-security__point {
+    padding: 28px 20px;
+    gap: 12px;
+  }
+  .s-security__point:nth-child(3n+1) { border-left: 1px solid rgba(255, 255, 255, 0.08); }
+  .s-security__point:nth-child(-n+3) { border-top: 1px solid rgba(255, 255, 255, 0.08); }
+  .s-security__point:nth-child(2n+1) { border-left: none; }
+  .s-security__point:nth-child(-n+2) { border-top: none; }
+  .s-security__point:nth-child(7) {
+    grid-column: 1 / -1;
+    align-items: center;
+    text-align: center;
+    border-right: none;
+  }
+  .s-security__point:nth-child(7) > div { align-items: center; text-align: center; }
+  .s-security__point strong {
+    font-size: 15px;
+  }
+  .s-security__point span {
+    font-size: 13px;
+  }
+
+  /* Proof — 1 col on small tablet */
+  .s-proof__grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  /* Footer — 2 col */
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+/* ==========================================================================
+   F. LARGE PHONE (430px – 767px)
+   ========================================================================== */
+@media (min-width: 430px) and (max-width: 767px) {
+  /* Section spacing */
+  .allybi-section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  /* Hero */
+  .s-hero {
+    padding: 100px 0 44px;
+  }
+
+  .s-hero__grid {
+    grid-template-columns: 1fr;
+    column-gap: 32px; row-gap: 0;
+  }
+
+  .s-hero__visual {
+    order: 2;
+  }
+
+  .s-hero__h1 {
+    font-size: clamp(28px, 7vw, 36px);
+    line-height: 1.05;
+  }
+
+  .s-hero__sub {
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+
+  .s-hero__ctas {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .s-hero__ctas .allybi-btn {
+    flex: 1;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .hero-scene {
+    max-width: 100%;
+  }
+
+  .hero-scene__body {
+    padding: 16px;
+  }
+
+  .hero-scene__source-strip {
+    padding: 10px 14px;
+    gap: 6px;
+  }
+
+  .hero-scene__source-pill {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  /* Trust rail — horizontal scroll */
+  .s-trust {
+    padding: 14px 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .s-trust__inner {
+    gap: 10px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    padding: 0 20px;
+    min-width: max-content;
+  }
+
+  .s-trust__item {
+    font-size: 11px;
+    padding: 5px 10px;
+    background: var(--allybi-bg-surface);
+    border-radius: var(--allybi-radius-full);
+    flex-shrink: 0;
+  }
+
+  /* Pain cards — 1 col */
+  .s-pain .allybi-grid-3 {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .s-pain__header {
+    margin-bottom: 40px;
+  }
+
+  .s-pain__illustration {
+    height: 160px;
+  }
+
+  /* Workflow — 1 col stacked */
+  .s-workflow__steps {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+    margin: 0 auto;
+    gap: 8px;
+  }
+
+  .s-workflow__step {
+    border-radius: var(--allybi-radius-md) !important;
+    padding: 24px 20px;
+  }
+
+  .s-workflow__step::after {
+    display: none;
+  }
+
+  .s-workflow__header {
+    margin-bottom: 36px;
+  }
+
+  /* Integrations — 2 col on large phone */
+  .s-integrations__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .s-integrations__card {
+    padding: 18px;
+  }
+
+  .s-integrations__card-name {
+    font-size: 14px;
+  }
+
+  .s-integrations__card-desc {
+    font-size: 12px;
+  }
+
+  /* Cases — stack, full width tabs */
+  .s-cases__tabs {
+    width: 100%;
+  }
+
+  .s-cases__tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px 8px;
+    font-size: 13px;
+    min-height: 44px;
+  }
+
+  .s-cases__split {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* Security — 1 col with horizontal line dividers only */
+  .s-security__grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .s-security__point {
+    border-left: none !important;
+    border-right: none !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .s-security__point:first-child { border-top: none; }
+  .s-security__point:nth-child(7) {
+    grid-column: auto;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .s-security__point:nth-child(7) > div { align-items: flex-start; text-align: left; }
+
+  .s-security__subtitle {
+    margin-bottom: 36px;
+    font-size: 15px;
+  }
+
+  /* Proof — 1 col */
+  .s-proof__grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .s-proof__card {
+    padding: 28px;
+  }
+
+  /* FAQ */
+  .s-faq__header {
+    margin-bottom: 32px;
+  }
+
+  .allybi-accordion__trigger {
+    padding: 20px 0;
+    font-size: 15px;
+    min-height: 48px;
+    gap: 12px;
+  }
+
+  .allybi-accordion__content p {
+    font-size: 14px;
+    padding: 0 0 20px;
+  }
+
+  /* CTA */
+  .s-cta__ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .s-cta__ctas .allybi-btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  /* Footer on large phone — show compact links */
+  .footer-columns {
+    display: none;
+  }
+
+  .footer-mobile-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px 16px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .footer-mobile-links a {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+    padding: 8px 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  .allybi-footer {
+    padding: 40px 0 calc(24px + 72px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* ==========================================================================
+   G. STANDARD PHONE (375px – 429px)
+   ========================================================================== */
+@media (min-width: 375px) and (max-width: 429px) {
+  .allybi-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .allybi-section {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
+  /* Hero */
+  .s-hero {
+    padding: 92px 0 36px;
+  }
+
+  .s-hero__h1 {
+    font-size: 28px;
+    line-height: 1.08;
+    margin-bottom: 16px;
+  }
+
+  .s-hero__sub {
+    font-size: 15px;
+    margin-bottom: 24px;
+    line-height: 1.55;
+  }
+
+  .s-hero__eyebrow {
+    font-size: 10px;
+    padding: 5px 10px 5px 7px;
+    margin-bottom: 14px;
+  }
+
+  .s-hero__ctas {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .s-hero__ctas .allybi-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .s-hero__proof {
+    gap: 6px;
+  }
+
+  .s-hero__chip {
+    font-size: 11px;
+    padding: 4px 8px;
+    background: var(--allybi-bg-alt-1);
+    border-radius: var(--allybi-radius-full);
+  }
+
+  /* Hero scene smaller */
+  .hero-scene__body {
+    padding: 14px;
+  }
+
+  .hero-scene__source-strip {
+    padding: 8px 12px;
+    gap: 5px;
+  }
+
+  .hero-scene__source-pill {
+    font-size: 10px;
+    padding: 3px 7px;
+  }
+
+  .hero-scene__query {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .hero-scene__result {
+    font-size: 13px;
+  }
+
+  .hero-scene__confirm {
+    padding: 10px 12px;
+  }
+
+  .hero-scene__confirm-detail {
+    font-size: 11px;
+  }
+
+  .hero-scene__confirm-btn {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  /* Pain section */
+  .s-pain__header {
+    margin-bottom: 32px;
+  }
+
+  .s-pain__header h2 {
+    font-size: 22px;
+  }
+
+  .s-pain__illustration {
+    height: 140px;
+  }
+
+  .s-pain__text {
+    padding: 20px;
+  }
+
+  .s-pain__text h3 {
+    font-size: 16px;
+  }
+
+  .s-pain__text p {
+    font-size: 13px;
+  }
+
+  /* Workflow */
+  .s-workflow__header h2 {
+    font-size: 22px;
+  }
+
+  .s-workflow__step {
+    padding: 20px 16px;
+  }
+
+  .s-workflow__step h3 {
+    font-size: 14px;
+  }
+
+  .s-workflow__step p {
+    font-size: 12px;
+  }
+
+  /* Integrations — single col on standard phone */
+  .s-integrations__grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .s-integrations__header h2 {
+    font-size: 22px;
+  }
+
+  .s-integrations__card {
+    padding: 18px;
+  }
+
+  /* Cases */
+  .s-cases__header h2 {
+    font-size: 22px;
+  }
+
+  .s-cases__copy h3 {
+    font-size: 18px;
+  }
+
+  .s-cases__mock-body {
+    padding: 14px;
+  }
+
+  .s-cases__mock-q {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .s-cases__mock-a {
+    font-size: 13px;
+  }
+
+  /* Security */
+  .s-security__point {
+    padding: 26px 18px;
+    gap: 12px;
+  }
+
+  .s-security__point svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .s-security__point strong {
+    font-size: 13px;
+  }
+
+  .s-security__point span {
+    font-size: 12px;
+  }
+
+  /* Proof */
+  .s-proof__card {
+    padding: 24px;
+  }
+
+  .s-proof__card h3 {
+    font-size: 15px;
+  }
+
+  .s-proof__card-context {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .s-proof__card p {
+    font-size: 13px;
+  }
+
+  /* CTA */
+  .s-cta h2 {
+    font-size: 22px;
+  }
+
+  .s-cta p {
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+
+  .allybi-btn--lg {
+    height: 48px;
+    padding: 0 24px;
+    font-size: 14px;
+  }
+}
+
+/* ==========================================================================
+   H. SMALL PHONE (320px – 374px)
+   ========================================================================== */
+@media (max-width: 374px) {
+  .allybi-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .allybi-section {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  .allybi-header-inner {
+    padding: 0 16px;
+    height: 52px;
+  }
+
+  .allybi-logo img {
+    height: 28px;
+  }
+
+  /* Hero */
+  .s-hero {
+    padding: 76px 0 32px;
+  }
+
+  .s-hero__h1 {
+    font-size: 24px;
+    line-height: 1.1;
+    margin-bottom: 14px;
+  }
+
+  .s-hero__sub {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .s-hero__eyebrow {
+    font-size: 9px;
+    padding: 4px 8px 4px 6px;
+    margin-bottom: 12px;
+  }
+
+  .s-hero__eyebrow::before {
+    width: 5px;
+    height: 5px;
+  }
+
+  /* Hero scene — very compact */
+  .hero-scene__source-strip {
+    padding: 6px 10px;
+    gap: 4px;
+  }
+
+  .hero-scene__source-pill {
+    font-size: 9px;
+    padding: 2px 6px;
+    gap: 3px;
+  }
+
+  .hero-scene__source-pill svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .hero-scene__body {
+    padding: 12px;
+  }
+
+  .hero-scene__query {
+    font-size: 11px;
+    padding: 8px;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .hero-scene__result {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .hero-scene__result-badge {
+    font-size: 9px;
+  }
+
+  .hero-scene__source {
+    font-size: 10px;
+    margin-bottom: 12px;
+  }
+
+  .hero-scene__confirm {
+    padding: 8px 10px;
+  }
+
+  .hero-scene__confirm-label {
+    font-size: 9px;
+  }
+
+  .hero-scene__confirm-detail {
+    font-size: 10px;
+  }
+
+  .hero-scene__confirm-btn {
+    font-size: 9px;
+    padding: 4px 8px;
+  }
+
+  /* Section headings */
+  .s-pain__header h2,
+  .s-workflow__header h2,
+  .s-integrations__header h2,
+  .s-cases__header h2,
+  .s-security__inner h2,
+  .s-proof__header h2,
+  .s-faq__header h2 {
+    font-size: 20px;
+  }
+
+  /* Pain */
+  .s-pain__illustration {
+    height: 120px;
+  }
+
+  .s-pain__text {
+    padding: 16px;
+  }
+
+  .s-pain__text h3 {
+    font-size: 15px;
+  }
+
+  .s-pain__text p {
+    font-size: 13px;
+  }
+
+  /* Workflow */
+  .s-workflow__steps {
+    max-width: 100%;
+  }
+
+  .s-workflow__step {
+    padding: 18px 14px;
+  }
+
+  /* Integrations */
+  .s-integrations__card {
+    padding: 16px;
+  }
+
+  .s-integrations__card-name {
+    font-size: 14px;
+  }
+
+  .s-integrations__card-desc {
+    font-size: 12px;
+  }
+
+  .s-integrations__card-top img,
+  .s-integrations__card-top svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Cases tabs */
+  .s-cases__tab {
+    font-size: 12px;
+    padding: 8px 6px;
+  }
+
+  .s-cases__copy h3 {
+    font-size: 17px;
+  }
+
+  .s-cases__copy li {
+    font-size: 13px;
+  }
+
+  .s-cases__mock-body {
+    padding: 12px;
+  }
+
+  /* Security */
+  .s-security__point {
+    padding: 22px 16px;
+    gap: 12px;
+  }
+
+  .s-security__subtitle {
+    margin-bottom: 28px;
+  }
+
+  /* Proof */
+  .s-proof__card {
+    padding: 20px;
+  }
+
+  /* FAQ */
+  .allybi-accordion__trigger {
+    padding: 16px 0;
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  .allybi-accordion__content p {
+    font-size: 13px;
+    padding: 0 0 16px;
+  }
+
+  /* CTA */
+  .s-cta {
+    padding: clamp(56px, 10vw, 100px) 0;
+  }
+
+  .s-cta h2 {
+    font-size: 20px;
+  }
+
+  .s-cta p {
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+
+  .allybi-btn--lg {
+    height: 44px;
+    padding: 0 20px;
+    font-size: 14px;
+  }
+
+  /* Footer */
+  .allybi-footer {
+    padding: 32px 0 calc(20px + 72px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .allybi-footer-inner {
+    padding: 0 16px;
+  }
+
+  .footer-mobile-links {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .footer-mobile-links a {
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  .footer-copyright {
+    font-size: 11px;
+  }
+}
+
+/* ==========================================================================
+   I. SHARED PAGE RESPONSIVE (sub-pages)
+   ========================================================================== */
+
+/* Generic page hero — used by about, pricing, security, etc. */
+@media (max-width: 768px) {
+  .pricing-hero,
+  .about-hero,
+  .hiw-hero,
+  .ucl-hero {
+    padding-top: calc(var(--allybi-section-py-mobile) + 32px) !important;
+  }
+
+  .pricing-hero .allybi-h1,
+  .about-hero .allybi-h1,
+  .hiw-hero h1,
+  .ucl-hero h1 {
+    font-size: clamp(24px, 7vw, 36px);
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing-hero,
+  .about-hero,
+  .hiw-hero,
+  .ucl-hero {
+    padding-top: 96px !important;
+  }
+}
+
+/* How It Works steps — stack on tablet and below */
+@media (max-width: 1024px) {
+  .hiw-step {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 48px 0;
+  }
+
+  .hiw-step:nth-child(even) .hiw-step__text { order: 1; }
+  .hiw-step:nth-child(even) .hiw-step__visual { order: 2; }
+}
+
+@media (max-width: 600px) {
+  .hiw-step {
+    padding: 32px 0;
+  }
+
+  .hiw-step h3 {
+    font-size: 20px;
+  }
+
+  .hiw-step p {
+    font-size: 14px;
+  }
+
+  .hiw-hero__ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hiw-hero__ctas .allybi-btn {
+    justify-content: center;
+  }
+
+  .hiw-strip__inner {
+    gap: 20px;
+  }
+}
+
+/* Legal page responsive */
+@media (max-width: 1024px) {
+  .ucl-feature__grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .ucl-feature__grid--reverse .ucl-feature__text { order: 1; }
+  .ucl-feature__grid--reverse .ucl-feature__visual { order: 2; }
+
+  .ucl-pressure__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ucl-security__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .ucl-feature {
+    padding: 48px 0;
+  }
+
+  .ucl-feature h3 {
+    font-size: 20px;
+  }
+
+  .ucl-feature p {
+    font-size: 14px;
+  }
+
+  .ucl-hero__ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ucl-hero__ctas .allybi-btn {
+    justify-content: center;
+  }
+
+  .ucl-pressure__card {
+    padding: 20px;
+  }
+
+  .ucl-pressure__card h3 {
+    font-size: 15px;
+  }
+
+  .ucl-pressure__card p {
+    font-size: 13px;
+  }
+}
+
+/* Pricing page responsive */
+@media (max-width: 768px) {
+  .pricing-included__grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .pricing-feature-item {
+    padding: 12px 0;
+  }
+
+  .pricing-feature-item span {
+    font-size: 14px;
+  }
+
+  .pricing-rollout__steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-rollout__steps {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .pricing-rollout__step {
+    padding: 20px;
+  }
+
+  .pricing-cta__btns,
+  .pricing-cta__btns .allybi-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .pricing-cta__btns {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* About page responsive */
+@media (max-width: 768px) {
+  .about-principles-grid.allybi-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .about-principle-card {
+    padding: 20px !important;
+  }
+
+  .about-principle-card .allybi-h3 {
+    font-size: 16px;
+  }
+
+  .about-principle-card .allybi-body {
+    font-size: 13px;
+  }
+
+  .about-grounded-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .about-grounded-cta .allybi-btn {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-principles-grid.allybi-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* FAQ standalone page responsive */
+@media (max-width: 768px) {
+  .faq-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 6px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+  }
+
+  .faq-tab {
+    flex-shrink: 0;
+    font-size: 12px;
+    padding: 8px 14px;
+    min-height: 40px;
+  }
+}
+
+/* Contact form responsive */
+@media (max-width: 600px) {
+  .contact-paths__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   J. ANIMATION RESPONSIVENESS
+   ========================================================================== */
+
+/* Simpler animations on phone */
+@media (max-width: 768px) {
+  .allybi-reveal {
+    transform: translateY(16px);
+  }
+
+  .allybi-reveal--left,
+  .allybi-reveal--right {
+    transform: translateY(16px);
+  }
+
+  .allybi-reveal--scale {
+    transform: scale(0.98) translateY(0);
+  }
+
+  /* Reduce stagger on mobile — max 4 visible delays */
+  .allybi-stagger > :nth-child(n+5) {
+    transition-delay: 320ms !important;
+  }
+
+  /* No card hover lift on touch */
+  .allybi-card:hover {
+    transform: none;
+  }
+
+  .s-integrations__card:hover {
+    transform: none;
+  }
+
+  /* Simplify hero confirm animation */
+  .hero-scene__confirm {
+    animation-delay: 1s;
+  }
+}
+
+/* Even simpler on small phone */
+@media (max-width: 430px) {
+  .allybi-reveal {
+    transform: translateY(12px);
+  }
+
+  .allybi-stagger > :nth-child(n+3) {
+    transition-delay: 160ms !important;
+  }
+}
+
+/* ==========================================================================
+   K. TOUCH TARGET ENFORCEMENT
+   ========================================================================== */
+@media (max-width: 1024px) {
+  /* Ensure all interactive elements meet 44px minimum */
+  .mobile-nav-link,
+  .mobile-dropdown-trigger {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-dropdown-items a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-mobile-links a {
+    min-height: 44px;
+  }
+
+  .allybi-accordion__trigger {
+    min-height: 48px;
+  }
+
+  /* Slightly bigger button on touch */
+  .allybi-btn {
+    min-height: 44px;
+  }
+}
+
+/* ==========================================================================
+   L. STICKY MOBILE CTA REFINEMENTS
+   ========================================================================== */
+@media (max-width: 768px) {
+  .sticky-mobile-cta {
+    display: block;
+    padding: 10px 20px calc(10px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .sticky-mobile-cta .allybi-btn {
+    height: 46px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 374px) {
+  .sticky-mobile-cta {
+    padding: 8px 16px calc(8px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .sticky-mobile-cta .allybi-btn {
+    height: 44px;
+    font-size: 14px;
+  }
+}
+
+/* ==========================================================================
+   M. OVERFLOW PREVENTION
+   ========================================================================== */
+
+/* Prevent any inline-style grids from overflowing on mobile */
+@media (max-width: 600px) {
+  [style*="grid-template-columns: repeat(2"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Force max-width on inline-styled elements */
+  [style*="max-width: 600px"] {
+    max-width: 100% !important;
+  }
+}
+
+/* Tables — horizontal scroll wrapper */
+.table-scroll-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 calc(var(--allybi-gutter-mobile) * -1);
+  padding: 0 var(--allybi-gutter-mobile);
+}
+
+/* Ensure images and SVGs never break out */
+img, svg, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==========================================================================
+   N. MOBILE-FIRST QA PASS — June 2026
+   ========================================================================== */
+
+/* Scroll margin for anchor targets behind sticky header */
+:target {
+  scroll-margin-top: 80px;
+}
+
+/* Mobile flow sections: force vertical */
+@media (max-width: 767px) {
+  /* Pricing workflow card 2-col → stack */
+  [style*="42% 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Before/after comparison → stack */
+  [style*="1fr 1fr"][style*="max-width:800px"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Homepage workflow flow arrows → vertical */
+  .s-workflow__flow {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .s-workflow__flow-arrow {
+    transform: rotate(90deg);
+    margin: 4px auto;
+  }
+
+  /* Integrations matrix: hide desktop table, show mobile accordion */
+  .integ-matrix__desktop-only {
+    display: none !important;
+  }
+  .integ-matrix__mobile-only {
+    display: block !important;
+  }
+
+  /* Legal page tables: scroll wrapper */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Ensure all inline grid sections stack */
+  [style*="grid-template-columns: 1fr 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Smaller phones: extra compact */
+@media (max-width: 480px) {
+  /* Pricing card on very small screens */
+  .pricing-card {
+    padding: 24px 20px !important;
+  }
+
+  /* Hero chip wrapping */
+  .s-hero__proof,
+  .pricing-hero__trust {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* Methodology dimensions stack */
+  .met-dim-card {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Result pages comparison grid */
+  .met-results-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ==========================================================================
+   O. PRINT STYLES (bonus)
+   ========================================================================== */
+@media print {
+  .allybi-header,
+  .mobile-menu,
+  .sticky-mobile-cta,
+  .s-cta,
+  .pricing-cta {
+    display: none !important;
+  }
+
+  .allybi-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+}

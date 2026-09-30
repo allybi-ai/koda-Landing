@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dj-html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
+  <title>Como os dois instrumentos funcionam | Allybi</title>
+  <meta name="description" content="Sinais, pesos, faixas, versões e privacidade dos instrumentos de tempo e fluxo do Allybi.">
+  <link rel="canonical" href="https://allybi.com.br/metodologia.html">
+  <link rel="stylesheet" href="assets/tools/allybi-diagnostic-journey.css">
+</head>
+<body class="dj-body dj-body--methodology">
+  <div class="dj-gradient" data-dj-gradient-layer="base"></div>
+  <div class="dj-gradient" data-dj-gradient-layer="shift" data-dj-active="true"></div>
+  <div class="dj-shell dj-methodology" data-dj-methodology data-dj-methodology-state="entering">
+    <div class="dj-topbar"><a class="dj-brand" href="index.html" aria-label="Allybi, página inicial">Allybi<span>Metodologia</span></a><a class="dj-close" href="index.html" aria-label="Voltar para a página inicial"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></a></div>
+    <main class="dj-methodology__main">
+      <header class="dj-methodology__hero">
+        <p class="dj-eyebrow">O que entra. O que sai. O que fica local.</p>
+        <h1>Doze sinais observáveis, dois resultados derivados.</h1>
+        <p>Tempo e Fluxo medem coisas diferentes. Aqui estão a ordem, os pesos, as faixas e as regras de compatibilidade usadas para projetar cada resultado.</p>
+        <nav class="dj-methodology__nav" aria-label="Nesta página"><a href="#tempo">Tempo</a><a href="#fluxo">Fluxo</a><a href="#versoes-privacidade">Versões e privacidade</a></nav>
+      </header>
+
+      <section class="dj-methodology__section" id="tempo" tabindex="-1" aria-labelledby="tempo-title">
+        <div class="dj-section-heading"><p class="dj-eyebrow">Instrumento 01 · Tempo</p><h2 id="tempo-title">Cinco sinais em ordem</h2><p>A resposta final estima horas por mês, equivalente anual e onde o tempo se distribui.</p></div>
+        <ol class="dj-methodology__signals">
+          <li data-dj-tempo-signal="places"><span>places</span><strong>Lugares percorridos</strong><p>Conta quantos locais entram no caminho até o arquivo aparecer.</p></li>
+          <li data-dj-tempo-signal="frequency"><span>frequency</span><strong>Frequência semanal</strong><p>Define quantas vezes a cena costuma se repetir.</p></li>
+          <li data-dj-tempo-signal="searchTime"><span>searchTime</span><strong>Tempo de busca</strong><p>Estima a duração da primeira procura até um arquivo plausível.</p></li>
+          <li data-dj-tempo-signal="afterFind"><span>afterFind</span><strong>Trabalho depois de encontrar</strong><p>Registra as etapas que ainda ficam entre o arquivo e o pedido pronto.</p></li>
+          <li data-dj-tempo-signal="recheck"><span>recheck</span><strong>Repetição do caminho</strong><p>Representa a parcela de pedidos em que o percurso é conferido outra vez.</p></li>
+        </ol>
+        <div class="dj-methodology__formula"><p class="dj-eyebrow">Projeção</p><p>Minutos por ocorrência × frequência semanal × 4,33 semanas ÷ 60. A faixa de incerteza usa 0,8 × estimativa e 1,2 × estimativa.</p></div>
+        <div class="dj-methodology__formula" data-dj-frequency-contract="less-than-weekly" data-dj-frequency-rate="0.5"><p class="dj-eyebrow">Menor frequência</p><p><code>less-than-weekly</code> equivale a 0,5 ocorrência por semana: “Menos de uma vez por semana (em média, 2 vezes por mês)”, representada pelo ícone semântico <code>calendar-subweekly</code>.</p></div>
+        <div class="dj-methodology__bands" aria-label="Faixas de tempo"><span>menos de 3 h</span><span>3 a menos de 10 h</span><span>10 a menos de 25 h</span><span>25 h ou mais</span></div>
+      </section>
+
+      <section class="dj-methodology__section" id="fluxo" tabindex="-1" aria-labelledby="fluxo-title">
+        <div class="dj-section-heading"><p class="dj-eyebrow">Instrumento 02 · Fluxo</p><h2 id="fluxo-title">Sete sinais, seis etapas públicas</h2><p>As duas respostas de confirmação se combinam em uma única etapa pública.</p></div>
+        <ol class="dj-methodology__signals dj-methodology__signals--weighted">
+          <li data-dj-fluxo-signal="request" data-dj-weight="12"><span>request · 12</span><strong>Pedido</strong><p>Quanto contexto já chega no começo.</p></li>
+          <li data-dj-fluxo-signal="search" data-dj-weight="18"><span>search · 18</span><strong>Busca</strong><p>Quantos lugares entram no percurso.</p></li>
+          <li data-dj-fluxo-signal="version" data-dj-weight="20"><span>version · 20</span><strong>Versão</strong><p>Como o arquivo correto é reconhecido.</p></li>
+          <li data-dj-fluxo-signal="source" data-dj-weight="20"><span>source · 20</span><strong>Fonte</strong><p>Se a origem acompanha a informação.</p></li>
+          <li data-dj-fluxo-signal="confirmationPasses" data-dj-weight="9"><span>confirmationPasses · 9</span><strong>Passagens</strong><p>Quantas confirmações acontecem antes da saída.</p></li>
+          <li data-dj-fluxo-signal="confirmationDependency" data-dj-weight="9"><span>confirmationDependency · 9</span><strong>Dependência</strong><p>Se o pedido continua quando a pessoa habitual não está disponível.</p></li>
+          <li data-dj-fluxo-signal="send" data-dj-weight="12"><span>send · 12</span><strong>Envio</strong><p>Se tudo que precisa de revisão está no mesmo lugar.</p></li>
+        </ol>
+        <div class="dj-methodology__formula"><p class="dj-eyebrow">Confirmação combinada</p><p><code>9 × confirmationPasses / 3 + 9 × confirmationDependency / 3</code></p><p>A etapa pública de confirmação pode projetar 0 / 17 / 33 / 50 / 67 / 83 / 100.</p></div>
+        <div class="dj-methodology__formula"><p class="dj-eyebrow">Desempate do maior estágio</p><p>version → source → search → confirmation → request → send</p></div>
+        <div class="dj-methodology__bands" aria-label="Faixas do fluxo"><span>0–24 · Fluxo claro</span><span>25–49 · Atrito moderado</span><span>50–74 · Atrito alto</span><span>75–100 · Atrito muito alto</span></div>
+      </section>
+
+      <section class="dj-methodology__section" id="versoes-privacidade" tabindex="-1" aria-labelledby="versions-title">
+        <div class="dj-section-heading"><p class="dj-eyebrow">Versões e privacidade</p><h2 id="versions-title">Compatibilidade sem reabrir suas respostas</h2></div>
+        <dl class="dj-methodology__ledger">
+          <div><dt>Versão do cálculo</dt><dd><code>2026-08-v2</code></dd></div>
+          <div><dt>Instrumento de Tempo</dt><dd><code>2026-08-tempo-v3</code></dd></div>
+          <div><dt>Instrumento de Fluxo</dt><dd><code>2026-08-fluxo-v3</code></dd></div>
+          <div><dt>Respostas em andamento</dt><dd>Ficam localmente por até 24 horas e são descartadas quando incompatíveis.</dd></div>
+          <div><dt>Resultado derivado</dt><dd>Fica localmente por até 30 dias e pode ser aberto por query ou link compartilhado.</dd></div>
+          <div><dt>Privacidade</dt><dd>Respostas brutas não são persistidas no resultado, na query nem no compartilhamento. Só agregados derivados são projetados.</dd></div>
+          <div><dt>Compatibilidade</dt><dd>Resultados derivados no schema v2 são lidos como foram gravados. O schema v3 exige versões explícitas do cálculo e do instrumento, além de um índice de faixa estável; a versão v3 do instrumento não recalcula silenciosamente um resultado legado.</dd></div>
+        </dl>
+      </section>
+    </main>
+  </div>
+  <noscript><style>.dj-shell,.dj-gradient{display:none!important}</style><section class="dj-noscript"><span class="dj-noscript__brand">Allybi</span><h1>A metodologia continua disponível sem JavaScript.</h1><p>Todo o conteúdo factual está nesta página. O JavaScript serve apenas à transição entre âncoras.</p><nav><a href="index.html">Voltar para a página inicial</a><a href="tempo.html">Abrir Tempo</a><a href="diagnostico.html">Abrir Fluxo</a></nav></section></noscript>
+  <script src="assets/tools/allybi-tools-data.js"></script><script src="assets/tools/allybi-methodology.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080c10"><title>Segurança e privacidade | Allybi</title><meta name="description" content="Conheça a criptografia, o uso responsável pela IA, as escolhas de acesso e os direitos de privacidade no Allybi."><link rel="canonical" href="https://allybi.com.br/security-overview.html"><meta property="og:title" content="Segurança e privacidade | Allybi"><meta property="og:description" content="Trabalhe com IA. Preserve o que é seu."><meta property="og:type" content="website"><link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg"><link rel="preload" href="assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="allybi-tokens.css"><link rel="stylesheet" href="allybi-base.css"><link rel="stylesheet" href="allybi-components.css"><link rel="stylesheet" href="allybi-header.css"><link rel="stylesheet" href="allybi-footer.css"><link rel="stylesheet" href="allybi-responsive.css"><link rel="stylesheet" href="assets/webapp-spatial-system.css"><link rel="stylesheet" href="assets/workspace-dropdown.css"><link rel="stylesheet" href="assets/home-header-material.css"><link rel="stylesheet" href="assets/site-footer-light.css"><link rel="stylesheet" href="pages/security-overview.css"><link rel="stylesheet" href="assets/security-art-motion.css">
+</head><body class="security-site"><a class="sec-skip" href="#security-page">Ir para o conteúdo</a><header class="site-header" data-site-header>
+  <div class="site-header__inner">
+
+    <a class="site-header__logo" href="/" aria-label="Allybi">
+      <img src="assets/images/allybi-workspace-knot.svg" alt="Allybi" width="32" height="32">
+    </a>
+
+    <nav class="site-header__desktop-nav" aria-label="Navegação principal">
+      <a href="/how-it-works.html" class="site-header__nav-link">Como funciona</a>
+      <a href="/security-overview.html" class="site-header__nav-link">Segurança</a>
+
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-ferramentas" aria-haspopup="true">Ferramentas</button>
+        <div class="site-header__dropdown-panel" id="dd-ferramentas" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/tempo.html"><span class="site-header__dropdown-title">Tempo perdido</span><span class="site-header__dropdown-desc">Calcule o tempo invisível.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/diagnostico.html"><span class="site-header__dropdown-title">Diagnóstico do fluxo</span><span class="site-header__dropdown-desc">Mapeie onde o time trava.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/metodologia.html"><span class="site-header__dropdown-title">Metodologia</span><span class="site-header__dropdown-desc">Como calculamos.</span></a>
+        </div>
+      </div>
+      <a href="/pricing.html" class="site-header__nav-link">Preços</a>
+      <a href="/about.html" class="site-header__nav-link">Sobre</a>
+    </nav>
+
+    <div class="site-header__desktop-actions">
+      <a href="https://app.allybi.com.br/" class="site-header__signin">Entrar</a>
+      <a href="https://app.allybi.com.br/" class="site-header__cta">Começar grátis</a>
+    </div>
+
+    <button class="site-header__menu-button" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" data-mobile-menu-toggle>
+      <span class="site-header__menu-line"></span>
+      <span class="site-header__menu-line"></span>
+    </button>
+
+  </div>
+  <noscript>
+    <nav class="site-header__nojs-nav" aria-label="Navegação principal">
+      <a href="/how-it-works.html">Como funciona</a>
+      <a href="/security-overview.html">Segurança</a>
+      <a href="/pricing.html">Preços</a>
+      <a href="https://app.allybi.com.br/">Começar grátis</a>
+    </nav>
+  </noscript>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true" inert>
+  <div class="mobile-menu__top">
+    <a class="mobile-menu__logo" href="/" aria-label="Allybi"><img src="assets/images/allybi-workspace-knot.svg" alt="Allybi" width="32" height="32"></a>
+    <button class="mobile-menu__close" type="button" aria-label="Fechar menu" data-mobile-menu-close>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu__body">
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">O Allybi</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/how-it-works.html">Como funciona<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/security-overview.html">Segurança<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Ferramentas</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/tempo.html">Tempo perdido<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/diagnostico.html">Diagnóstico do fluxo<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/metodologia.html">Metodologia<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Empresa</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/pricing.html">Preços<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/about.html">Sobre<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/pricing.html#faq">FAQ<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/contact.html">Contato<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <div class="mobile-menu__actions">
+      <a href="https://app.allybi.com.br/" class="mobile-menu__primary">Começar grátis</a>
+      <a href="https://app.allybi.com.br/" class="mobile-menu__secondary">Entrar</a>
+    </div>
+    <p class="mobile-menu__note">30 dias grátis. Depois R$170/mês. Cancele quando quiser.</p>
+  </div>
+</div>
+
+<main id="security-page">
+<section class="sec-hero sec-wrap" aria-labelledby="security-title">
+ <div class="sec-hero__copy" data-security-reveal>
+  <p class="sec-kicker">Segurança e privacidade</p>
+  <h1 id="security-title">Trabalhe com IA.<br><span>Preserve o que<br>é seu.</span></h1>
+  <p class="sec-lead">Seus documentos carregam decisões, relações e trabalho. O cuidado com eles precisa fazer parte de cada etapa.</p>
+  <a class="sec-link" href="#protecao">Conheça as proteções <span aria-hidden="true">↓</span></a>
+ </div>
+ <div class="sec-art sec-hero__art" aria-hidden="true"><img src="assets/images/security-native/protected.svg" width="900" height="900" alt="" fetchpriority="high" decoding="async"></div>
+</section>
+<nav class="sec-index sec-wrap" aria-label="Nesta página">
+ <a href="#protecao">Criptografia <span aria-hidden="true">↘</span></a><a href="#uso-da-ia">Uso pela IA <span aria-hidden="true">↘</span></a><a href="#controle">Suas escolhas <span aria-hidden="true">↘</span></a><a href="#lgpd">Direitos e LGPD <span aria-hidden="true">↘</span></a>
+</nav>
+<section class="sec-wrap sec-encryption" id="protecao" aria-labelledby="encryption-title">
+ <header class="sec-section-heading" data-security-reveal><p class="sec-kicker">Criptografia</p><h2 id="encryption-title">Protegidos no caminho.<br><span>E quando ficam.</span></h2><p>Quando você envia um arquivo, a proteção começa na conexão. Depois, continua no armazenamento.</p></header>
+ <div class="sec-encryption__pair">
+  <article data-security-reveal>
+   <div class="sec-art " aria-hidden="true"><img class="security-art-transit" src="assets/images/security-native/transit.svg" width="900" height="900" alt="" loading="lazy" decoding="async"></div>
+   <div class="sec-encryption__copy"><p class="sec-standard">TLS</p><h3>Entre sua tela e o Allybi.</h3><p>Você envia um contrato. Na conexão, o TLS cifra os dados para protegê-los enquanto atravessam a internet.</p>
+   <details class="sec-detail"><summary>O que isso protege?<span aria-hidden="true">+</span></summary><div><p>O TLS protege o conteúdo enquanto ele percorre a conexão, ajudando a impedir sua leitura ou alteração por terceiros durante o trajeto.</p><a href="https://www.rfc-editor.org/rfc/rfc8446.html" target="_blank" rel="noopener noreferrer">Conheça o protocolo TLS <span aria-hidden="true">↗</span></a></div></details></div>
+  </article>
+  <article data-security-reveal>
+   <div class="sec-art " aria-hidden="true"><img src="assets/images/security-native/storage.svg" width="900" height="900" alt="" loading="lazy" decoding="async"></div>
+   <div class="sec-encryption__copy"><p class="sec-standard">AES-256</p><h3>Guardado. E ainda protegido.</h3><p>Depois do envio, o arquivo continua disponível para o seu trabalho. No armazenamento, documentos e informações pessoais são protegidos com AES-256.</p>
+   <details class="sec-detail"><summary>Como a criptografia funciona?<span aria-hidden="true">+</span></summary><div><p>A criptografia transforma os dados em conteúdo cifrado, que precisa da chave correspondente para ser lido. AES-256 utiliza chaves de 256 bits.</p><a href="https://csrc.nist.gov/pubs/fips/197/final" target="_blank" rel="noopener noreferrer">Consulte o padrão AES <span aria-hidden="true">↗</span></a></div></details></div>
+  </article>
+ </div>
+ <p class="sec-evidence-note">Proteções descritas na <a href="/privacy.html#section-6">Política de privacidade</a>. Criptografia e controle de acesso se complementam.</p>
+</section>
+<section class="sec-processing" id="uso-da-ia" aria-labelledby="processing-title">
+ <div class="sec-wrap sec-split">
+  <div class="sec-processing__copy" data-security-reveal><p class="sec-kicker">Uso responsável do conteúdo</p><h2 id="processing-title">Uma resposta precisa<br>de contexto.</h2><p class="sec-body">Para encontrar uma cláusula, o Allybi precisa processar o conteúdo do contrato. Esse uso tem uma finalidade: responder ao que você pediu.</p><p class="sec-processing__promise">Seu conteúdo não vira treinamento.<span>Documentos, perguntas e respostas não são usados para treinar modelos de IA.</span></p><a class="sec-link" href="/privacy.html#section-3">Entenda o uso dos dados <span aria-hidden="true">↗</span></a></div>
+  <div class="sec-art " aria-hidden="true"><img src="assets/images/security-native/processing.svg" width="900" height="900" alt="" loading="lazy" decoding="async"></div>
+ </div>
+ <div class="sec-wrap sec-processing__notes" data-security-reveal>
+  <div><h3>Além do conteúdo dos arquivos.</h3><p>A política também abrange nomes de arquivos, informações da conta e dados de uso. Você pode consultar o que é coletado e para quais finalidades.</p></div>
+  <div><h3>Acesso tem limites.</h3><p>A política restringe o acesso a pessoas autorizadas e prestadores de serviço quando necessário para suas funções, com obrigações de proteção dos dados.</p></div>
+ </div>
+</section>
+<section class="sec-wrap sec-control" id="controle" aria-labelledby="control-title">
+ <div class="sec-split">
+  <div class="sec-art " aria-hidden="true"><img src="assets/images/security-native/access.svg" width="900" height="900" alt="" loading="lazy" decoding="async"></div>
+  <div class="sec-control__copy" data-security-reveal><p class="sec-kicker">Suas escolhas</p><h2 id="control-title">A próxima decisão<br>continua com você.</h2>
+   <div class="sec-control__item"><h3>Conectar é uma escolha.</h3><p>Você autoriza cada integração e pode revogar a conexão. O Allybi utiliza as permissões concedidas para os recursos que você habilita.</p></div>
+   <div class="sec-control__item"><h3>Enviar exige confirmação.</h3><p>Antes do envio, confira a mensagem, o arquivo, o destinatário e o canal. Preparar uma resposta e enviá-la são decisões separadas.</p></div>
+   <div class="sec-control__item"><h3>Desconectar e excluir são escolhas diferentes.</h3><p>Desconectar uma integração interrompe novos acessos. Um arquivo já importado precisa ser excluído separadamente, conforme as regras de retenção.</p></div>
+  </div>
+ </div>
+</section>
+<div class="sec-light" data-security-light>
+<section class="sec-wrap sec-rights" id="lgpd" aria-labelledby="rights-title">
+ <header class="sec-section-heading" data-security-reveal><p class="sec-kicker">LGPD, na prática</p><h2 id="rights-title">Seus dados vêm<br>com direitos.</h2><p>Você pode pedir informações, corrigir dados e exercer suas escolhas sobre o tratamento. Nosso compromisso inclui tornar esse caminho acessível.</p></header>
+ <div class="sec-rights__layout">
+  <div class="sec-art " aria-hidden="true"><img src="assets/images/security-native/rights.svg" width="900" height="900" alt="" loading="lazy" decoding="async"></div>
+  <div class="sec-rights__list" data-security-reveal>
+   <details name="privacy-rights" open><summary>Conhecer e acessar<span aria-hidden="true">−</span></summary><div><p>Solicite a confirmação do tratamento, acesso aos seus dados e informações sobre finalidade, duração e compartilhamento.</p></div></details>
+   <details name="privacy-rights"><summary>Corrigir e atualizar<span aria-hidden="true">+</span></summary><div><p>Peça a correção de dados pessoais incompletos, inexatos ou desatualizados.</p></div></details>
+   <details name="privacy-rights"><summary>Revogar e solicitar exclusão<span aria-hidden="true">+</span></summary><div><p>Revogue seu consentimento quando ele for a base do tratamento. Você também pode solicitar a exclusão de dados nas hipóteses previstas na LGPD, respeitadas as obrigações legais de conservação.</p></div></details>
+   <details name="privacy-rights"><summary>Entender o compartilhamento<span aria-hidden="true">+</span></summary><div><p>Peça informações sobre as entidades com as quais seus dados são compartilhados e para quais finalidades.</p></div></details>
+   <a class="sec-link" href="/contact.html">Falar sobre meus dados <span aria-hidden="true">↗</span></a>
+  </div>
+ </div>
+ <div class="sec-rights__foot"><p>Para exercer seus direitos, fale com nossa equipe. Podemos precisar confirmar sua identidade para proteger seus dados.</p><a href="https://www.gov.br/anpd/pt-br/assuntos/titular-de-dados/direito-dos-titulares" target="_blank" rel="noopener noreferrer">Conheça seus direitos na ANPD <span aria-hidden="true">↗</span></a></div>
+</section>
+<section class="sec-wrap sec-questions" aria-labelledby="questions-title">
+ <div><p class="sec-kicker">Para ficar claro</p><h2 id="questions-title">Boas perguntas.<br>Respostas diretas.</h2><a class="sec-link" href="/contact.html">Converse com a equipe <span aria-hidden="true">↗</span></a></div>
+ <div class="sec-questions__list">
+  <details><summary>O Allybi consegue ler meus documentos?<span aria-hidden="true">+</span></summary><div><p>O serviço processa o conteúdo que você fornece para buscar informações e gerar respostas. A criptografia protege a transmissão e o armazenamento; ela não significa que o conteúdo nunca seja processado pelos servidores. O acesso operacional segue os limites descritos na política de privacidade.</p></div></details>
+  <details><summary>O que acontece quando excluo um arquivo?<span aria-hidden="true">+</span></summary><div><p>A exclusão e a retenção seguem suas instruções, as configurações da conta e a política de privacidade. Algumas informações podem precisar ser conservadas para cumprir obrigações legais. Para detalhes sobre um pedido específico, entre em contato com a equipe.</p></div></details>
+  <details><summary>Preciso conectar todas as minhas contas?<span aria-hidden="true">+</span></summary><div><p>Não. Você pode começar com arquivos enviados diretamente e conectar apenas os serviços que quiser utilizar.</p></div></details>
+  <details><summary>Posso avaliar a segurança antes de começar?<span aria-hidden="true">+</span></summary><div><p>Sim. Consulte a política de privacidade ou fale com a equipe sobre o seu contexto de uso, os requisitos da sua empresa e os dados que pretende utilizar.</p><a href="/contact.html">Falar com a equipe <span aria-hidden="true">↗</span></a></div></details>
+ </div>
+</section>
+<section class="sec-wrap sec-end" aria-labelledby="end-title" data-security-reveal><p class="sec-kicker">O próximo passo é seu</p><h2 id="end-title">Comece com um arquivo.<br><span>Avance com clareza.</span></h2><p>Conheça o Allybi no seu ritmo, com as fontes e as decisões ao seu alcance.</p><div class="sec-end__actions"><a class="sec-button" href="https://app.allybi.com.br">Experimentar o Allybi <span aria-hidden="true">↗</span></a><a class="sec-link" href="/privacy.html">Ler a política de privacidade <span aria-hidden="true">↗</span></a></div></section>
+</div>
+</main><footer class="site-footer" id="security-footer" data-surface="light">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="site-footer__wordmark-link" href="/" aria-label="Allybi — início"><img src="assets/images/allybi-workspace-knot.svg" alt="" width="44" height="44"><span class="site-footer__wordmark">Allybi</span></a>
+    </div>
+    <nav class="site-footer__nav" aria-label="Rodapé">
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">O Allybi</h3>
+        <div class="site-footer__links">
+          <a href="/how-it-works.html">Como funciona</a>
+          <a href="/security-overview.html">Segurança</a>
+          <a href="/pricing.html">Preços</a>
+        </div>
+      </div>
+
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Ferramentas</h3>
+        <div class="site-footer__links">
+          <a href="/tempo.html">Tempo perdido</a>
+          <a href="/diagnostico.html">Diagnóstico do fluxo</a>
+          <a href="/metodologia.html">Metodologia</a>
+        </div>
+      </div>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Empresa</h3>
+        <div class="site-footer__links">
+          <a href="/about.html">Sobre</a>
+          <a href="/#faq">Perguntas frequentes</a>
+          <a href="/contact.html">Contato</a>
+        </div>
+      </div>
+    </nav>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">© 2026 Allybi. Todos os direitos reservados.</p>
+      <div class="site-footer__legal">
+        <a href="/terms.html">Termos</a>
+        <a href="/privacy.html">Privacidade</a>
+      </div>
+    </div>
+  </div>
+</footer><script src="allybi-header.js" defer></script><script src="assets/workspace-menu-motion.js" defer></script><script src="assets/home-header-workspace.js" defer></script><script src="assets/home-header-scroll.js" defer></script><script src="assets/security-page.js" defer></script><script src="assets/security-art-motion.js" defer></script>
+</body></html>

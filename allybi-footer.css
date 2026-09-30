@@ -1,0 +1,183 @@
+/* ════════════════════════════════════════════════════════════════════
+   Global site footer  (2026-06-30 rebuild)
+   - Desktop: brand + 4-column nav, bottom row with copyright + legal.
+   - Tablet: brand stacked, nav 2×2.
+   - Mobile: brand stacked, nav 1 col, links underlined rows.
+   ════════════════════════════════════════════════════════════════════ */
+
+.site-footer {
+  background: #181818;
+  color: #FFFFFF;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.site-footer__inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 48px 20px 28px;
+  display: block;
+}
+
+/* Brand */
+.site-footer__brand { max-width: 330px; }
+.site-footer__wordmark-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.site-footer__wordmark {
+  font-family: inherit;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+.site-footer__tagline {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.56);
+  margin: 12px 0 0;
+}
+
+/* Nav */
+.site-footer__nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 42px;
+}
+.site-footer__group { min-width: 0; }
+.site-footer__group-title {
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.46);
+  margin: 0 0 12px;
+}
+.site-footer__links {
+  display: grid;
+  gap: 0;
+}
+.site-footer__links a {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  line-height: 21px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.68);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.site-footer__links a:hover { color: #FFFFFF; }
+.site-footer__links a:focus-visible {
+  outline: 2px solid #FFFFFF;
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+.site-footer__links a[aria-current="page"] { color: #FFFFFF; }
+
+/* Bottom */
+.site-footer__bottom {
+  margin-top: 38px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.site-footer__copyright {
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(255, 255, 255, 0.46);
+  margin: 0;
+}
+.site-footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+}
+.site-footer__legal a {
+  font-size: 12px;
+  line-height: 18px;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.52);
+  text-decoration: none;
+}
+.site-footer__legal a:hover { color: #FFFFFF; }
+.site-footer__legal a:focus-visible {
+  outline: 2px solid #FFFFFF;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Tablet 768-1023 */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .site-footer__inner { padding: 56px 32px 32px; }
+  .site-footer__nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px 48px;
+  }
+  .site-footer__bottom {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .site-footer__links { gap: 10px; }
+  .site-footer__links a {
+    min-height: 0;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    border-bottom: 0;
+    color: rgba(255, 255, 255, 0.68);
+  }
+}
+
+/* Desktop ≥1024 */
+@media (min-width: 1024px) {
+  .site-footer__inner {
+    padding: 64px 48px 32px;
+    display: grid;
+    grid-template-columns: minmax(260px, 1fr) minmax(0, 2fr);
+    gap: 80px;
+    align-items: start;
+  }
+  .site-footer__brand { max-width: 320px; }
+  .site-footer__tagline { margin-top: 14px; }
+  .site-footer__nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+    margin-top: 0;
+  }
+  .site-footer__group-title { margin-bottom: 14px; }
+  .site-footer__links { gap: 10px; }
+  .site-footer__links a {
+    min-height: 0;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    border-bottom: 0;
+    color: rgba(255, 255, 255, 0.68);
+  }
+  .site-footer__bottom {
+    grid-column: 1 / -1;
+    margin-top: 54px;
+    padding-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .site-footer__legal { gap: 18px; }
+}
+
+/* Hide any legacy footer markup that may still ship — defensive. */
+.allybi-footer { display: none !important; }

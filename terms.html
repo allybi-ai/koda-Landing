@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
+  <title>Uso Aceit&#225;vel &#8212; Allybi</title>
+  <meta name="description" content="O que n&#227;o pode ser feito no Allybi, incluindo uso ilegal, abuso da plataforma, tentativa de acesso n&#227;o autorizado e envio de conte&#250;do proibido.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="allybi-tokens.css">
+  <link rel="stylesheet" href="allybi-base.css">
+  <link rel="stylesheet" href="allybi-components.css">
+  <link rel="stylesheet" href="allybi-header.css">
+  <link rel="stylesheet" href="allybi-footer.css">
+  <link rel="stylesheet" href="allybi-responsive.css">
+  <style>
+    .legal-hero { padding: 140px 0 40px; }
+    .legal-eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--allybi-text-muted); margin-bottom: 16px; }
+    .legal-h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 700; letter-spacing: -0.02em; color: var(--allybi-text-strongest); margin-bottom: 16px; }
+    .legal-summary { font-size: 16px; color: var(--allybi-text-secondary); line-height: 1.6; max-width: 640px; margin-bottom: 20px; }
+    .legal-meta { font-size: 13px; color: var(--allybi-text-muted); display: flex; gap: 24px; flex-wrap: wrap; }
+    .legal-body { padding: 48px 0 80px; }
+    .legal-content { max-width: 760px; margin: 0 auto; font-size: 15px; line-height: 1.7; color: var(--allybi-text-primary); }
+    .legal-content h2 { font-size: 22px; font-weight: 700; color: var(--allybi-text-strongest); margin: 48px 0 16px; padding-top: 24px; border-top: 1px solid var(--allybi-border-default); }
+    .legal-content h3 { font-size: 18px; font-weight: 600; color: var(--allybi-text-strongest); margin: 32px 0 12px; }
+    .legal-content p { margin: 0 0 16px; }
+    .legal-content ul, .legal-content ol { margin: 0 0 16px; padding-left: 24px; }
+    .legal-content li { margin-bottom: 8px; }
+    .legal-content a { color: var(--allybi-accent); text-decoration: underline; }
+    .legal-notice { padding: 16px 20px; background: var(--allybi-bg-alt-1); border-radius: var(--allybi-radius-md); font-size: 14px; color: var(--allybi-text-secondary); margin-bottom: 32px; border-left: 3px solid var(--allybi-accent); }
+    .legal-back-top { text-align: center; padding: 32px 0; }
+    .legal-back-top a { font-size: 14px; color: var(--allybi-text-muted); text-decoration: none; }
+    .legal-back-top a:hover { color: var(--allybi-text-strongest); }
+    @media (max-width: 768px) { .legal-hero { padding: 110px 0 32px; } .legal-content { font-size: 16px; } }
+  </style>
+</head>
+<body>
+<!-- HEADER -->
+<header class="site-header" data-site-header>
+  <div class="site-header__inner">
+
+    <a class="site-header__logo" href="/" aria-label="Allybi">
+      <img src="assets/images/allybi-logo.svg" alt="Allybi" width="42" height="42">
+    </a>
+
+    <nav class="site-header__desktop-nav" aria-label="Navegação principal">
+      <a href="/how-it-works.html" class="site-header__nav-link">Como funciona</a>
+      <a href="/security-overview.html" class="site-header__nav-link">Segurança</a>
+
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-ferramentas" aria-haspopup="true">Ferramentas<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-ferramentas" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/tempo.html"><span class="site-header__dropdown-title">Tempo perdido</span><span class="site-header__dropdown-desc">Calcule o tempo invisível.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/diagnostico.html"><span class="site-header__dropdown-title">Diagnóstico do fluxo</span><span class="site-header__dropdown-desc">Mapeie onde o time trava.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/metodologia.html"><span class="site-header__dropdown-title">Metodologia</span><span class="site-header__dropdown-desc">Como calculamos.</span></a>
+        </div>
+      </div>
+      <a href="/pricing.html" class="site-header__nav-link">Preços</a>
+      <a href="/about.html" class="site-header__nav-link">Sobre</a>
+    </nav>
+
+    <div class="site-header__desktop-actions">
+      <a href="https://app.allybi.com.br" class="site-header__signin">Entrar</a>
+      <a href="https://app.allybi.com.br" class="site-header__cta">Começar grátis</a>
+    </div>
+
+    <button class="site-header__menu-button" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" data-mobile-menu-toggle>
+      <span class="site-header__menu-line"></span>
+      <span class="site-header__menu-line"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true" inert>
+  <div class="mobile-menu__top">
+    <a class="mobile-menu__logo" href="/" aria-label="Allybi"><img src="assets/images/allybi-logo.svg" alt="Allybi" width="38" height="38"></a>
+    <button class="mobile-menu__close" type="button" aria-label="Fechar menu" data-mobile-menu-close>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu__body">
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">O Allybi</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/how-it-works.html">Como funciona<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/security-overview.html">Segurança<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Ferramentas</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/tempo.html">Tempo perdido<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/diagnostico.html">Diagnóstico do fluxo<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/metodologia.html">Metodologia<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Empresa</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/pricing.html">Preços<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/about.html">Sobre<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/pricing.html#faq">FAQ<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/contact.html">Contato<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <div class="mobile-menu__actions">
+      <a href="https://app.allybi.com.br" class="mobile-menu__primary">Começar grátis</a>
+      <a href="https://app.allybi.com.br" class="mobile-menu__secondary">Entrar</a>
+    </div>
+    <p class="mobile-menu__note">30 dias grátis. Depois R$170/mês. Cancele quando quiser.</p>
+  </div>
+</div>
+<script src="allybi-header.js"></script>
+<script src="allybi-animations.js"></script>
+
+<main id="terms-page">
+<section class="legal-hero">
+  <div class="allybi-container">
+    <div class="legal-eyebrow">Jur&#237;dico</div>
+    <h1 class="legal-h1">Pol&#237;tica de Uso Aceit&#225;vel</h1>
+    <p class="legal-summary">O que n&#227;o pode ser feito no Allybi, incluindo uso ilegal, abuso da plataforma, tentativa de acesso n&#227;o autorizado e envio de conte&#250;do proibido.</p>
+    <div class="legal-meta">
+      <span>&#218;ltima atualiza&#231;&#227;o: April 30, 2026</span>
+      <span>Vers&#227;o: 2.0</span>
+    </div>
+  </div>
+</section>
+
+<section class="legal-body">
+  <div class="allybi-container">
+    <div class="legal-content">
+      <div class="legal-notice">
+        Esta p&#225;gina cont&#233;m texto jur&#237;dico em ingl&#234;s enquanto a vers&#227;o em portugu&#234;s passa por revis&#227;o. Em caso de d&#250;vida, entre em contato com o Allybi.
+      </div>
+
+      <h2 id="section-1">1. Purpose and Introduction</h2>
+      <p>This Acceptable Use Policy (&ldquo;AUP&rdquo; or &ldquo;Policy&rdquo;) establishes the rules, guidelines, and standards governing the use of Allybi, a secure document management and AI assistant platform operated by Camasmie Gillet Inc., a Delaware corporation (&ldquo;Company,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;). This Policy applies to all users of the Allybi Service, including the web platform and all related services (collectively, the &ldquo;Service&rdquo; or &ldquo;Platform&rdquo;).</p>
+      <p>The purpose of this AUP is to ensure that all users utilize the Allybi Service in a manner that is legal, ethical, secure, and respectful of others&rsquo; rights and interests. This Policy is designed to protect the integrity, security, and availability of our Service while fostering a professional environment that enables productive document management and AI-assisted workflows.</p>
+      <p>By accessing or using the Allybi Service, you acknowledge that you have read, understood, and agree to comply with this Acceptable Use Policy. Your use of the Service constitutes acceptance of these terms and your commitment to abide by the standards set forth herein. Violation of this Policy may result in immediate suspension or termination of your access to the Service, as well as potential legal action.</p>
+      <p>This AUP works in conjunction with our Terms of Service and Privacy Policy to provide a comprehensive framework for the responsible use of our Platform. Where conflicts may arise between these documents, the Terms of Service shall take precedence, followed by this AUP, and then the Privacy Policy for privacy-specific matters.</p>
+      <p>We reserve the right to modify this Policy at any time to address evolving security threats, legal requirements, technological changes, or operational needs. Material changes will be communicated to users through appropriate channels, including email notifications and in-service announcements. Continued use of the Service after such modifications constitutes acceptance of the updated Policy.</p>
+
+      <h2 id="section-2">2. Scope and Application</h2>
+      <p>This Acceptable Use Policy applies comprehensively to all aspects of the Allybi Service and all individuals who interact with our Platform in any capacity. The scope of this Policy encompasses all users regardless of account type, subscription level, geographic location, or method of access to the Service.</p>
+
+      <h3>2.1 Covered Users</h3>
+      <p>This Policy applies to all categories of users, including individual subscribers who use Allybi for personal document management and productivity enhancement, business users who utilize the Service for professional document workflows and collaboration, team administrators who manage organizational accounts and user permissions, guest users who access shared documents or collaborate on projects, and any third parties who interact with content or features through the Allybi Platform.</p>
+      <p>The Policy extends to all user activities within the Service environment, including but not limited to uploading, storing, organizing, and managing documents of any type or format; utilizing AI Assistant features for document analysis, summarization, and insights; sharing documents and collaborating with other users; accessing and downloading content from the Platform; communicating through any Service-provided messaging or collaboration tools; and integrating third-party applications or services with the Allybi Platform.</p>
+
+      <h3>2.2 Covered Systems and Resources</h3>
+      <p>This AUP governs the use of all Allybi systems, infrastructure, and resources, including the core document management platform accessible through web browsers; AI Assistant services and all related artificial intelligence and machine learning capabilities; cloud storage infrastructure and all associated data processing systems; collaboration tools and sharing mechanisms; user authentication and account management systems; customer support channels and communication platforms; and any APIs, integrations, or third-party services connected to the Allybi Platform.</p>
+      <p>The Policy also covers all data and content within the Allybi ecosystem, including user-uploaded documents, files, and media of all formats; AI-generated insights, summaries, and analysis results; user account information and profile data; collaboration and sharing activity logs; system-generated metadata and usage analytics; and any derivative works or processed content created through the Service.</p>
+
+      <h3>2.3 Geographic and Legal Jurisdiction</h3>
+      <p>This Policy applies to all users regardless of their geographic location, while acknowledging that users must also comply with all applicable local, state, national, and international laws and regulations in their respective jurisdictions. Users are responsible for ensuring that their use of the Allybi Service complies with all applicable legal requirements in their location, including but not limited to data protection and privacy laws, intellectual property regulations, professional licensing requirements, industry-specific compliance standards, and export control and trade restriction laws.</p>
+      <p>Where local laws conflict with the provisions of this Policy, users must comply with the more restrictive requirements and immediately notify Allybi of any such conflicts. The Company reserves the right to restrict or terminate access to the Service in jurisdictions where compliance with local laws would conflict with our operational requirements or legal obligations.</p>
+
+      <h2 id="section-3">3. Prohibited Content</h2>
+      <p>Users are strictly prohibited from uploading, storing, sharing, or otherwise introducing any content to the Allybi Platform that violates legal standards, ethical guidelines, or the rights of others. The following categories of content are explicitly forbidden and will result in immediate enforcement action.</p>
+
+      <h3>3.1 Illegal and Harmful Content</h3>
+      <p>Users must not upload or share any content that is illegal under applicable federal, state, local, or international laws. This prohibition includes but is not limited to content that constitutes or promotes criminal activity, including fraud, theft, money laundering, or other financial crimes; terrorism, violence, or threats against individuals, groups, or institutions; child exploitation, abuse, or any content involving minors in inappropriate contexts; human trafficking or exploitation of vulnerable populations; drug trafficking, illegal weapons sales, or other contraband distribution; and any content that violates export control laws or trade restrictions.</p>
+      <p>Content that is defamatory, libelous, or intentionally false and damaging to individuals or organizations is strictly prohibited. This includes fabricated documents, falsified records, manipulated evidence intended to deceive, and any content designed to spread misinformation or disinformation that could cause harm to individuals, organizations, or public welfare.</p>
+      <p>Obscene, pornographic, or sexually explicit content is not permitted on the Platform, regardless of the legal status of such content in the user&rsquo;s jurisdiction. This prohibition extends to any content that sexualizes minors, promotes non-consensual sexual activities, or contains graphic sexual imagery or descriptions that would be inappropriate in a professional document management environment.</p>
+
+      <h3>3.2 Intellectual Property Violations</h3>
+      <p>The Allybi Platform must not be used to store, share, or distribute content that infringes upon the intellectual property rights of others. Users are prohibited from uploading copyrighted materials without proper authorization from the copyright holder, including but not limited to books, articles, research papers, software, music, videos, images, and any other creative works protected by copyright law.</p>
+      <p>Trademark infringement is similarly prohibited, including the unauthorized use of registered trademarks, service marks, trade names, logos, or other proprietary identifiers in a manner that could cause confusion or dilute the value of the trademark. Users must not upload content that violates patent rights, trade secrets, or other proprietary information belonging to third parties.</p>
+      <p>This prohibition extends to content that facilitates intellectual property infringement, such as instructions for circumventing copyright protection measures, unauthorized software activation keys or license circumvention tools, and any content that promotes or enables the unauthorized distribution of protected intellectual property.</p>
+
+      <h3>3.3 Privacy and Confidentiality Violations</h3>
+      <p>Users must not upload or share personal information of others without proper authorization and legal basis. This includes personally identifiable information such as social security numbers, financial account information, medical records, private communications, and any other sensitive personal data that individuals have a reasonable expectation to keep private.</p>
+      <p>Confidential business information, trade secrets, proprietary data, and other sensitive commercial information must not be uploaded without proper authorization from the owning organization. This prohibition includes internal company documents, strategic plans, financial records, customer lists, and any other information that could provide competitive advantage or cause harm if disclosed.</p>
+      <p>Users who handle regulated data types, such as protected health information under HIPAA, financial data under PCI DSS, or educational records under FERPA, must ensure that their use of the Allybi Platform complies with all applicable regulatory requirements and that they have proper authorization to store such information in cloud-based systems.</p>
+
+      <h3>3.4 Malicious and Harmful Code</h3>
+      <p>The Platform must not be used to store, distribute, or execute any form of malicious software or code. This prohibition includes computer viruses, worms, trojans, ransomware, spyware, adware, keyloggers, rootkits, and any other software designed to damage, disrupt, or gain unauthorized access to computer systems or networks.</p>
+      <p>Users are prohibited from uploading files that contain embedded malicious code, even if the primary purpose of the file appears legitimate. This includes documents with malicious macros, infected media files, compromised software installers, and any other files that could pose security risks to the Platform or other users.</p>
+      <p>Content designed to facilitate hacking, unauthorized access, or other cybersecurity attacks is strictly forbidden. This includes hacking tools, exploit code, password cracking utilities, network scanning tools when used for malicious purposes, and instructional materials that provide detailed guidance for conducting unauthorized access or attacks against computer systems.</p>
+
+      <h2 id="section-4">4. Prohibited Conduct</h2>
+      <p>Beyond content restrictions, users must adhere to strict behavioral standards when using the Allybi Service. The following activities and behaviors are explicitly prohibited and will result in immediate enforcement action.</p>
+
+      <h3>4.1 Unauthorized Access and Security Violations</h3>
+      <p>Users are strictly prohibited from attempting to gain unauthorized access to any aspect of the Allybi Platform, other user accounts, or underlying systems and infrastructure. This prohibition includes attempting to bypass authentication mechanisms, exploit security vulnerabilities, or use any means other than the provided user interface to access the Service.</p>
+      <p>Password sharing, account sharing, or any other form of unauthorized credential use is forbidden. Each user account is intended for use by a single individual, and users are responsible for maintaining the security and confidentiality of their login credentials. Users must not attempt to access accounts belonging to other users, even with permission, except through properly authorized sharing and collaboration features.</p>
+      <p>Probing, scanning, or testing the security of the Allybi Platform without explicit written authorization is prohibited. This includes vulnerability scanning, penetration testing, network reconnaissance, and any other activities designed to identify or exploit security weaknesses. Users who discover security vulnerabilities must report them immediately through proper channels rather than attempting to exploit or publicize them.</p>
+      <p>Social engineering attacks against Allybi employees, contractors, or other users are strictly forbidden. This includes phishing attempts, pretexting, baiting, and any other deceptive practices designed to obtain unauthorized access to systems, accounts, or sensitive information.</p>
+
+      <h3>4.2 Service Disruption and Abuse</h3>
+      <p>Users must not engage in any activities that disrupt, degrade, or interfere with the normal operation of the Allybi Service or the experience of other users. This prohibition includes distributed denial of service (DDoS) attacks, flooding the Service with excessive requests, automated scraping or crawling beyond normal usage patterns, and any other activities that consume excessive system resources or bandwidth.</p>
+      <p>Spamming other users through any Service communication channels is strictly prohibited. This includes sending unsolicited commercial messages, bulk communications, repetitive content, and any other communications that could be considered harassment or abuse. Users must respect the communication preferences of others and use Service messaging features only for legitimate collaboration and business purposes.</p>
+      <p>Attempting to reverse engineer, decompile, disassemble, or otherwise derive the source code of the Allybi Platform is forbidden. Users must not attempt to create derivative works based on the Service, copy or replicate Service functionality, or use any automated tools to extract or harvest data from the Platform beyond normal document management activities.</p>
+      <p>Reselling, redistributing, or providing unauthorized commercial access to the Allybi Service is prohibited. Users must not sublicense their access to the Platform, create unauthorized third-party applications that access the Service, or use the Platform to provide competing services to other parties.</p>
+
+      <h3>4.3 Misrepresentation and Fraud</h3>
+      <p>Users must not misrepresent their identity, affiliation, or authority when using the Allybi Service. This includes creating false accounts, impersonating other individuals or organizations, claiming unauthorized credentials or qualifications, and providing false information during account registration or verification processes.</p>
+      <p>Fraudulent activities of any kind are strictly prohibited, including using the Service to facilitate financial fraud, identity theft, credit card fraud, or any other deceptive practices designed to obtain money, property, or services through false pretenses. Users must not upload or share documents that facilitate fraudulent activities or contain falsified information intended to deceive others.</p>
+      <p>Manipulation of Service features or data for deceptive purposes is forbidden. This includes artificially inflating usage metrics, creating fake collaboration activities, manipulating AI Assistant results through deceptive inputs, and any other activities designed to mislead other users or the Service operators about actual usage patterns or content.</p>
+
+      <h3>4.4 Harassment and Abuse</h3>
+      <p>The Allybi Platform must be used in a manner that respects the dignity and rights of all users. Harassment, bullying, intimidation, or any other form of abusive behavior toward other users is strictly prohibited. This includes sending threatening or intimidating messages, sharing content intended to embarrass or humiliate others, engaging in discriminatory behavior based on protected characteristics, and any other conduct that creates a hostile or unwelcoming environment.</p>
+      <p>Stalking or persistent unwanted contact with other users is forbidden, whether through Service communication features or by repeatedly sharing unwanted content or collaboration requests. Users must respect the boundaries and preferences of others and cease contact when requested to do so.</p>
+      <p>Doxxing, or the sharing of private personal information about other users without their consent, is strictly prohibited. This includes sharing contact information, location data, personal details, or any other information that could be used to identify, contact, or harass individuals outside of the Platform.</p>
+
+      <h2 id="section-5">5. Connected Accounts and Third-Party Integrations</h2>
+      <p>Allybi enables users to connect their accounts to third-party services and platforms to enhance functionality and streamline workflows. Users who choose to integrate third-party services with Allybi must understand their responsibilities and comply with all applicable terms and policies.</p>
+
+      <h3>5.1 Integration Authorization and Responsibility</h3>
+      <p>Users may connect Allybi to third-party services including Outlook, OneDrive, SharePoint, Google Drive, and WhatsApp, as well as other authorized integrations. When connecting these services, users are responsible for having the legal right and permission to connect and process the data from these services. Users must ensure that they have proper authorization from their organization, employer, or data owner before connecting any third-party service to Allybi.</p>
+      <p>Users must not use Allybi to bypass provider access controls, scrape integrations beyond authorized use, generate fraudulent legal or financial documents, impersonate others in prepared messages, use connected accounts to spam, or violate third-party platform rules.</p>
+      <p>Users must comply with the terms of service, privacy policies, and acceptable use policies of all third-party services they choose to integrate with Allybi. Users are solely responsible for understanding and adhering to any restrictions or requirements imposed by these third-party providers.</p>
+
+      <h3>5.2 Security and Access Control Restrictions</h3>
+      <p>Users are prohibited from attempting to bypass security controls, rate limits, or permission restrictions in third-party services through their use of Allybi. Users must not use Allybi to circumvent access controls or authorization mechanisms implemented by third-party providers.</p>
+      <p>Connected content, including messages, emails, attachments, and files imported from third-party services, is treated as &ldquo;User Content&rdquo; under this Acceptable Use Policy and must comply with all prohibited content and conduct restrictions outlined in Sections 3 and 4.</p>
+
+      <h3>5.3 Third-Party Data Processing</h3>
+      <p>When users connect third-party services to Allybi, data from those services may be processed, analyzed, and stored within Allybi&rsquo;s systems. Users acknowledge that Allybi will handle this data in accordance with its Privacy Policy and applicable data protection laws. Users are responsible for ensuring that any processing of third-party service data complies with the terms and policies of those services.</p>
+
+      <h2 id="section-6">6. Email and Messaging Integrations</h2>
+      <p>Allybi&rsquo;s integration with email and messaging platforms enables users to import, analyze, and manage communications within the Service. These integrations are subject to specific acceptable use requirements to protect user privacy and prevent misuse.</p>
+
+      <h3>6.1 Prohibited Email and Messaging Activities</h3>
+      <p>Users are strictly prohibited from using Allybi&rsquo;s email and messaging integrations to engage in spam, unsolicited messaging, or harassment. This includes using the Service to send bulk emails, create automated messaging campaigns without proper consent, or use email integration features to contact individuals who have not opted in to receive communications.</p>
+      <p>Phishing, fraud, or deceptive impersonation through email or messaging integrations is strictly forbidden. Users must not use these integrations to create fraudulent emails, impersonate other individuals or organizations, or conduct social engineering attacks.</p>
+      <p>Unauthorized monitoring, interception, or harvesting of emails or messages is prohibited. Users must not use Allybi to monitor communications of other individuals without proper authorization, intercept messages intended for others, or harvest email addresses or contact information for unauthorized purposes.</p>
+
+      <h3>6.2 Data Export and Sharing Restrictions</h3>
+      <p>Exporting or sharing third-party data (such as emails from Outlook, or data from other connected sources) without authorization is strictly prohibited. Users must not use Allybi to extract and redistribute data from connected email or messaging services without proper consent from the data owner and compliance with applicable policies.</p>
+
+      <h3>6.3 Employer and Contractual Compliance</h3>
+      <p>Users must not use Allybi&rsquo;s email and messaging integrations in a manner that violates their employer&rsquo;s policies, contractual duties, confidentiality obligations, or privacy rights of others. Users are responsible for ensuring that their use of these integrations complies with all applicable employment agreements, organizational policies, and legal obligations.</p>
+
+      <h2 id="section-7">7. Document Analysis, Import, and Response Preparation</h2>
+      <p>Allybi helps users search across documents and connected sources, compare versions, find the right clause or attachment, prepare responses, and review before anything is sent. The following acceptable use rules apply to these workflows.</p>
+
+      <h3>7.1 Prohibited Editing Activities</h3>
+      <p>Users must not upload documents containing malware, malicious macros, or harmful code. This includes files with embedded malicious scripts, or any other code intended to compromise security or damage systems.</p>
+      <p>Unauthorized alteration of records, falsification of data, or deceptive manipulation of documents is strictly prohibited. Users must not use Allybi to create fraudulent documents, falsify records, manipulate data to deceive others, or create documents intended to misrepresent facts or circumstances.</p>
+
+      <h3>7.2 Intellectual Property and AI-Generated Content</h3>
+      <p>Users must not use Allybi&rsquo;s editing features to upload, create, or distribute content that infringes intellectual property rights. This includes creating documents that contain unauthorized copyrighted material, trademark violations, or other IP infringement.</p>
+      <p>Misuse of AI-generated edits is prohibited. Users must not misrepresent AI-generated work as verified professional advice, original human work, or certified expertise. When using AI-assisted editing features, users must clearly disclose the use of AI assistance and take responsibility for verifying accuracy and appropriateness of AI-generated content.</p>
+
+      <h2 id="section-8">8. AI Assistant Usage Guidelines</h2>
+      <p>The Allybi AI Assistant represents a powerful tool for document analysis and productivity enhancement, but its use must be governed by strict ethical and security guidelines to protect user privacy, ensure accuracy, and maintain the integrity of the Service.</p>
+
+      <h3>8.1 Data Privacy and Confidentiality</h3>
+      <p>Users must exercise extreme caution when utilizing AI Assistant features with sensitive, confidential, or regulated information. While Allybi implements robust privacy protections and does not use user content to train AI models or benefit other users, users remain responsible for ensuring that their use of AI features complies with all applicable privacy laws, professional obligations, and organizational policies.</p>
+      <p>Highly sensitive information, such as personally identifiable information of third parties, protected health information, financial account details, legal privileged communications, classified or restricted government information, and trade secrets or proprietary business information, should only be processed through AI Assistant features when users have confirmed that such processing is legally permissible and professionally appropriate.</p>
+      <p>Users in regulated industries or professions must ensure that their use of AI Assistant features complies with all applicable regulatory requirements, including HIPAA for healthcare information, FERPA for educational records, PCI DSS for payment card information, and any other industry-specific data protection standards. When in doubt, users should consult with their legal or compliance teams before processing sensitive information through AI features.</p>
+
+      <h3>8.2 Accuracy and Reliability Considerations</h3>
+      <p>AI Assistant features are designed to provide helpful insights and analysis, but users must understand that AI-generated content is not infallible and should not be relied upon as the sole source of information for critical decisions. AI systems can make errors, exhibit biases, or produce results that are incomplete or contextually inappropriate.</p>
+      <p>Users are responsible for reviewing, verifying, and validating all AI-generated insights, summaries, and recommendations before relying on them for important business decisions, legal matters, medical diagnoses, financial planning, or any other consequential activities. AI Assistant features should be used as a supportive tool to enhance human judgment and analysis, not as a replacement for professional expertise or critical thinking.</p>
+      <p>When using AI Assistant features for professional purposes, users should maintain appropriate documentation of their review and validation processes, particularly in regulated industries where audit trails and decision-making processes may be subject to regulatory scrutiny. Users should also be prepared to explain and justify their reliance on AI-generated insights when required by professional standards or legal obligations.</p>
+
+      <h3>8.3 Prohibited AI Usage</h3>
+      <p>Certain uses of AI Assistant features are strictly prohibited due to ethical, legal, or safety concerns. Users must not attempt to use AI features to generate illegal content, create deceptive or fraudulent materials, produce content that violates intellectual property rights, develop harmful or malicious code or instructions, create content intended to harass, threaten, or harm others, or generate content that promotes discrimination or bias against protected groups.</p>
+      <p>Users are prohibited from attempting to manipulate or deceive AI Assistant features through adversarial inputs, prompt injection attacks, or other techniques designed to produce inappropriate or harmful outputs. Such activities not only violate this Policy but may also compromise the security and reliability of the Service for all users.</p>
+      <p>The AI Assistant must not be used to make fully automated decisions that have legal or similarly significant effects on individuals without appropriate human oversight and intervention. While AI insights can inform decision-making processes, final decisions that affect employment, credit, housing, healthcare, or other significant life areas must involve meaningful human review and consideration.</p>
+
+      <h3>8.4 Transparency and Disclosure</h3>
+      <p>When sharing AI-generated content or insights with others, users should provide appropriate disclosure that the content was produced with AI assistance. This transparency is particularly important in professional contexts where the source and methodology of analysis may be relevant to the recipient&rsquo;s evaluation and use of the information.</p>
+      <p>Users should maintain awareness of the capabilities and limitations of AI Assistant features and communicate these limitations appropriately when sharing AI-generated insights with colleagues, clients, or other stakeholders. Overstating the capabilities or reliability of AI-generated content could lead to inappropriate reliance and poor decision-making by others.</p>
+      <p>In academic, research, or professional contexts where the methodology of analysis is important, users should document their use of AI Assistant features and be prepared to explain how AI-generated insights were integrated into their work and what validation or verification processes were employed.</p>
+
+      <h2 id="section-9">9. Professional and Legal Compliance</h2>
+      <p>Users of the Allybi Service must ensure that their use of the Platform complies with all applicable professional standards, legal requirements, and regulatory obligations in their respective jurisdictions and industries.</p>
+
+      <h3>9.1 Professional Standards and Ethics</h3>
+      <p>Users who are subject to professional licensing requirements, codes of ethics, or industry standards must ensure that their use of the Allybi Service complies with all such obligations. This includes maintaining client confidentiality as required by professional ethics rules, protecting privileged communications and work product, complying with professional record-keeping and documentation requirements, adhering to conflict of interest rules and disclosure obligations, and maintaining the integrity and security of professional work product.</p>
+      <p>Legal professionals must ensure that their use of the Platform complies with attorney-client privilege requirements, professional responsibility rules, court orders and litigation holds, and any other legal obligations specific to the practice of law. Healthcare professionals must comply with HIPAA and other healthcare privacy regulations, medical record-keeping requirements, and professional standards for patient information protection.</p>
+      <p>Financial services professionals must adhere to SEC regulations, FINRA rules, banking regulations, and other financial industry compliance requirements. Users in other regulated industries must similarly ensure compliance with all applicable professional and regulatory standards.</p>
+
+      <h3>9.2 International and Cross-Border Compliance</h3>
+      <p>Users who operate across international borders or handle information subject to multiple jurisdictions must ensure compliance with all applicable laws and regulations. This includes data protection and privacy laws such as GDPR, CCPA, PIPEDA, and other regional privacy regulations; export control and trade restriction laws; international sanctions and embargo requirements; and cross-border data transfer restrictions.</p>
+      <p>Users must be particularly careful when sharing documents or collaborating with individuals in different countries, as such activities may trigger additional legal obligations or restrictions. When in doubt, users should consult with legal counsel to ensure compliance with all applicable international requirements.</p>
+
+      <h3>9.3 Organizational Policies and Procedures</h3>
+      <p>Users who access the Allybi Service through organizational accounts or for business purposes must ensure compliance with all applicable organizational policies, procedures, and guidelines. This includes information security policies, data classification and handling procedures, document retention and destruction policies, acceptable use policies for technology resources, and any other organizational requirements that may apply to the use of cloud-based services.</p>
+      <p>Users should coordinate with their organization&rsquo;s IT, legal, and compliance teams to ensure that their use of the Allybi Service is properly authorized and compliant with all organizational requirements. Organizations may impose additional restrictions or requirements beyond those set forth in this Policy, and users are responsible for complying with such additional requirements.</p>
+
+      <h2 id="section-10">10. Security Responsibilities</h2>
+      <p>All users share responsibility for maintaining the security and integrity of the Allybi Platform. Users must take appropriate measures to protect their accounts, data, and the broader Service community from security threats and vulnerabilities.</p>
+
+      <h3>10.1 Account Security</h3>
+      <p>Users are responsible for maintaining the security of their Allybi accounts and must take appropriate measures to prevent unauthorized access. This includes creating strong, unique passwords that are not used for other services; enabling multi-factor authentication when available; keeping login credentials confidential and not sharing them with others; regularly reviewing account activity and reporting suspicious behavior; and promptly updating account information when circumstances change.</p>
+      <p>Users must immediately report any suspected unauthorized access to their accounts, any suspicious activity or communications related to their Allybi account, any potential security vulnerabilities they discover, and any loss or theft of devices that contain Allybi login credentials or access to Allybi data.</p>
+
+      <h3>10.2 Data Protection</h3>
+      <p>Users must implement appropriate measures to protect the confidentiality, integrity, and availability of data stored in the Allybi Platform. This includes classifying data according to sensitivity and implementing appropriate handling procedures; encrypting sensitive data when required by law or organizational policy; implementing appropriate access controls and sharing restrictions; regularly backing up critical data and testing recovery procedures; and monitoring for unauthorized access or data breaches.</p>
+      <p>Users should be particularly careful when accessing the Allybi Service from public or shared computers, unsecured networks, or mobile devices that may be lost or stolen. Appropriate security measures should be implemented to protect against unauthorized access in these higher-risk environments.</p>
+
+      <h3>10.3 Incident Reporting</h3>
+      <p>Users must promptly report any security incidents, policy violations, or suspicious activities to Allybi support. This includes any suspected unauthorized access to user accounts or data, any malicious content discovered on the Platform, any attempts to compromise the security of the Service, any violations of this Policy by other users, and any other activities that may pose a risk to the security or integrity of the Platform.</p>
+      <p>When reporting security incidents, users should provide as much detail as possible while avoiding actions that could compromise evidence or exacerbate the situation. Users should not attempt to investigate or remediate security incidents on their own unless specifically instructed to do so by Allybi support personnel.</p>
+
+      <h2 id="section-11">11. Monitoring and Enforcement</h2>
+      <p>Allybi reserves the right to monitor user activities on the Platform to ensure compliance with this Policy, protect the security and integrity of the Service, and fulfill legal and regulatory obligations.</p>
+
+      <h3>11.1 Monitoring Activities</h3>
+      <p>Allybi may monitor user activities through various means, including automated systems that scan for prohibited content or suspicious behavior, analysis of usage patterns and system logs, review of user-reported violations or security incidents, and investigation of suspected policy violations or security threats.</p>
+      <p>Monitoring activities are conducted in accordance with applicable privacy laws and Allybi&rsquo;s Privacy Policy, with appropriate safeguards to protect user privacy and confidentiality. Users consent to such monitoring as a condition of using the Service, while understanding that monitoring does not guarantee the detection or prevention of all policy violations or security threats.</p>
+
+      <h3>11.2 Investigation Procedures</h3>
+      <p>When potential policy violations are identified, Allybi may conduct investigations to determine the facts and appropriate response. Investigation procedures include preserving relevant evidence and system logs, interviewing affected users and witnesses, analyzing technical data and system activity, consulting with legal counsel and law enforcement when appropriate, and documenting findings and remedial actions.</p>
+      <p>Users are expected to cooperate fully with policy violation investigations, including providing requested information and documentation, participating in interviews when requested, preserving relevant evidence and refraining from actions that could compromise the investigation, and complying with any interim restrictions or requirements imposed during the investigation process.</p>
+
+      <h3>11.3 Enforcement Actions</h3>
+      <p>Violations of this Policy may result in various enforcement actions, depending on the severity and nature of the violation, the user&rsquo;s history of compliance, and the potential impact on other users or the Service. Enforcement actions may include warning notifications and educational communications, temporary restrictions on account features or functionality, temporary suspension of account access, permanent termination of account and Service access, removal of violating content from the Platform, reporting to law enforcement or regulatory authorities, and legal action to recover damages or obtain injunctive relief.</p>
+      <p>Allybi reserves the right to take immediate action to protect the Service and other users, including emergency suspension of accounts or removal of content, without prior notice when circumstances warrant such action. Users will be notified of enforcement actions as soon as reasonably practicable, along with information about appeal procedures when applicable.</p>
+
+      <h2 id="section-12">12. Appeals and Dispute Resolution</h2>
+      <p>Users who believe that enforcement actions have been taken in error or who wish to contest policy interpretations may utilize the appeals and dispute resolution procedures outlined in this section.</p>
+
+      <h3>12.1 Appeal Process</h3>
+      <p>Users may appeal enforcement actions by submitting a written appeal to Allybi support within thirty (30) days of receiving notice of the enforcement action. Appeals must include a detailed explanation of why the user believes the enforcement action was inappropriate or incorrect, any relevant evidence or documentation supporting the appeal, and a statement of the relief requested.</p>
+      <p>Allybi will review appeals in good faith and provide a written response within a reasonable time period. The appeal review process may include re-examination of the original evidence and investigation findings, consideration of additional evidence provided by the user, consultation with relevant technical and legal experts, and evaluation of the appropriateness of the enforcement action taken.</p>
+
+      <h3>12.2 Dispute Resolution</h3>
+      <p>Disputes arising under this Policy that cannot be resolved through the appeal process may be subject to the dispute resolution procedures set forth in the Allybi Terms of Service. Users are encouraged to work with Allybi support to resolve disputes informally before pursuing formal dispute resolution procedures.</p>
+
+      <h2 id="section-13">13. Policy Updates and Modifications</h2>
+      <p>This Acceptable Use Policy may be updated from time to time to address evolving security threats, legal requirements, technological changes, or operational needs. Material changes to the Policy will be communicated to users through appropriate channels, including email notifications and prominent notices within the Service interface.</p>
+      <p>Users are responsible for reviewing Policy updates and ensuring continued compliance with the current version. Continued use of the Service after Policy updates constitutes acceptance of the modified terms. Users who do not agree with Policy modifications may discontinue use of the Service and terminate their accounts.</p>
+
+      <h2 id="section-14">14. Contact Information</h2>
+      <p>For questions about this Acceptable Use Policy, to report policy violations, or to request clarification of Policy requirements, please contact:</p>
+      <p><strong>Email:</strong> info@allybi.co<br><strong>Company:</strong> Camasmie Gillet Inc.<br><strong>Jurisdiction:</strong> Delaware, United States</p>
+      <p>When contacting support regarding policy matters, please provide as much detail as possible about your question or concern, including relevant account information, specific Policy provisions at issue, and any supporting documentation or evidence.</p>
+      <p><strong>Effective Date:</strong> April 30, 2026<br><strong>Last Updated:</strong> April 30, 2026<br><strong>Version:</strong> 2.0</p>
+      <p>This Acceptable Use Policy is designed to ensure that the Allybi Service remains a secure, professional, and productive environment for all users. We appreciate your cooperation in maintaining these standards and contributing to a positive user experience for the entire Allybi community.</p>
+    </div>
+    <div class="legal-back-top">
+      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">&#8593; Voltar ao topo</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="site-footer__wordmark-link" href="/"><span class="site-footer__wordmark">Allybi</span></a>
+      <p class="site-footer__tagline">Um chat para encontrar, confirmar e enviar o documento certo.</p>
+    </div>
+    <nav class="site-footer__nav" aria-label="Rodapé">
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">O Allybi</h3>
+        <div class="site-footer__links">
+          <a href="/how-it-works.html">Como funciona</a>
+          <a href="/security-overview.html">Segurança</a>
+        </div>
+      </div>
+
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Ferramentas</h3>
+        <div class="site-footer__links">
+          <a href="/tempo.html">Tempo perdido</a>
+          <a href="/diagnostico.html">Diagnóstico do fluxo</a>
+          <a href="/metodologia.html">Metodologia</a>
+        </div>
+      </div>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Empresa</h3>
+        <div class="site-footer__links">
+          <a href="/pricing.html">Preços</a>
+          <a href="/about.html">Sobre</a>
+          <a href="/pricing.html#faq">FAQ</a>
+          <a href="/contact.html">Contato</a>
+        </div>
+      </div>
+    </nav>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">© 2026 Allybi. Todos os direitos reservados.</p>
+      <div class="site-footer__legal">
+        <a href="/terms.html">Termos</a>
+        <a href="/privacy.html">Privacidade</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

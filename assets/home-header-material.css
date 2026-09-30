@@ -1,0 +1,119 @@
+/* Landing composition; palette, surfaces and dropdown anatomy from workspace. */
+.site-header {
+ --header-floating:0;
+ --header-motion:380ms;
+ --header-ease:cubic-bezier(.22,.68,0,1);
+ --header-space:76px;
+ --header-rest-inset:0px;
+ --header-inset:max(16px, calc((100vw - 1080px)/2));
+ --header-edge:calc(var(--header-rest-inset) + (var(--header-inset) - var(--header-rest-inset))*var(--header-floating));
+ --header-lift:10px;
+ --header-float-offset:22px;
+ top:calc(var(--header-float-offset)*var(--header-floating));
+ transition:top var(--header-motion) var(--header-ease); margin:0; height:var(--header-space);
+ border:0; border-radius:0; background:none; box-shadow:none;
+ backdrop-filter:none; -webkit-backdrop-filter:none; isolation:isolate;
+ color: var(--workspace-graphite);
+}
+.site-header[data-floating="true"] { --header-floating:1; }
+html.home-hero-runway-locked .site-header {
+ --header-space:var(--home-hero-latched-header,76px);
+}
+.site-header::before {
+ content:""; position:absolute; pointer-events:none; box-sizing:border-box;
+ inset:calc(var(--header-lift)*var(--header-floating)) var(--header-edge);
+ border:0;
+ /* The attached and lifted states keep one material and lower-edge profile. */
+ border-radius:calc(17px*var(--header-floating)) calc(17px*var(--header-floating)) calc(12px + 5px*var(--header-floating)) calc(12px + 5px*var(--header-floating));
+ background:linear-gradient(180deg,rgba(251,252,253,.96),rgba(247,249,251,.94));
+ /* Depth comes from a broad soft field, never a drawn lower rim. */
+ box-shadow:0 10px 28px -14px rgba(34,45,61,.13);
+ opacity:calc(.12 + .88*var(--header-floating));
+ transition:inset var(--header-motion) var(--header-ease),
+  border-radius var(--header-motion) var(--header-ease),
+  box-shadow var(--header-motion) var(--header-ease),
+  opacity var(--header-motion) var(--header-ease);
+}
+.site-header .site-header__inner {
+ position:relative; max-width:none; height:var(--header-space);
+ transition:padding var(--header-motion) var(--header-ease);
+}
+.site-header__logo { width:44px; height:44px; display:grid; place-items:center; }
+.site-header__logo img {
+ width:calc(44px - 12px*var(--header-floating)); height:calc(44px - 12px*var(--header-floating));
+ transition:width var(--header-motion) var(--header-ease),
+  height var(--header-motion) var(--header-ease);
+}
+.mobile-menu__logo img { width:32px; height:32px; }
+.site-header__nav-trigger, .site-header__nav-link, .site-header__signin,
+.site-header__cta, .site-header__menu-button, .mobile-menu__close {
+ background:none; border:0; border-radius:0; box-shadow:none;
+ color:var(--workspace-muted); transform:none;
+ transition:color var(--workspace-motion-feedback) var(--workspace-ease-standard);
+}
+.site-header__cta { padding:0; color:var(--workspace-graphite); font-weight:650; }
+.site-header__cta:hover, .site-header__cta:active,
+.site-header__menu-button:hover, .mobile-menu__close:hover {
+ background:none; box-shadow:none; transform:none; color:var(--workspace-ink);
+}
+.site-header__nav-trigger:hover, .site-header__nav-trigger[aria-expanded="true"],
+.site-header__nav-link:hover, .site-header__signin:hover { color:var(--workspace-ink); }
+.site-header :focus-visible, .mobile-menu :focus-visible {
+ outline:2px solid var(--workspace-focus-ring); outline-offset:5px;
+}
+.site-header__dropdown-panel {
+ border-radius:var(--workspace-radius-popover);
+ isolation:isolate;
+}
+.site-header__dropdown-item.allybi-dropdown__item { padding:10px 12px; min-height:54px; text-decoration:none; }
+.site-header__dropdown-title { display:block; color:var(--workspace-graphite); font-size:13px; line-height:20px; }
+.site-header__dropdown-desc { display:block; margin-top:3px; color:var(--workspace-muted); font-size:12px; line-height:18px; font-weight:400; }
+.mobile-menu { background:var(--workspace-surface-work); color:var(--workspace-graphite); }
+.mobile-menu__primary, .mobile-menu__secondary {
+ background:none; border:0; border-radius:0; box-shadow:none;
+ color:var(--workspace-graphite); font-weight:650; justify-content:flex-start;
+}
+.mobile-menu__secondary { color:var(--workspace-muted); font-weight:550; }
+@media (min-width:1024px) {
+ .site-header__inner { grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); gap:24px; max-width:none; padding-inline:calc(28px + var(--header-edge)); }
+ .site-header__logo { justify-self:start; }
+ .site-header__desktop-nav { justify-content:center; gap:clamp(18px,2vw,30px); }
+ .site-header__desktop-actions {
+  position:relative; justify-self:end;
+  gap:12px;
+ }
+ .site-header__desktop-actions::before {
+  content:""; position:absolute; width:1px; height:18px; left:-20px; top:50%;
+  background:var(--workspace-line); opacity:1;
+  transform:translateY(-50%);
+  transition:opacity var(--header-motion) var(--header-ease);
+ }
+ .site-header__desktop-actions a { white-space:nowrap; }
+ .site-header__nav-trigger, .site-header__nav-link, .site-header__signin { font-size:13px; font-weight:550; }
+ .site-header__cta { font-size:13px; font-weight:650; letter-spacing:-.15px; }
+ .site-header .site-header__dropdown-panel.allybi-dropdown {
+  display:block; position:absolute; left:0; top:calc(100% + 8px);
+  width:284px; min-width:0; max-width:calc(100vw - 20px);
+  visibility:hidden; opacity:0; pointer-events:none;
+  transform:none; transition:none; padding:0; border:0; background:transparent; box-shadow:none;
+ }
+ .site-header .site-header__dropdown-panel.allybi-dropdown .allybi-dropdown__surface {
+  border:1px solid var(--workspace-edge-popover);
+  border-radius:var(--workspace-radius-popover);
+  background:var(--workspace-surface-popover);
+  box-shadow:var(--workspace-shadow-popover);
+ }
+}
+@media (max-width:1023px) {
+ .site-header { --header-space:64px; --header-rest-inset:0px; --header-inset:12px; --header-lift:4px; --header-float-offset:18px; }
+ .site-header__inner { padding-inline:calc(14px + var(--header-edge)); }
+ .site-header__logo img { width:calc(38px - 6px*var(--header-floating)); height:calc(38px - 6px*var(--header-floating)); }
+}
+@media (max-width:767px) {
+ .site-header { --header-float-offset:14px; }
+}
+@media (prefers-reduced-motion:reduce) {
+ .site-header, .site-header::before, .site-header *, .mobile-menu * { transition:none !important; }
+}
+
+body:has(#home-page) { background-color:#f2f4f6; }

@@ -1,0 +1,51 @@
+{
+  "contact": {
+    "page": {
+      "copied": "Copied.",
+      "copy_email": "Copy email address",
+      "copy_error": "Could not copy. Select the text and copy it manually.",
+      "direct": "Prefer to write directly?",
+      "email": "Your email",
+      "error": "We couldn’t send your message just now. Your text is still here so you can try again.",
+      "handoff": "We’ll reply to the email address you provide.",
+      "intro": "A question, an idea, or something that didn’t work as expected. Tell us about it.",
+      "message": "Your message",
+      "message_placeholder": "Start with what you need.",
+      "optional": "optional",
+      "rate": "You’ve tried a few times. Please wait a few minutes before trying again.",
+      "sending": "Sending…",
+      "subject": "Subject",
+      "subject_placeholder": "What would you like to talk about?",
+      "submit": "Send message",
+      "success": "Your message has been sent. We’ll reply to the email address you provided.",
+      "team": "The Allybi team",
+      "title": "Let’s talk.",
+      "to": "To"
+    }
+  },
+  "home": {
+    "faq": {
+      "a1": "Create your account, upload a file and ask a question about it. You can also start by connecting your email or cloud files.",
+      "a2": "Yes. You can connect Gmail, Outlook, Google Drive, OneDrive and SharePoint. You can also upload files directly to Allybi.",
+      "a3": "Alongside its answer, Allybi shows where the information came from. You can open the file or email and check the passage in context.",
+      "a4": "No. With Outlook, you review and confirm before sending. For WhatsApp, Allybi opens the prepared message in the app, and you decide whether to send it.",
+      "a5": "No. Your files, questions and answers are not used to train artificial intelligence models.",
+      "a6": "Yes, you get 30 days free to use Allybi. After that, the subscription costs R$ 170 per month. You can cancel whenever you want.",
+      "contact": "Talk to us",
+      "q1": "How do I get started?",
+      "q2": "Does it work with Gmail, Outlook and Google Drive?",
+      "q3": "How do I know the answer is right?",
+      "q4": "Will it send messages without asking me?",
+      "q5": "Does Allybi use my files to train AI?",
+      "q6": "Can I try it before paying?",
+      "support": "Still have a question?",
+      "title": "Frequently asked questions"
+    },
+    "final_cta": {
+      "cta": "Try free for 30 days",
+      "micro": "Then R$ 170/month. Cancel anytime.",
+      "support": "Bring that task you left for later. Try working through it with Allybi — and see for yourself.",
+      "title": "Will you want to work the old way?"
+    }
+  }
+}

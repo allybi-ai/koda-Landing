@@ -1,0 +1,10 @@
+/* Light, finite motion. The object has an arrival, a reading position and an exit. */
+.sec-art,.privacy__art,.privacy-proof__visual{--art-enter:1;--art-leave:0}
+@media(prefers-reduced-motion:no-preference){
+ .sec-art>img,.privacy__art>img,.privacy-proof__visual>img{
+  transform:translate3d(0,calc((1 - var(--art-enter))*64px - var(--art-leave)*42px),0) rotate(calc((1 - var(--art-enter))*-5deg + var(--art-leave)*3deg)) scale(calc(.92 + var(--art-enter)*.08 - var(--art-leave)*.04));
+  opacity:calc((.25 + var(--art-enter)*.75)*(1 - var(--art-leave)*.9));
+  transform-origin:50% 60%;
+ }
+}
+@media(prefers-reduced-motion:reduce){.sec-art>img,.privacy__art>img,.privacy-proof__visual>img{transform:none;opacity:1}}

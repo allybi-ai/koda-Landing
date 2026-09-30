@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dj-html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="robots" content="noindex,follow">
+  <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
+  <title>O mapa do seu fluxo | Allybi</title>
+  <link rel="canonical" href="https://allybi.com.br/diagnostico-resultado.html">
+  <link rel="stylesheet" href="assets/tools/allybi-diagnostic-journey.css">
+</head>
+<body class="dj-body dj-body--result">
+  <div class="dj-gradient" data-dj-gradient-layer="base"></div>
+  <div class="dj-gradient" data-dj-gradient-layer="shift" data-dj-active="true"></div>
+  <div class="dj-shell">
+    <div class="dj-topbar"><a class="dj-brand" href="index.html" aria-label="Allybi, página inicial">Allybi<span>Mapa do fluxo</span></a><a class="dj-close" href="index.html" aria-label="Voltar para a página inicial"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></a></div>
+    <main class="dj-result" data-dj-result data-dj-result-kind="flow" data-dj-result-state="hydrating" aria-live="off">
+      <section class="dj-state-panel" data-dj-empty hidden>
+        <p class="dj-eyebrow">Resultado indisponível</p><h1>Não encontramos um resultado válido para abrir.</h1><p>Refaça os sete momentos do fluxo para criar um novo mapa.</p><a class="dj-primary-action" href="diagnostico-questionario.html?restart=1">Começar pelas perguntas</a>
+      </section>
+      <section class="dj-state-panel" data-dj-runtime-error hidden>
+        <p class="dj-eyebrow">Não carregou desta vez</p><h1>Seu mapa não pôde ser exibido.</h1><p>Nenhuma leitura foi inferida. Reabra as perguntas para gerar um novo resultado.</p><a class="dj-primary-action" href="diagnostico-questionario.html?restart=1">Tentar novamente</a>
+      </section>
+      <div class="dj-result__body" data-dj-result-body hidden>
+        <header class="dj-result__hero">
+          <p class="dj-eyebrow">Seu caminho, do pedido ao envio</p>
+          <p class="dj-result__factual" data-dj-result-factual></p>
+          <h1 class="dj-result__value" data-dj-result-value></h1>
+          <p class="dj-result__interpretation" data-dj-result-interpretation></p>
+        </header>
+        <section class="dj-result__path" aria-labelledby="flow-path-title">
+          <div class="dj-section-heading"><p class="dj-eyebrow">O desenho completo</p><h2 id="flow-path-title">Seis etapas públicas, uma linha contínua</h2></div>
+          <div class="dj-result__trail" data-dj-result-path></div>
+          <p class="dj-result__bottleneck" data-dj-result-bottleneck></p>
+        </section>
+        <section class="dj-result__details" data-dj-result-details aria-labelledby="flow-detail-title">
+          <div class="dj-section-heading"><p class="dj-eyebrow">Leitura do mapa</p><h2 id="flow-detail-title">Pontuação, faixa e versão</h2></div>
+          <div class="dj-result__facts" data-dj-result-facts></div>
+          <a class="dj-text-link" href="metodologia.html#fluxo">Ver como pontuamos</a>
+        </section>
+        <section class="dj-result__share" data-dj-result-share aria-labelledby="flow-share-title">
+          <div class="dj-section-heading"><p class="dj-eyebrow">Levar o resumo</p><h2 id="flow-share-title">Compartilhe só o resultado derivado</h2></div>
+          <div class="dj-share-actions"><button type="button" data-dj-share-native>Compartilhar</button><button type="button" data-dj-share-copy>Copiar resumo</button><a data-dj-share-whatsapp href="#" target="_blank" rel="noopener">Abrir no WhatsApp</a></div>
+          <p class="dj-share-feedback" data-dj-share-feedback aria-live="polite"></p>
+        </section>
+        <nav class="dj-result__next" aria-label="Próximas ações"><a class="dj-text-link" data-dj-restart href="diagnostico-questionario.html">Refazer as perguntas</a><a class="dj-text-link" href="tempo.html">Estimar o tempo do caminho</a></nav>
+        <section data-dj-lead hidden><p>Contato indisponível sem um destino real configurado.</p></section>
+      </div>
+    </main>
+  </div>
+  <noscript><style>.dj-shell,.dj-gradient{display:none!important}</style><section class="dj-noscript"><span class="dj-noscript__brand">Allybi</span><h1>JavaScript é necessário para abrir este resultado.</h1><p>Sem JavaScript, nenhum valor é lido ou estimado.</p><nav><a href="index.html">Voltar para a página inicial</a><a href="metodologia.html">Ver a metodologia</a></nav></section></noscript>
+  <script src="assets/tools/allybi-tools-data.js"></script><script src="assets/tools/allybi-results.js"></script>
+</body>
+</html>

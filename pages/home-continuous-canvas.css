@@ -1,0 +1,20 @@
+/* One continuous light field for the entire homepage, not a gradient per card. */
+#home-page{
+  background-color:#eef1f4;
+  background-image:
+    radial-gradient(ellipse at 23% 14%,rgba(255,255,255,.78),transparent 46%),
+    radial-gradient(ellipse at 80% 66%,rgba(255,255,255,.68),transparent 48%),
+    linear-gradient(180deg,#f2f4f6 0%,#e9edf1 48%,#f0f3f5 100%);
+}
+#home-page>section,
+#home-page>.home-closing-chapter,
+#home-page>.home-closing-chapter>section{
+  background:transparent!important;
+  border-block-color:transparent!important;
+}
+/* Remove section-local transition paint so the light does not restart. */
+#home-page>#security::after,
+#home-page>#use-cases::before,
+#home-page>#use-cases::after{
+  background:none!important;
+}

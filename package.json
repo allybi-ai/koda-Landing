@@ -1,0 +1,26 @@
+{
+  "name": "allybi-landing",
+  "version": "1.0.0",
+  "description": "Current Allybi marketing website and self-assessment tools",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test --test-concurrency=1 tests/*.test.js",
+    "verify": "node scripts/verify-release.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allybi-ai/koda-Landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "nodemailer": "^10.0.12"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  }
+}

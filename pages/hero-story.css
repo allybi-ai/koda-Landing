@@ -1,0 +1,133 @@
+/* A wordless source → confirmed document → destination composition. */
+.hero-story {
+  width: min(1240px, 100%);
+  flex: none;
+  pointer-events: none;
+}
+.hero-story svg { display: block; width: 100%; height: auto; overflow: visible; }
+html.has-cinematic-potential .hero-story {
+  position: absolute;
+  bottom: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1240px, calc(100% - 64px));
+}
+.home-hero-container > .home-hero-actions { margin-top: 0; }
+html.has-cinematic-potential .home-hero-container {
+  position: relative;
+  top: 0;
+  justify-content: flex-start;
+  padding-top: clamp(32px, 6vh, 60px);
+}
+html.has-cinematic-potential .home-hero {
+  min-height: 0;
+  padding-bottom: 80px;
+}
+html.has-cinematic-hero .home-hero-copy {
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+html.has-cinematic-potential .home-hero-container > .home-hero-actions {
+  position: absolute;
+  bottom: 128px;
+  left: 0;
+  right: 0;
+  margin-top: 0;
+}
+@media (min-width: 1180px) {
+  html #home-hero-title,
+  html.has-cinematic-potential #home-hero-title {
+    font-size: clamp(48px, 4vw, 54px);
+    position: relative;
+    top: 76px;
+  }
+}
+#home-hero-title {
+  color: #242C36;
+  line-height: 1.04;
+  text-shadow: none;
+}
+@keyframes hero-story-light { from { stroke-dashoffset: 8; } to { stroke-dashoffset: -100; } }
+@keyframes hero-story-exit {
+  from { opacity: 1; transform: translateY(0); visibility: visible; }
+  to { opacity: 0; transform: translateY(var(--hero-copy-exit-lift, -28px)); visibility: hidden; }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    html.has-cinematic-hero #home-hero-title,
+    html.has-cinematic-hero .hero-story > svg,
+    html.has-cinematic-hero .home-hero-container > .home-hero-actions {
+      animation: hero-story-exit 1ms linear both;
+      animation-timeline: view();
+      animation-range: exit 0% exit 100%;
+    }
+    html.has-cinematic-hero .hero-story-highlight {
+      animation: hero-story-light 1ms linear both;
+      animation-timeline: --home-hero-runway;
+      animation-range: exit-crossing 0% exit-crossing 80%;
+    }
+  }
+}
+@media (min-width: 1180px) and (max-width: 1279px) {
+  .hero-story > svg,
+  .home-hero-container > .home-hero-actions { --hero-copy-exit-lift: -14px; }
+}
+@media (max-width: 767px) {
+  .hero-story { width: calc(100% + 16px); }
+  .hero-story svg { min-height: 100px; }
+  html.has-cinematic-potential .hero-story { width: calc(100% - 24px); bottom: 154px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-story-highlight { display: none; }
+}
+
+/* The same object family, with a vertical composition on compact screens. */
+.hero-story svg.hero-story-compact { display:none; }
+.hero-story-inputs image[href*="workspace/"], .hero-provider,
+.hero-story-outputs image[href*="whatsapp"] {
+  filter:none;
+}
+.hero-story-thread { opacity:.55; }
+@media (max-width:767px) {
+ .hero-story svg.hero-story-wide { display:none; }
+ .hero-story svg.hero-story-compact { display:block; }
+ .hero-story, html.has-cinematic-potential .hero-story { width:min(360px,100%); }
+}
+/* Keep copy, objects and actions in one flow at every viewport height. */
+html #home-page .home-hero {
+ min-height:calc(100svh - var(--site-header-height,76px));
+ height:auto; padding-block:0;
+}
+html #home-page .home-hero-container {
+ position:relative; top:auto; height:auto; min-height:inherit;
+ max-width:1360px; padding:clamp(28px,4vh,48px) 32px;
+ justify-content:center; gap:clamp(28px,4vh,44px);
+}
+html #home-page #home-hero-title { top:auto; }
+html #home-page .hero-story {
+ position:relative; inset:auto; transform:none;
+ width:min(1240px,max(740px,calc((100svh - 350px)*3.1)),100%);
+}
+html #home-page .home-hero-container > .home-hero-actions {
+ position:relative; inset:auto; margin:0;
+}
+@media (max-width:767px) {
+ html #home-page .home-hero-container { padding:32px 20px 40px; gap:28px; }
+ html #home-page .hero-story { width:min(360px,100%); }
+ html #home-page #home-hero-title { font-size:clamp(30px,7.6vw,44px); line-height:1.12; }
+}
+
+/* Depth is coordinated through scale and a consistent light direction.
+   Keep silhouettes sharp and connectors still so depth does not add visual noise. */
+.hero-depth--far { opacity: 1; filter: drop-shadow(0 1px 1px rgb(34 45 61 / .05)); }
+.hero-depth--mid { opacity: 1; filter: drop-shadow(0 2px 2px rgb(34 45 61 / .06)); }
+.hero-depth--near { opacity: 1; filter: drop-shadow(0 4px 3px rgb(34 45 61 / .08)); }
+
+/* The motion controller owns only the artwork, leaving layout and copy intact. */
+html #home-page .hero-story.has-story-motion > svg,
+html #home-page .home-hero-container:has(.has-story-motion) > .home-hero-actions { animation: none; }
+html #home-page .home-hero-container { overflow: visible; }
+@media (prefers-reduced-motion: reduce) {
+ html #home-page .hero-story.has-story-motion > svg { transform: none !important; }
+}

@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function() {
+      var root = document.documentElement;
+      root.classList.add('js');
+      if (window.matchMedia && window.CSS && CSS.supports('animation-timeline: view()') &&
+          CSS.supports('animation-range: exit-crossing 0% exit-crossing 100%') &&
+          CSS.supports('view-timeline-name: --home-chapter') &&
+          CSS.supports('animation-range: entry 0% exit 100%') &&
+          matchMedia('(min-width: 1180px) and (min-height: 732px) and (prefers-reduced-motion: no-preference)').matches) {
+        root.classList.add('has-cinematic-potential');
+      }
+    })();
+  </script>
+  <meta name="theme-color" content="#FAFAF8">
+  <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
+  <title>Allybi | Encontre, confirme e envie o documento certo</title>
+  <meta name="description" content="Conecte Outlook, OneDrive, SharePoint, Google Drive e uploads. Pergunte no chat, veja a fonte da resposta e envie e-mails via Outlook com confirmação. WhatsApp abre como handoff.">
+  <link rel="canonical" href="https://allybi.com.br">
+  <link rel="alternate" hreflang="en" href="https://allybi.co">
+  <link rel="alternate" hreflang="pt-BR" href="https://allybi.com.br">
+  <link rel="alternate" hreflang="x-default" href="https://allybi.co">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Allybi | Encontre, confirme e envie o documento certo">
+  <meta property="og:description" content="Pergunte no chat, receba resposta com fonte e revise antes de enviar.">
+  <meta property="og:url" content="https://allybi.com.br">
+  <meta property="og:site_name" content="Allybi">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://allybi.com.br">
+  <meta name="twitter:title" content="Allybi | Encontre, confirme e envie o documento certo">
+  <meta name="twitter:description" content="Pergunte no chat, receba resposta com fonte e revise antes de enviar.">
+  <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="allybi-tokens.css">
+  <link rel="stylesheet" href="allybi-base.css">
+  <link rel="stylesheet" href="allybi-components.css">
+  <link rel="stylesheet" href="allybi-header.css">
+  <link rel="stylesheet" href="allybi-footer.css">
+  <link rel="stylesheet" href="assets/site-footer-light.css">
+  <link rel="stylesheet" href="pages/home.css">
+  <link rel="stylesheet" href="pages/hero-story.css">
+  <link rel="stylesheet" href="assets/home-flow-scene.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Allybi",
+    "applicationCategory": "BusinessApplication",
+    "description": "A chat for finding, confirming, and sending the right document. Source-cited answers with confirmation before every send.",
+    "url": "https://allybi.co",
+    "operatingSystem": "Web"
+  }
+  </script>
+  <link rel="stylesheet" href="allybi-responsive.css">
+  <link rel="stylesheet" href="assets/homepage-continuity.css">
+  <link rel="stylesheet" href="assets/webapp-spatial-system.css">
+  <link rel="stylesheet" href="assets/workspace-dropdown.css">
+  <link rel="stylesheet" href="assets/home-header-material.css">
+<link rel="stylesheet" href="assets/home-cards-material.css">
+  <link rel="stylesheet" href="pages/work-trace.css">
+  <link rel="stylesheet" href="pages/home-continuous-canvas.css">
+  <link rel="stylesheet" href="assets/product-reveal.css">
+  <link rel="stylesheet" href="assets/retrieval-scene.css">
+  <link rel="stylesheet" href="assets/privacy-chapter.css">
+  <noscript>
+    <style>
+      .allybi-reveal { opacity: 1 !important; transform: none !important; }
+      .home-hero-copy { opacity: 1 !important; transform: none !important; }
+      .home-hero-rail, .home-hero-rail .home-hero-source { opacity: 1 !important; transform: none !important; }
+      .hero-scene[data-state] .hero-scene__source-strip,
+      .hero-scene[data-state] .hero-scene__query,
+      .hero-scene[data-state] .hero-scene__versions,
+      .hero-scene[data-state] .hero-scene__review,
+      .hero-scene[data-state] .hero-scene__send,
+      .hero-scene[data-state] .hero-scene__v,
+      .hero-scene[data-state] .hero-scene__source-line {
+        opacity: 1 !important; transform: none !important;
+      }
+      #home-find-gap .find-gap-copy,
+      #home-find-gap .find-gap-composition,
+      #home-find-gap .find-gap-panel {
+        opacity: 1 !important; transform: none !important;
+      }
+      .site-header__menu-button,
+      #mobile-menu { display: none !important; }
+      .site-header > noscript { display: block; }
+      .site-header__nojs-nav {
+        display: grid;
+        grid-template-columns: 1.1fr 0.95fr 0.55fr 1.35fr;
+        gap: 6px;
+        align-items: center;
+        padding: 8px 20px 10px;
+        border-top: 1px solid rgba(24, 24, 24, 0.08);
+        background: #FFFFFF;
+      }
+      .site-header__nojs-nav a {
+        min-width: 0;
+        min-height: 34px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 4px;
+        border-radius: 999px;
+        color: #32302C;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none;
+      }
+      .site-header__nojs-nav a:last-child {
+        background: #181818;
+        color: #FFFFFF;
+      }
+      .site-header__nojs-nav a:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
+      }
+      @media (min-width: 1024px) {
+        .site-header > noscript { display: none; }
+      }
+    </style>
+  </noscript>
+<link rel="stylesheet" href="assets/security-art-motion.css">
+</head>
+<body>
+
+
+<!-- HEADER -->
+<header class="site-header" data-site-header>
+  <div class="site-header__inner">
+
+    <a class="site-header__logo" href="/" aria-label="Allybi">
+      <img src="assets/images/allybi-workspace-knot.svg" alt="Allybi" width="32" height="32">
+    </a>
+
+    <nav class="site-header__desktop-nav" aria-label="Navegação principal">
+      <a href="/how-it-works.html" class="site-header__nav-link">Como funciona</a>
+      <a href="/security-overview.html" class="site-header__nav-link">Segurança</a>
+
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-ferramentas" aria-haspopup="true">Ferramentas</button>
+        <div class="site-header__dropdown-panel" id="dd-ferramentas" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/tempo.html"><span class="site-header__dropdown-title">Tempo perdido</span><span class="site-header__dropdown-desc">Calcule o tempo invisível.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/diagnostico.html"><span class="site-header__dropdown-title">Diagnóstico do fluxo</span><span class="site-header__dropdown-desc">Mapeie onde o time trava.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/metodologia.html"><span class="site-header__dropdown-title">Metodologia</span><span class="site-header__dropdown-desc">Como calculamos.</span></a>
+        </div>
+      </div>
+      <a href="/pricing.html" class="site-header__nav-link">Preços</a>
+      <a href="/about.html" class="site-header__nav-link">Sobre</a>
+    </nav>
+
+    <div class="site-header__desktop-actions">
+      <a href="https://app.allybi.com.br/" class="site-header__signin">Entrar</a>
+      <a href="https://app.allybi.com.br/" class="site-header__cta">Começar grátis</a>
+    </div>
+
+    <button class="site-header__menu-button" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" data-mobile-menu-toggle>
+      <span class="site-header__menu-line"></span>
+      <span class="site-header__menu-line"></span>
+    </button>
+
+  </div>
+  <noscript>
+    <nav class="site-header__nojs-nav" aria-label="Navegação principal">
+      <a href="/how-it-works.html">Como funciona</a>
+      <a href="/security-overview.html">Segurança</a>
+      <a href="/pricing.html">Preços</a>
+      <a href="https://app.allybi.com.br/">Começar grátis</a>
+    </nav>
+  </noscript>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true" inert>
+  <div class="mobile-menu__top">
+    <a class="mobile-menu__logo" href="/" aria-label="Allybi"><img src="assets/images/allybi-workspace-knot.svg" alt="Allybi" width="32" height="32"></a>
+    <button class="mobile-menu__close" type="button" aria-label="Fechar menu" data-mobile-menu-close>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu__body">
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">O Allybi</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/how-it-works.html">Como funciona<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/security-overview.html">Segurança<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Ferramentas</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/tempo.html">Tempo perdido<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/diagnostico.html">Diagnóstico do fluxo<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/metodologia.html">Metodologia<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Empresa</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/pricing.html">Preços<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/about.html">Sobre<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/pricing.html#faq">FAQ<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/contact.html">Contato<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <div class="mobile-menu__actions">
+      <a href="https://app.allybi.com.br/" class="mobile-menu__primary">Começar grátis</a>
+      <a href="https://app.allybi.com.br/" class="mobile-menu__secondary">Entrar</a>
+    </div>
+    <p class="mobile-menu__note">30 dias grátis. Depois R$170/mês. Cancele quando quiser.</p>
+  </div>
+</div>
+
+<main id="home-page">
+<div class="privacy-backdrop" aria-hidden="true"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     1. HERO — Suas fontes. Sua confirmação. Seu envio.
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="home-hero" aria-labelledby="home-hero-title">
+  <div class="home-hero-container">
+    <div class="home-hero-copy">
+      <h1 id="home-hero-title"><span>Suas fontes. Sua confirmação.</span><span>Seu envio.</span></h1>
+    </div>
+    <div class="hero-story" aria-hidden="true">
+      <svg class="hero-story-wide" viewBox="0 0 1240 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="hero-paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF"/><stop offset=".38" stop-color="#FAFCFD"/><stop offset="1" stop-color="#E6EBF0"/></linearGradient>
+          <filter id="hero-depth" x="-60%" y="-40%" width="220%" height="220%"><feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#243448" flood-opacity=".09"/></filter>
+          <linearGradient id="hero-converge" x1="60" y1="140" x2="1180" y2="140" gradientUnits="userSpaceOnUse"><stop stop-color="#DFE6EE" stop-opacity=".45"/><stop offset=".35" stop-color="#A9B8C9"/><stop offset=".5" stop-color="#667A90"/><stop offset=".65" stop-color="#A9B8C9"/><stop offset="1" stop-color="#DFE6EE" stop-opacity=".45"/></linearGradient>
+          <linearGradient id="hero-metal" x1="572" y1="42" x2="665" y2="150" gradientUnits="userSpaceOnUse"><stop stop-color="#8290A0"/><stop offset=".35" stop-color="#495767"/><stop offset=".7" stop-color="#202A37"/><stop offset="1" stop-color="#566679"/></linearGradient>
+          <rect id="hero-hub-loop" x="568" y="77" width="104" height="52" rx="26"/>
+          <clipPath id="hero-hub-front"><rect x="560" y="103" width="120" height="70"/></clipPath>
+          <linearGradient id="hero-source-soft" x1="89" y1="0" x2="565" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#C5D1DE" stop-opacity="0"/><stop offset=".06" stop-color="#C5D1DE" stop-opacity=".35"/><stop offset="1" stop-color="#667A90"/></linearGradient>
+          <linearGradient id="hero-drive-soft" href="#hero-source-soft" x1="250" x2="565"/>
+          <linearGradient id="hero-sharepoint-soft" href="#hero-source-soft" x1="191" x2="565"/>
+        </defs>
+        <g class="hero-story-thread" stroke="url(#hero-converge)" stroke-width=".7">
+          <path d="M211 56C390 30 481 62 572 132"/>
+          <path d="M420 118C472 118 490 154 543 171"/>
+          <path d="M169 224C322 236 430 204 536 208"/>
+          <path d="M346 335C436 337 479 284 568 264"/>
+          <path d="M879 85C841 116 777 120 678 137"/>
+          <path d="M1070 160C943 144 840 185 705 187"/>
+          <path d="M833 263C784 270 742 249 696 235"/>
+          <path d="M1056 346C900 357 780 307 674 271"/>
+        </g>
+        <g class="hero-story-inputs">
+          <g class="hero-depth hero-depth--far"><image href="/assets/images/workspace/onedrive.svg" x="156" y="32" width="48" height="48"/></g>
+          <g class="hero-depth hero-depth--mid"><image href="/assets/images/hero-text-symbol.svg" x="351" y="87" width="62" height="62"/></g>
+          <g class="hero-depth hero-depth--near"><image href="/assets/images/workspace/sharepoint.svg" x="110" y="200" width="48" height="48"/></g>
+          <g class="hero-depth hero-depth--mid"><image href="/assets/images/workspace/google-drive.svg" x="291" y="312" width="46" height="46"/></g>
+          <g class="hero-depth hero-depth--far"><image href="/assets/images/hero-paper-pdf.svg" x="864" y="23" width="70" height="70"/></g>
+          <g class="hero-depth hero-depth--near"><image href="/assets/images/workspace/outlook.svg" x="1086" y="136" width="48" height="48"/></g>
+          <g class="hero-depth hero-depth--mid"><image href="/assets/images/hero-sheet-symbol.svg" x="836" y="231" width="64" height="64"/></g>
+          <g class="hero-depth hero-depth--near"><image href="/assets/images/hero-whatsapp.svg" x="1067" y="323" width="46" height="46"/></g>
+        </g>
+        <g class="hero-story-hub"><image href="/assets/images/hero-allybi-organized.svg" x="540" y="120" width="160" height="160"/></g>
+      </svg>
+      <svg class="hero-story-compact" viewBox="0 0 360 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#aebbc9" stroke-opacity=".35" stroke-width=".65">
+          <path d="M40 58C80 52 154 65 154 118"/>
+          <path d="M132 89C132 110 140 120 140 145"/>
+          <path d="M228 56C228 90 192 95 192 118"/>
+          <path d="M319 88C319 118 222 112 222 145"/>
+          <path d="M154 222C154 266 80 270 40 260"/>
+          <path d="M140 195C140 210 130 218 123 222"/>
+          <path d="M192 222C192 245 223 254 223 278"/>
+          <path d="M222 195C222 226 315 222 315 254"/>
+        </g>
+        <g class="hero-story-inputs">
+          <g class="hero-depth hero-depth--far"><image href="/assets/images/workspace/onedrive.svg" x="23.5" y="19.5" width="33" height="33"/></g>
+          <g class="hero-depth hero-depth--mid"><image href="/assets/images/hero-text-symbol.svg" x="112" y="45" width="40" height="40"/></g>
+          <g class="hero-depth hero-depth--near"><image href="/assets/images/workspace/sharepoint.svg" x="212" y="14" width="32" height="32"/></g>
+          <g class="hero-depth hero-depth--mid"><image href="/assets/images/workspace/google-drive.svg" x="303" y="48" width="32" height="32"/></g>
+          <g class="hero-depth hero-depth--far"><image href="/assets/images/hero-paper-pdf.svg" x="16" y="261" width="48" height="48"/></g>
+          <g class="hero-depth hero-depth--near"><image href="/assets/images/workspace/outlook.svg" x="89" y="219" width="32" height="32"/></g>
+          <g class="hero-depth hero-depth--mid"><image href="/assets/images/hero-sheet-symbol.svg" x="201.5" y="284.5" width="43" height="43"/></g>
+          <g class="hero-depth hero-depth--near"><image href="/assets/images/hero-whatsapp.svg" x="299" y="263" width="32" height="32"/></g>
+        </g>
+        <image href="/assets/images/hero-allybi-organized.svg" x="130" y="120" width="100" height="100"/>
+      </svg>
+    </div>
+    <div class="home-hero-actions">
+      <a class="home-hero-primary" href="https://app.allybi.com.br/">Começar grátis por 30 dias</a>
+      <a class="home-hero-secondary" href="/how-it-works.html">Ver como funciona <span class="home-hero-secondary__arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     2. O TRABALHO ANTES DO ENVIO — percurso contínuo (#home-find-gap)
+     ═══════════════════════════════════════════════════════════════ -->
+<section id="home-find-gap" class="work-trace" aria-labelledby="work-trace-title">
+<div class="work-trace__pin"><div class="work-trace__canvas">
+<svg class="work-trace__svg" viewBox="0 0 1200 800" role="img" aria-labelledby="work-trace-svg-title work-trace-svg-desc" xmlns="http://www.w3.org/2000/svg">
+<title id="work-trace-svg-title">O que acontece antes de enviar</title>
+<desc id="work-trace-svg-desc">Marina pede uma proposta. O arquivo é encontrado, comparado com uma versão cujo prazo é diferente e enviado a Rafael para confirmação. Só depois da aprovação ele chega à cliente. A entrega ocupa uma mensagem; o trabalho ocupa todo o percurso.</desc>
+<defs>
+ <mask id="wt-connection-mask" maskUnits="userSpaceOnUse" x="-500" y="-500" width="2500" height="2300">
+  <rect x="-500" y="-500" width="2500" height="2300" fill="white"/>
+  <g fill="black"><rect data-wt-occluder="0" x="47" y="60" width="354" height="136" rx="12"/><rect data-wt-occluder="1" x="113" y="370" width="368" height="292" rx="16"/><rect data-wt-occluder="2" x="497" y="27" width="358" height="268" rx="12"/><rect data-wt-occluder="3" x="833" y="343" width="352" height="278" rx="12"/><rect data-wt-occluder="4" x="569" y="675" width="298" height="158" rx="12"/></g>
+ </mask>
+ <linearGradient id="wt-surface" x2=".8" y2="1"><stop stop-color="#fff"/><stop offset=".38" stop-color="#fafcfd"/><stop offset="1" stop-color="#e6ebf0"/></linearGradient>
+ <linearGradient id="wt-outgoing" x2=".8" y2="1"><stop stop-color="#e4f3e9"/><stop offset="1" stop-color="#cfe6d8"/></linearGradient>
+ <linearGradient id="wt-folder-blue" x2=".7" y2="1"><stop stop-color="#659fea"/><stop offset=".4" stop-color="#3c7bce"/><stop offset="1" stop-color="#285ca2"/></linearGradient>
+ <linearGradient id="wt-sheet" x2=".7" y2="1"><stop stop-color="#fff"/><stop offset=".38" stop-color="#fafcfd"/><stop offset="1" stop-color="#e2e9f0"/></linearGradient>
+ <filter id="wt-shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#243448" flood-opacity=".09"/><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#243448" flood-opacity=".10"/></filter>
+ <filter id="wt-paper-shadow" x="-30%" y="-25%" width="160%" height="160%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#25364c" flood-opacity=".1"/></filter>
+ <g id="wt-paper"><path d="M10 0H129L160 31V198Q160 208 150 208H10Q0 208 0 198V10Q0 0 10 0Z" fill="url(#wt-sheet)"/><path d="M129 0V23Q129 31 137 31H160" fill="#dfe7ef"/></g>
+ <g id="wt-icon-lines" fill="none" stroke="#56758a" stroke-width="9" stroke-linecap="round"><path d="M42 88H114M42 111H114M42 134H88"/></g>
+ <g id="wt-details" fill="#354451">
+  <text x="20" y="40" style="font-size:13px;font-weight:600">Proposta</text>
+  <path d="M20 59H132M20 71H109M20 84H127" stroke="#c5cfd8" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="20" y="117" style="font-size:10px;fill:#76868f">Prazo de entrega</text>
+  <rect x="15" y="126" width="129" height="35" rx="5" fill="#e4efec" class="wt-difference"/>
+  <text x="23" y="151" class="wt-new-value" style="font-size:21px;font-weight:550">30 dias</text>
+  <path d="M20 181H116M20 190H87" stroke="#c5cfd8" stroke-width="2" stroke-linecap="round"/>
+ </g>
+ <g id="wt-file-icon"><use href="#wt-paper"/><use href="#wt-icon-lines"/></g>
+ <g id="wt-file-detail"><use href="#wt-paper"/><use href="#wt-details"/></g>
+ <g id="wt-folder" fill="url(#wt-folder-blue)"><path d="M0 4Q0 0 4 0H13L18 5H31Q35 5 35 9V26Q35 30 31 30H4Q0 30 0 26Z"/></g>
+ <g id="wt-marina-contact"><circle cx="17" cy="17" r="17" fill="#c5e1d0"/><text x="17" y="23" text-anchor="middle" class="wt-label" style="fill:#527364">M</text><text x="45" y="15" class="wt-label">Marina</text><text x="45" y="33" class="wt-small">Cliente</text></g>
+</defs>
+<g data-wt-camera="" transform="translate(600 325) scale(.87) translate(-610 -442)">
+ <g class="work-trace__paths" fill="none" stroke-linecap="round" mask="url(#wt-connection-mask)">
+  <path data-wt-path="0" d="M332 186C-10 320 0 552 225 544"/>
+  <path data-wt-path="1" d="M225 544C570 665 388 175 765 186"/>
+  <path data-wt-path="2" d="M765 186C1100 80 1210 395 941 470"/>
+  <path data-wt-path="3" d="M941 470C1240 790 947 885 614 774"/>
+ </g>
+ <!-- Familiar conversational grammar, without a product logo or copied interface. -->
+ <g data-wt-node="0" transform="translate(52 65)">
+  <use href="#wt-marina-contact"/>
+  <path d="M0 49H311Q328 49 328 66V101Q328 118 311 118H25Q8 118 8 101V60Z" class="wt-chat-incoming"/>
+  <text x="24" y="79" class="wt-body">Me envia a proposta?</text><text x="280" y="106" class="wt-micro">09:41</text>
+ </g>
+ <!-- Search is recognisable through folders, a query and a selected file. -->
+ <g data-wt-node="1" transform="translate(118 375)">
+  <rect width="358" height="282" rx="17" fill="url(#wt-surface)" filter="url(#wt-shadow)"/>
+  <rect x="18" y="17" width="322" height="39" rx="11" fill="#eaf0f5"/><circle cx="37" cy="35" r="6" fill="none" stroke="#73879a" stroke-width="1.6"/><path d="m41 39 5 5" stroke="#73879a" stroke-width="1.6"/><text x="60" y="42" class="wt-body">proposta</text>
+  <use href="#wt-folder" transform="translate(24 83) scale(.72)"/><use href="#wt-folder" transform="translate(24 143) scale(.6)" opacity=".7"/><use href="#wt-folder" transform="translate(24 198) scale(.6)" opacity=".7"/>
+  <path d="M72 76V262" class="wt-rule"/>
+  <g class="wt-folder-path" aria-label="Arquivos, Comercial, Clientes, Marina">
+   <title>Arquivos → Comercial → Clientes → Marina</title>
+   <g fill="none" stroke="#7d8e9e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path transform="translate(0 3)" d="M100 97h17a5 5 0 0 0 0-10 8 8 0 0 0-15-2 6 6 0 0 0-2 12Z"/>
+    <g transform="translate(161 82)"><rect x="0" y="6" width="22" height="17" rx="3"/><path d="M6 6V3h10v3M0 13q11 7 22 0M11 14v4"/></g>
+    <g transform="translate(223 82)"><circle cx="9" cy="6" r="4"/><path d="M0 23v-3a9 9 0 0 1 18 0v3M17 2a4 4 0 0 1 0 8M21 15a7 7 0 0 1 4 7"/></g>
+   </g>
+   <path transform="translate(0 2)" d="m137 88 4 4-4 4m63-8 4 4-4 4m62-8 4 4-4 4" fill="none" stroke="#b1bdc7" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+   <use href="#wt-folder" transform="translate(288 80) scale(.86)"/><text x="303" y="100" text-anchor="middle" style="font-size:12px;font-weight:550;fill:#ffffff">M</text>
+  </g>
+  <use href="#wt-folder" transform="translate(97 124) scale(.48)"/><text x="126" y="138" class="wt-small">Anteriores</text>
+  <rect x="86" y="151" width="254" height="36" rx="7" fill="#e9f0f8"/>
+  <text x="126" y="174" class="wt-label" style="font-size:13px">Proposta.pdf</text><text x="291" y="174" class="wt-micro">Hoje</text>
+  <use href="#wt-file-icon" transform="translate(98 195) scale(.1125)"/><text x="126" y="211" class="wt-small">Proposta_rev.pdf</text><text x="284" y="211" class="wt-micro">Ontem</text>
+  <use href="#wt-file-icon" transform="translate(98 232) scale(.1125)"/><text x="126" y="248" class="wt-small">Briefing.docx</text><text x="285" y="248" class="wt-micro">12 set.</text>
+  <g data-wt-residue="1" transform="translate(107 169) scale(.1125) translate(-80 -104)"><use href="#wt-file-icon"/></g>
+ </g>
+ <!-- Identical structure makes one consequential difference carry the scene. -->
+ <g data-wt-node="2" transform="translate(502 32)">
+  <g transform="translate(8 55) scale(.95)" filter="url(#wt-paper-shadow)">
+   <use href="#wt-paper"/><text x="20" y="40" style="font-size:13px;font-weight:600">Proposta</text>
+   <path d="M20 59H132M20 71H109M20 84H127" stroke="#c5cfd8" stroke-width="2.5" stroke-linecap="round"/>
+   <text x="20" y="117" style="font-size:10px;fill:#76868f">Prazo de entrega</text>
+   <rect x="15" y="126" width="129" height="35" rx="5" fill="#f5e9e7" class="wt-difference"/><text x="23" y="151" class="wt-old-value" style="font-size:21px;font-weight:550">15 dias</text>
+   <path d="M20 181H116M20 190H87" stroke="#c5cfd8" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <path d="M169 167h9M169 173h9" stroke="#9caab3" stroke-width="1.4"/>
+  <g data-wt-residue="2" transform="translate(263 154) scale(.95) translate(-80 -104)" filter="url(#wt-paper-shadow)"><use href="#wt-file-detail"/></g>
+ </g>
+ <g data-wt-node="3" transform="translate(838 348)">
+  <circle cx="17" cy="17" r="17" fill="#cbdcf0"/><text x="17" y="23" text-anchor="middle" class="wt-label" style="fill:#60758c">R</text>
+  <text x="45" y="15" class="wt-label">Rafael</text><text x="45" y="33" class="wt-small">Gestor</text>
+  <path d="M77 48H342L334 59V159Q334 176 317 176H77Q60 176 60 159V65Q60 48 77 48Z" class="wt-chat-outgoing"/>
+  <text x="79" y="75" class="wt-body">Confirmamos 30 dias?</text>
+  <text x="137" y="117" class="wt-label">Proposta</text><text x="137" y="139" class="wt-small">Prazo de entrega</text><text x="287" y="168" class="wt-micro">09:46</text>
+  <g data-wt-residue="3" transform="translate(103 122) scale(.225) translate(-80 -104)"><use href="#wt-file-icon"/></g>
+  <g data-wt-wait="" opacity="0"><rect x="8" y="192" width="62" height="39" rx="12" fill="url(#wt-surface)"/><circle cx="26" cy="211" r="2.3" fill="#9ba9af"/><circle cx="39" cy="211" r="2.3" fill="#9ba9af"/><circle cx="52" cy="211" r="2.3" fill="#9ba9af"/></g>
+  <g data-wt-confirm="" opacity="1"><path d="M0 193H251Q266 193 266 208V247Q266 262 251 262H23Q8 262 8 247V204Z" class="wt-chat-incoming"/><text x="24" y="223" class="wt-body">30 dias. Pode enviar.</text><text x="218" y="248" class="wt-micro">09:48</text></g>
+ </g>
+ <g data-wt-node="4" transform="translate(574 680)">
+  <use href="#wt-marina-contact"/>
+  <path d="M15 50H288L280 61V129Q280 146 263 146H17Q0 146 0 129V67Q0 50 15 50Z" class="wt-chat-outgoing"/>
+  <text x="70" y="91" class="wt-body">Proposta.pdf</text><text x="70" y="110" class="wt-small">Documento</text>
+  <text x="199" y="138" class="wt-micro">09:49</text><path d="m235 134 3 3 7-7m-2 4 3 3 7-7" fill="none" stroke="#628fa0" stroke-width="1.3" stroke-linecap="round"/>
+ </g>
+ <g data-wt-token="" transform="translate(614 774) scale(.1875) translate(-80 -104)" filter="url(#wt-paper-shadow)">
+  <use href="#wt-paper"/><g data-wt-token-icon=""><use href="#wt-icon-lines"/></g><g data-wt-token-detail="" opacity="0"><use href="#wt-details"/></g>
+ </g>
+</g>
+</svg></div>
+<div class="work-trace__epilogue"><h2 id="work-trace-title">Para quem recebe, um arquivo.</h2><p>Você conferiu cada detalhe para alguém poder seguir.</p></div>
+</div>
+<p class="work-trace__sr">A rolagem acompanha um mesmo documento pelo pedido, busca, comparação, confirmação e envio. Ao final, todo o percurso permanece visível.</p>
+</section>
+
+<!-- Six document relationships: source, useful result, traceable connection. -->
+<section class="possibility-section" id="home-flow" data-home-flow aria-labelledby="home-flow-title">
+ <div class="possibility__pin">
+  <div class="possibility__stage">
+   <h2 class="possibility__title" id="home-flow-title">E se tudo<br>estivesse à mão?</h2>
+
+   <div class="possibility__piece possibility__piece--finance" data-possibility-piece data-depth=".85" data-order="0" aria-hidden="true">
+    <div class="possibility__relationship">
+     <div class="possibility__sheet possibility__surface">
+      <div class="possibility__filehead"><img src="assets/images/hero-sheet-symbol.svg" width="26" height="26" alt=""><span>Receita</span></div>
+      <div class="possibility__table"><span></span><span>T2</span><span>T3</span><span>R$</span><b>120 mil</b><b>138 mil</b><i></i><i></i><i></i><i></i><i></i><i></i></div>
+     </div>
+     <svg class="possibility__link" viewBox="0 0 60 40"><path d="M3 28C23 28 25 12 51 12m-6-5 6 5-6 5"/></svg>
+     <div class="possibility__variance possibility__surface"><svg class="possibility__chart" viewBox="0 0 48 56"><path class="possibility__chart-axis" d="M2 40h44"/><rect x="7" y="13.91" width="12" height="26.09" rx="2"/><rect x="29" y="10" width="12" height="30" rx="2"/><text x="13" y="52">T2</text><text x="35" y="52">T3</text></svg><strong>+15<span>%</span></strong><small>entre os trimestres</small></div>
+    </div>
+   </div>
+
+   <div class="possibility__piece possibility__piece--compare" data-possibility-piece data-depth=".55" data-order=".035" aria-hidden="true">
+    <div class="possibility__relationship">
+     <div class="possibility__versions">
+      <div class="possibility__paper possibility__paper--back"><span>v1</span><i></i><i></i><i></i></div>
+      <div class="possibility__paper possibility__paper--front"><svg class="possibility__pdf" viewBox="0 0 24 24"><path d="M14 3c-3-5-4 4-2 8 2 4 9 8 10 5 1-3-12-1-17 3-5 5-2 6 1 2 3-4 8-15 8-18Z"/></svg><span>v2</span><i></i><i></i><i></i><div class="possibility__paper-mark"></div></div>
+     </div>
+     <svg class="possibility__link" viewBox="0 0 60 40"><path d="M3 11C22 11 28 28 51 28m-6-5 6 5-6 5"/></svg>
+     <div class="possibility__difference possibility__surface"><small>Reajuste anual</small><div><del>6%</del><svg viewBox="0 0 20 20"><path d="M3 10h13m-5-5 5 5-5 5"/></svg><strong>4,5%</strong></div></div>
+    </div>
+   </div>
+
+   <div class="possibility__piece possibility__piece--summary" data-possibility-piece data-depth=".6" data-order=".075" aria-hidden="true">
+    <div class="possibility__relationship">
+     <div class="possibility__report">
+      <div class="possibility__report-sheet"></div><div class="possibility__report-sheet"></div>
+      <div class="possibility__report-cover"><strong>Reunião</strong><div class="possibility__report-chart"><i></i><i></i><i></i><i></i></div><span>6 páginas</span></div>
+     </div>
+     <svg class="possibility__link" viewBox="0 0 60 40"><path d="M3 26C23 26 26 12 51 12m-6-5 6 5-6 5"/></svg>
+     <div class="possibility__digest possibility__surface"><p>Piloto aprovado.<br>Revisão até <strong>12 out.</strong></p></div>
+    </div>
+   </div>
+
+   <div class="possibility__piece possibility__piece--compose" data-possibility-piece data-depth="1" data-order=".11" aria-hidden="true">
+    <div class="possibility__relationship">
+     <div class="possibility__excerpt possibility__surface"><small>Cronograma</small><div class="possibility__schedule"><span>08</span><span>09</span><span>10</span><i></i><i></i><i></i><svg viewBox="0 0 20 20"><path d="m4 10 4 4 8-8"/></svg></div><strong>Etapa concluída</strong></div>
+     <svg class="possibility__link" viewBox="0 0 60 40"><path d="M3 13C22 13 26 26 51 26m-6-5 6 5-6 5"/></svg>
+     <div class="possibility__draft possibility__surface"><div class="possibility__draft-head"><img src="assets/images/workspace/outlook.svg" alt="" width="24" height="24"><span>Atualização do projeto</span></div><p>Segue o cronograma<br>atualizado.</p><div class="possibility__draft-foot"><span>Rascunho para revisão</span></div></div>
+    </div>
+   </div>
+   <div class="possibility__piece possibility__piece--incoming" data-possibility-piece data-depth=".45" data-order=".05" aria-hidden="true">
+    <div class="possibility__relationship">
+     <div class="possibility__incoming possibility__surface"><img src="assets/images/gmail-icon.svg" width="30" height="30" alt=""><small>Novo horário</small><p>Podemos às 14h30?</p></div>
+     <svg class="possibility__link" viewBox="0 0 60 40"><path d="M3 26C23 26 26 12 51 12m-6-5 6 5-6 5"/></svg>
+     <div class="possibility__time possibility__surface"><small>Alinhamento</small><strong>14<span>h</span>30</strong></div>
+    </div>
+   </div>
+
+   <div class="possibility__piece possibility__piece--whatsapp" data-possibility-piece data-depth=".7" data-order=".13" aria-hidden="true">
+    <div class="possibility__relationship">
+     <div class="possibility__attachment possibility__surface"><svg class="possibility__attachment-pdf" viewBox="0 0 24 24"><path d="M14 3c-3-5-4 4-2 8 2 4 9 8 10 5 1-3-12-1-17 3-5 5-2 6 1 2 3-4 8-15 8-18Z"/></svg><span>Escopo.pdf</span><i></i><i></i></div>
+     <svg class="possibility__link" viewBox="0 0 60 40"><path d="M3 12C23 12 26 26 51 26m-6-5 6 5-6 5"/></svg>
+     <div class="possibility__message"><img src="assets/images/workspace/whatsapp.svg" width="28" height="28" alt=""><p>Segue o escopo revisado.</p><small>Revisar no WhatsApp</small></div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <p class="sr-only">Exemplos ilustrativos: calcular a variação de receita com referência às células; comparar alterações entre versões de um contrato; reunir decisões e responsáveis de uma reunião com as páginas de origem; preparar um rascunho a partir de documentos para revisão; encontrar o horário em um e-mail; preparar uma mensagem para revisar no WhatsApp. Localizar, compreender e usar a informação mantendo suas fontes.</p>
+</section>
+
+<!-- Product demonstration: native Allybi visual primitives, fictional example content. -->
+<section id="home-integrations-flow" class="product-reveal" aria-labelledby="product-reveal-title">
+ <header class="product-reveal__copy">
+   <h2 id="product-reveal-title">O reajuste está na página 8.</h2>
+   <p>Encontre o reajuste no contrato, confira a cláusula e prepare o e-mail para enviar.</p>
+ </header>
+ <div class="product-reveal__pin">
+  <figure class="product-reveal__scene" role="img" aria-label="Demonstração do Allybi: após o indicador de processamento, a pergunta sobre o reajuste recebe a resposta de 4,5% ao ano. O contrato abre à esquerda, no trecho correspondente. A tela começa compacta, com as laterais colapsadas, e cresce junto com os painéis. A conversa rola para o pedido de enviar a Marina o reajuste e a cláusula. Os contatos aparecem à direita, com Marina no centro da lista. Em seguida o rascunho abre com destinatário, assunto, anexo e botão Enviar para revisão. Os dados do contrato e da mensagem são ilustrativos.">
+   <div class="product-reveal__app" aria-hidden="true">
+    <div class="product-reveal__nav">
+     <div class="product-reveal__history"><img src="assets/images/allybi-workspace-knot.svg" width="34" height="34" alt=""><svg class="product-reveal__glyph" viewBox="0 0 24 24"><use href="assets/images/product-ui-glyphs.svg#back"/></svg><svg class="product-reveal__glyph" viewBox="0 0 24 24"><use href="assets/images/product-ui-glyphs.svg#forward"/></svg><svg class="product-reveal__glyph" viewBox="0 0 24 24"><use href="assets/images/product-ui-glyphs.svg#home"/></svg></div>
+     <div class="product-reveal__search"><svg class="product-reveal__glyph" viewBox="0 0 24 24"><use href="assets/images/product-ui-glyphs.svg#search"/></svg><span>Pesquisar no workspace</span></div>
+     <div class="product-reveal__account"><svg class="product-reveal__glyph" viewBox="0 0 24 24"><use href="assets/images/product-ui-glyphs.svg#bell"/></svg><span>J</span></div>
+    </div>
+    <div class="product-reveal__panels">
+     <div class="product-reveal__panel product-reveal__source-slot" data-product-panel="source">
+      <div class="product-reveal__rail"><img src="assets/images/workspace/rail-workspace.svg" width="32" height="32" alt=""></div>
+      <div class="product-reveal__reader">
+       <div class="product-reveal__paper-viewport">
+        <article class="product-reveal__paper">
+         <header class="product-reveal__document-running-head"><strong>Aurora</strong><span>Contrato nº 024/2025</span></header>
+         <h3 class="product-reveal__document-title">Contrato de prestação de serviços</h3>
+         <p class="product-reveal__document-parties">Aurora Serviços Ltda. e Atlas Comercial Ltda.</p>
+         <h4>7. Condições de pagamento</h4>
+         <p><b>7.2.</b> O pagamento será realizado mediante apresentação da nota fiscal, no prazo de quinze dias contados do recebimento.</p>
+         <h4>8. Reajuste anual</h4>
+         <p><b>8.1.</b> O valor dos serviços será reajustado <mark>a cada doze meses, à taxa de <strong>4,5% ao ano</strong></mark>, a partir da data de assinatura deste contrato.</p>
+         <p><b>8.2.</b> O novo valor constará da primeira cobrança após o período indicado.</p>
+         <h4>9. Comunicações</h4>
+         <p><b>9.1.</b> As comunicações entre as partes serão realizadas pelos endereços eletrônicos indicados neste instrumento.</p>
+         <footer class="product-reveal__document-footer"><span>Aurora Serviços Ltda.</span><span>8</span></footer>
+        </article>
+       </div>
+      </div>
+     </div>
+     <div class="product-reveal__panel product-reveal__chat">
+      <div class="product-reveal__chat-head"><svg class="product-reveal__glyph" viewBox="0 0 24 24"><use href="assets/images/product-ui-glyphs.svg#collapse-panel"/></svg><span>Reajuste do contrato</span><div><svg class="product-reveal__glyph" viewBox="0 0 24 24"><use href="assets/images/product-ui-glyphs.svg#switch-panels"/></svg><svg class="product-reveal__glyph" viewBox="0 0 24 24"><use href="assets/images/product-ui-glyphs.svg#expand"/></svg></div></div>
+      <div class="product-reveal__thread-viewport"><div class="product-reveal__thread">
+       <p class="product-reveal__question">Qual é o reajuste deste contrato?</p>
+       <div class="product-reveal__response">
+        <div class="product-reveal__loading allybi-status-line" data-generation-state="waiting">
+         <span class="allybi-status-line__mark" data-allybi-thinking-mark><span class="allybi-thinking-orb"><span class="allybi-thinking-orb__ring"></span><span class="allybi-thinking-orb__loop"></span></span></span>
+         <span class="allybi-status-line__text">Pensando…</span>
+        </div>
+       <div class="product-reveal__answer">
+        <p>O reajuste é de <strong>4,5% ao ano.</strong></p>
+        <p class="product-reveal__answer-detail">A cláusula 8 prevê a atualização a cada doze meses, a partir da assinatura.</p>
+        <div class="product-reveal__citation"><img src="assets/images/workspace/pdf.svg" width="30" height="30" alt=""><span>Contrato.pdf <span>· página 8</span></span></div>
+       </div>
+       </div>
+       <div class="product-reveal__followup">
+        <p class="product-reveal__question">Envie para a Marina o reajuste de 4,5% ao ano e a cláusula do contrato.</p>
+        <p class="product-reveal__sent-receipt">Preparei o e-mail com a cláusula e o contrato em anexo.</p>
+       </div>
+      </div>
+      </div>
+      <div class="product-reveal__composer"><svg class="product-reveal__glyph" viewBox="0 0 24 24"><use href="assets/images/product-ui-glyphs.svg#plus"/></svg><span>Pergunte ao Allybi…</span><svg class="product-reveal__glyph" viewBox="0 0 24 24"><use href="assets/images/product-ui-glyphs.svg#arrow"/></svg></div>
+     </div>
+     <div class="product-reveal__panel product-reveal__context-slot" data-product-panel="workspace">
+      <div class="product-reveal__rail"><img src="assets/images/workspace/rail-context.png" width="32" height="32" alt=""></div>
+      <div class="product-reveal__contacts">
+       <h3>Contatos</h3>
+       <div class="product-reveal__contacts-search"><svg class="product-reveal__glyph" viewBox="0 0 24 24"><use href="assets/images/product-ui-glyphs.svg#search"/></svg><span>Pesquisar contatos</span><svg class="product-reveal__glyph" viewBox="0 0 24 24"><use href="assets/images/product-ui-glyphs.svg#plus"/></svg></div>
+       <ul class="product-reveal__contacts-list">
+        <li><span class="product-reveal__contact-avatar">AC</span><div><strong>Ana Carvalho</strong><small>Operações</small></div><span>›</span></li>
+        <li><span class="product-reveal__contact-avatar">BL</span><div><strong>Bruno Lima</strong><small>Financeiro</small></div><span>›</span></li>
+        <li class="product-reveal__contact-marina"><span class="product-reveal__contact-avatar">MC</span><div><strong>Marina Costa</strong><small>Atlas Comercial</small></div><span>›</span></li>
+        <li><span class="product-reveal__contact-avatar">RM</span><div><strong>Rafael Martins</strong><small>Diretoria</small></div><span>›</span></li>
+        <li><span class="product-reveal__contact-avatar">SC</span><div><strong>Sofia Campos</strong><small>Jurídico</small></div><span>›</span></li>
+       </ul>
+      </div>
+      <div class="product-reveal__email">
+       <header class="product-reveal__email-head">
+        <img src="assets/images/workspace/outlook.svg" width="24" height="24" alt="">
+        <h3>Rascunho de e-mail</h3>
+        <svg class="product-reveal__glyph" viewBox="0 0 24 24"><use href="assets/images/product-ui-glyphs.svg#close"/></svg>
+       </header>
+       <div class="product-reveal__email-editor">
+        <dl class="product-reveal__email-addresses"><dt>Para:</dt><dd>Marina Costa</dd><dt>Assunto:</dt><dd>Reajuste anual do contrato</dd></dl>
+        <div class="product-reveal__email-attachment"><img src="assets/images/workspace/pdf.svg" width="28" height="28" alt=""><span>Contrato.pdf</span><svg class="product-reveal__glyph" viewBox="0 0 24 24"><use href="assets/images/product-ui-glyphs.svg#close"/></svg><svg class="product-reveal__glyph" viewBox="0 0 24 24"><use href="assets/images/product-ui-glyphs.svg#plus"/></svg></div>
+        <div class="product-reveal__email-body">
+         <p>Oi, Marina.</p>
+         <p>O reajuste é de 4,5% ao ano, a cada doze meses a partir da assinatura.</p>
+         <p>A cláusula está na página 8 do contrato em anexo.</p>
+         <p>Obrigada,<br>Joana</p>
+        </div>
+       </div>
+       <footer class="product-reveal__email-footer"><span>Cancelar</span><span class="product-reveal__email-send">Enviar</span></footer>
+      </div>
+     </div>
+    </div>
+   </div>
+  </figure>
+ </div>
+</section>
+
+<!-- Four independent conversations, presented in two matching pairs. -->
+<section id="use-cases" class="retrieval-section" aria-labelledby="retrieval-title">
+ <div class="retrieval__pin">
+  <header class="retrieval__copy">
+   <h2 id="retrieval-title">Entenda o que mudou.<br>Continue de onde parou.</h2>
+   <p>Compare versões, recupere conversas, confira planilhas e prepare a próxima mensagem.</p>
+  </header>
+  <div class="retrieval__stage">
+   <article class="retrieval__case retrieval__case--file" aria-labelledby="retrieval-file-title">
+    <header class="retrieval__case-head">
+     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5v14m12-12-5 5 5 5m-5-5h9"/></svg>
+     <h3 id="retrieval-file-title">O que mudou na proposta</h3>
+     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6m0-6-7 7M10 20H4v-6m0 6 7-7"/></svg>
+    </header>
+    <div class="retrieval__conversation retrieval__conversation--comparison">
+     <div class="retrieval__thread">
+      <p class="retrieval__question">Compare as duas versões da proposta da Aurora.</p>
+      <p class="retrieval__answer">A v2 aumenta o valor, divide o pagamento e amplia o suporte. Veja o que mudou:</p>
+      <table class="retrieval__comparison" aria-label="Diferenças entre as versões da proposta Aurora">
+       <thead><tr><td></td><th scope="col">Versão 1</th><th scope="col">Versão 2</th></tr></thead>
+       <tbody>
+        <tr><th scope="row">Valor total</th><td>R$ 24.000</td><td>R$ 26.400</td></tr>
+        <tr><th scope="row">Pagamento</th><td>100% na assinatura</td><td>50% na assinatura<br>50% na entrega</td></tr>
+        <tr><th scope="row">Suporte incluído</th><td>30 dias</td><td>90 dias</td></tr>
+        <tr><th scope="row">Assinatura</th><td class="retrieval__former">Não consta</td><td>Camila Rocha<small>12 set. 2025 · p. 6</small></td></tr>
+       </tbody>
+      </table>
+      <div class="retrieval__followup">
+       <p class="retrieval__question">A v2 exige mais dinheiro na entrada?</p>
+       <p class="retrieval__answer"><strong>R$ 10.800 a menos na entrada.</strong> São R$ 13.200 agora e R$ 13.200 na entrega, mesmo com o total R$ 2.400 maior.</p>
+      </div>
+     </div>
+    </div>
+    <div class="retrieval__composer" aria-hidden="true"><span>＋</span><span>Pergunte ao Allybi...</span><span>→</span></div>
+   </article>
+   <article class="retrieval__case retrieval__case--mail" aria-labelledby="retrieval-mail-title">
+    <header class="retrieval__case-head">
+     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5v14m12-12-5 5 5 5m-5-5h9"/></svg>
+     <h3 id="retrieval-mail-title">A reunião que mudou de data</h3>
+     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6m0-6-7 7M10 20H4v-6m0 6 7-7"/></svg>
+    </header>
+    <div class="retrieval__conversation">
+     <p class="retrieval__question">Ache aquele e-mail antigo em que o Daniel mudou a reunião para quinta.</p>
+     <p class="retrieval__answer">Daniel combinou <strong>quinta, às 15h.</strong> A mensagem está na conversa de 17 de março de 2025.</p>
+     <div class="retrieval__source retrieval__source--mail">
+      <div class="retrieval__origin"><img src="assets/images/gmail-icon.svg" alt="Gmail" width="20" height="20" loading="lazy"><span>Gmail <span>/ Todos os e-mails</span></span></div>
+      <div class="retrieval__mail-message">
+       <h4>Re: Alinhamento do projeto</h4>
+       <div class="retrieval__sender"><span class="retrieval__avatar" aria-hidden="true">D</span><div><strong>Daniel Ferreira</strong><span>para você</span></div><time datetime="2025-03-17">17 mar. 2025</time></div>
+       <p>Podemos passar nossa reunião para <mark>quinta, às 15h</mark>? Até lá já consigo te mandar os números revisados.</p>
+      </div>
+     </div>
+    </div>
+    <div class="retrieval__composer" aria-hidden="true"><span>＋</span><span>Pergunte ao Allybi...</span><span>→</span></div>
+   </article>
+   <article class="retrieval__case retrieval__case--sheet" aria-labelledby="retrieval-sheet-title">
+    <header class="retrieval__case-head">
+     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5v14m12-12-5 5 5 5m-5-5h9"/></svg>
+     <h3 id="retrieval-sheet-title">A mesma nota, duas vezes</h3>
+     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6m0-6-7 7M10 20H4v-6m0 6 7-7"/></svg>
+    </header>
+    <div class="retrieval__conversation">
+     <p class="retrieval__question">Tem algum pagamento duplicado nesta planilha?</p>
+     <p class="retrieval__answer">Encontrei uma possível duplicidade de <strong>R$ 3.200.</strong> A mesma nota aparece em duas saídas para a Norte Serviços.</p>
+     <div class="retrieval__source retrieval__source--sheet">
+      <div class="retrieval__citation"><img src="assets/images/workspace/sheet.svg" alt="" width="26" height="26" loading="lazy"><span>Pagamentos_setembro.xlsx</span></div>
+      <table class="retrieval__ledger" aria-label="Duas saídas encontradas para a nota fiscal 1048">
+       <thead><tr><th scope="col">Linha</th><th scope="col">Data</th><th scope="col">Nota fiscal</th><th scope="col">Valor</th></tr></thead>
+       <tbody>
+        <tr><th scope="row">18</th><td>12 set.</td><td>1048</td><td>R$ 3.200</td></tr>
+        <tr><th scope="row">43</th><td>16 set.</td><td>1048</td><td>R$ 3.200</td></tr>
+       </tbody>
+      </table>
+      <p class="retrieval__insight">Confira os comprovantes antes de pagar novamente.</p>
+     </div>
+    </div>
+    <div class="retrieval__composer" aria-hidden="true"><span>＋</span><span>Pergunte ao Allybi...</span><span>→</span></div>
+   </article>
+   <article class="retrieval__case retrieval__case--whatsapp" aria-labelledby="retrieval-whatsapp-title">
+    <header class="retrieval__case-head">
+     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5v14m12-12-5 5 5 5m-5-5h9"/></svg>
+     <h3 id="retrieval-whatsapp-title">Da reunião para a pessoa certa</h3>
+     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6m0-6-7 7M10 20H4v-6m0 6 7-7"/></svg>
+    </header>
+    <div class="retrieval__conversation">
+     <p class="retrieval__question">Prepare um WhatsApp para a Paula com o que ficou para ela na reunião.</p>
+     <div class="retrieval__draft" aria-label="Prévia de mensagem do WhatsApp no Allybi">
+      <div class="retrieval__draft-head"><img src="assets/images/workspace/whatsapp.svg" width="22" height="22" alt=""><strong>Mensagem do WhatsApp</strong></div>
+      <div class="retrieval__draft-to"><span>Para:</span><strong>Paula Nunes</strong></div>
+      <p class="retrieval__draft-body">Paula, a revisão do orçamento ficou com você até sexta, às 14h. Para fechar, falta a cotação da Atlas. Você consegue confirmar quando ela chega?</p>
+      <div class="retrieval__draft-source">Com base em <span>Ata de planejamento · p. 2</span></div>
+      <div class="retrieval__draft-footer">
+       <span>Revise e envie no WhatsApp</span>
+       <div class="retrieval__draft-actions" aria-label="Ações ilustrativas da demonstração">
+        <button type="button" aria-disabled="true" tabindex="-1">Cancelar</button>
+        <button type="button" class="retrieval__draft-send" aria-disabled="true" tabindex="-1">Abrir no WhatsApp</button>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="retrieval__composer" aria-hidden="true"><span>＋</span><span>Pergunte ao Allybi...</span><span>→</span></div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<!-- Privacy: a protected Allybi document, then three distinct visual explanations. -->
+<section id="security" class="privacy-chapter" aria-labelledby="privacy-title">
+
+ <div class="privacy__hero">
+  <div class="privacy__intro">
+   <h2 id="privacy-title">Seu trabalho é confidencial.<br><span>E deve continuar assim.</span></h2>
+   <p>Use inteligência artificial com o cuidado que seus documentos, conversas e decisões merecem.</p>
+  </div>
+  <div class="privacy__art" aria-hidden="true">
+   <img src="assets/images/security-native/protected.svg" width="900" height="900" alt="" loading="lazy" decoding="async">
+  </div>
+ </div>
+ <div class="privacy__assurances">
+  <article class="privacy-proof privacy-proof--transit" aria-labelledby="privacy-transit-title">
+   <div class="privacy-proof__copy">
+    <h3 id="privacy-transit-title">Proteção desde<br>o envio.</h3>
+    <p>A conexão entre seu dispositivo e o Allybi usa TLS para proteger os dados durante a transmissão.</p>
+   </div>
+   <div class="privacy-proof__visual" aria-hidden="true">
+    <img class="security-art-transit" src="assets/images/security-native/transit.svg" width="900" height="900" alt="" loading="lazy" decoding="async">
+   </div>
+  </article>
+  <article class="privacy-proof privacy-proof--storage" aria-labelledby="privacy-storage-title">
+   <div class="privacy-proof__copy">
+    <h3 id="privacy-storage-title">Proteção que<br>permanece.</h3>
+    <p>Documentos e informações pessoais são armazenados com criptografia AES-256.</p>
+   </div>
+   <div class="privacy-proof__visual" aria-hidden="true">
+    <img src="assets/images/security-native/storage.svg" width="900" height="900" alt="" loading="lazy" decoding="async">
+   </div>
+  </article>
+  <article class="privacy-proof privacy-proof--access" aria-labelledby="privacy-access-title">
+   <div class="privacy-proof__copy">
+    <h3 id="privacy-access-title">Acesso restrito.<br>Por princípio.</h3>
+    <p>O acesso a informações pessoais é limitado a pessoas autorizadas, quando necessário para operar o serviço.</p>
+   </div>
+   <div class="privacy-proof__visual" aria-hidden="true">
+    <img src="assets/images/security-native/access.svg" width="900" height="900" alt="" loading="lazy" decoding="async">
+   </div>
+  </article>
+  <article class="privacy-proof privacy-proof--training" aria-labelledby="privacy-training-title">
+   <div class="privacy-proof__copy">
+    <h3 id="privacy-training-title">Seu conteúdo<br>não treina IA.</h3>
+    <p>Seus documentos, perguntas e respostas não são usados para treinar modelos de inteligência artificial.</p>
+   </div>
+   <div class="privacy-proof__visual" aria-hidden="true">
+    <img src="assets/images/security-native/processing.svg" width="900" height="900" alt="" loading="lazy" decoding="async">
+   </div>
+  </article>
+  <article class="privacy-proof privacy-proof--rights" aria-labelledby="privacy-rights-title">
+   <div class="privacy-proof__copy">
+    <h3 id="privacy-rights-title">Seus dados.<br>Seus direitos.</h3>
+    <p>Nosso compromisso com a LGPD inclui seu direito de solicitar acesso, correção e exclusão dos seus dados, conforme a política de privacidade.</p>
+   </div>
+   <div class="privacy-proof__visual" aria-hidden="true">
+    <img src="assets/images/security-native/rights.svg" width="900" height="900" alt="" loading="lazy" decoding="async">
+   </div>
+  </article>
+ </div>
+ <div class="privacy__links">
+  <a href="/security-overview.html">Como protegemos seus dados <span aria-hidden="true">↗</span></a>
+  <a href="/privacy.html">Política de privacidade <span aria-hidden="true">↗</span></a>
+ </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     8. CLOSING CHAPTER — invitation followed by remaining questions
+     ═══════════════════════════════════════════════════════════════ -->
+<div class="home-closing-chapter">
+<!-- 8a. INVITATION — a clear next step after the privacy chapter. -->
+<section class="home-final-cta-section" id="comecar" aria-labelledby="home-final-cta-title">
+  <div class="home-final-cta-container">
+    <div class="home-final-cta-lede">
+      <h2 id="home-final-cta-title" data-i18n-key="home.final_cta.title">Vai querer trabalhar como antes?</h2>
+    </div>
+    <div class="home-final-cta-body">
+      <p class="home-final-cta-subtitle" data-i18n-key="home.final_cta.support">Traga aquela tarefa que ficou para depois. Experimente resolvê-la com o Allybi — e tire suas próprias conclusões.</p>
+      <div class="home-final-cta-actions">
+        <a href="https://app.allybi.com.br/" class="home-final-cta-primary">
+          <span data-i18n-key="home.final_cta.cta">Experimentar grátis por 30 dias</span>
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+        </a>
+      </div>
+      <p class="home-final-cta-micro" data-i18n-key="home.final_cta.micro">Depois, R$ 170/mês. Cancele quando quiser.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 8b. FAQ -->
+<section class="home-faq-section" id="faq" aria-labelledby="home-faq-title">
+  <div class="home-faq-container">
+    <header class="home-faq-header">
+      <h2 id="home-faq-title" data-i18n-key="home.faq.title">Perguntas frequentes</h2>
+    </header>
+    <div class="home-faq-list">
+      <div class="home-faq-item">
+        <button type="button" class="home-faq-trigger" aria-expanded="true" aria-controls="home-faq-a-1" id="home-faq-q-1">
+          <span data-i18n-key="home.faq.q1">Como faço para começar?</span>
+          <span class="home-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path class="home-faq-icon-vertical" d="M12 5v14"/><path d="M5 12h14"/></svg></span>
+        </button>
+        <div class="home-faq-answer" id="home-faq-a-1" role="region" aria-labelledby="home-faq-q-1"><div class="home-faq-answer-inner"><p data-i18n-key="home.faq.a1">Crie sua conta, envie um arquivo e faça uma pergunta sobre ele. Se preferir, comece conectando seu e-mail ou seus arquivos na nuvem.</p></div></div>
+      </div>
+      <div class="home-faq-item">
+        <button type="button" class="home-faq-trigger" aria-expanded="true" aria-controls="home-faq-a-2" id="home-faq-q-2">
+          <span data-i18n-key="home.faq.q2">Funciona com Gmail, Outlook e Google Drive?</span>
+          <span class="home-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path class="home-faq-icon-vertical" d="M12 5v14"/><path d="M5 12h14"/></svg></span>
+        </button>
+        <div class="home-faq-answer" id="home-faq-a-2" role="region" aria-labelledby="home-faq-q-2"><div class="home-faq-answer-inner"><p data-i18n-key="home.faq.a2">Sim. Você pode conectar Gmail, Outlook, Google Drive, OneDrive e SharePoint. Também pode enviar arquivos direto para o Allybi.</p></div></div>
+      </div>
+      <div class="home-faq-item">
+        <button type="button" class="home-faq-trigger" aria-expanded="true" aria-controls="home-faq-a-3" id="home-faq-q-3">
+          <span data-i18n-key="home.faq.q3">Como eu sei se a resposta está certa?</span>
+          <span class="home-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path class="home-faq-icon-vertical" d="M12 5v14"/><path d="M5 12h14"/></svg></span>
+        </button>
+        <div class="home-faq-answer" id="home-faq-a-3" role="region" aria-labelledby="home-faq-q-3"><div class="home-faq-answer-inner"><p data-i18n-key="home.faq.a3">Junto da resposta, o Allybi mostra de onde tirou a informação. Você pode abrir o arquivo ou o e-mail e conferir o trecho no contexto.</p></div></div>
+      </div>
+      <div class="home-faq-item">
+        <button type="button" class="home-faq-trigger" aria-expanded="true" aria-controls="home-faq-a-4" id="home-faq-q-4">
+          <span data-i18n-key="home.faq.q4">Ele envia mensagens sem me perguntar?</span>
+          <span class="home-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path class="home-faq-icon-vertical" d="M12 5v14"/><path d="M5 12h14"/></svg></span>
+        </button>
+        <div class="home-faq-answer" id="home-faq-a-4" role="region" aria-labelledby="home-faq-q-4"><div class="home-faq-answer-inner"><p data-i18n-key="home.faq.a4">Não. No Outlook, você revisa e confirma antes do envio. No WhatsApp, o Allybi abre a mensagem pronta no app, e você decide se quer enviar.</p></div></div>
+      </div>
+      <div class="home-faq-item">
+        <button type="button" class="home-faq-trigger" aria-expanded="true" aria-controls="home-faq-a-5" id="home-faq-q-5">
+          <span data-i18n-key="home.faq.q5">O Allybi usa meus arquivos para treinar IA?</span>
+          <span class="home-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path class="home-faq-icon-vertical" d="M12 5v14"/><path d="M5 12h14"/></svg></span>
+        </button>
+        <div class="home-faq-answer" id="home-faq-a-5" role="region" aria-labelledby="home-faq-q-5"><div class="home-faq-answer-inner"><p data-i18n-key="home.faq.a5">Não. Seus arquivos, perguntas e respostas não são usados para treinar modelos de inteligência artificial.</p></div></div>
+      </div>
+      <div class="home-faq-item">
+        <button type="button" class="home-faq-trigger" aria-expanded="true" aria-controls="home-faq-a-6" id="home-faq-q-6">
+          <span data-i18n-key="home.faq.q6">Posso testar antes de pagar?</span>
+          <span class="home-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path class="home-faq-icon-vertical" d="M12 5v14"/><path d="M5 12h14"/></svg></span>
+        </button>
+        <div class="home-faq-answer" id="home-faq-a-6" role="region" aria-labelledby="home-faq-q-6"><div class="home-faq-answer-inner"><p data-i18n-key="home.faq.a6">Sim, você tem 30 dias grátis para usar o Allybi. Depois, a assinatura custa R$ 170 por mês. Você pode cancelar quando quiser.</p></div></div>
+      </div>
+      <div class="home-faq-help">
+      <p class="home-faq-support" data-i18n-key="home.faq.support">Ficou alguma dúvida?</p>
+      <a class="home-faq-contact" href="/contact.html"><span data-i18n-key="home.faq.contact">Fale com a gente</span><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</div>
+<!-- /.home-closing-chapter -->
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" id="home-footer" data-surface="light">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="site-footer__wordmark-link" href="/" aria-label="Allybi — início"><img src="assets/images/allybi-workspace-knot.svg" alt="" width="44" height="44"><span class="site-footer__wordmark">Allybi</span></a>
+    </div>
+    <nav class="site-footer__nav" aria-label="Rodapé">
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">O Allybi</h3>
+        <div class="site-footer__links">
+          <a href="/how-it-works.html">Como funciona</a>
+          <a href="/security-overview.html">Segurança</a>
+          <a href="/pricing.html">Preços</a>
+        </div>
+      </div>
+
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Ferramentas</h3>
+        <div class="site-footer__links">
+          <a href="/tempo.html">Tempo perdido</a>
+          <a href="/diagnostico.html">Diagnóstico do fluxo</a>
+          <a href="/metodologia.html">Metodologia</a>
+        </div>
+      </div>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Empresa</h3>
+        <div class="site-footer__links">
+          <a href="/about.html">Sobre</a>
+          <a href="/#faq">Perguntas frequentes</a>
+          <a href="/contact.html">Contato</a>
+        </div>
+      </div>
+    </nav>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">© 2026 Allybi. Todos os direitos reservados.</p>
+      <div class="site-footer__legal">
+        <a href="/terms.html">Termos</a>
+        <a href="/privacy.html">Privacidade</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+// Progressive FAQ enhancement: without JavaScript every answer remains readable.
+(function(){
+  var list=document.querySelector('.home-faq-list');
+  if(!list)return;
+  var triggers=Array.prototype.slice.call(list.querySelectorAll('.home-faq-trigger'));
+  function setOpen(trigger,open){
+    var answer=document.getElementById(trigger.getAttribute('aria-controls'));
+    trigger.setAttribute('aria-expanded',String(open));
+    if(!answer)return;
+    answer.setAttribute('aria-hidden',String(!open));
+    answer.toggleAttribute('inert',!open);
+  }
+  list.dataset.enhanced='true';
+  triggers.forEach(function(trigger,index){
+    setOpen(trigger,index===0);
+    trigger.addEventListener('click',function(){
+      var shouldOpen=trigger.getAttribute('aria-expanded')!=='true';
+      triggers.forEach(function(other){setOpen(other,false)});
+      if(shouldOpen)setOpen(trigger,true);
+    });
+  });
+})();
+</script>
+<script src="allybi-header.js"></script>
+<script src="assets/workspace-menu-motion.js"></script>
+<script src="assets/home-header-workspace.js"></script>
+<script src="assets/home-header-scroll.js"></script>
+<script src="allybi-animations.js"></script>
+<script src="assets/homepage-coordinator.js" defer></script>
+<script src="assets/home-hero-timeline.js" defer></script>
+<script src="assets/home-hero-reveal.js" defer onerror="document.documentElement.classList.remove('has-cinematic-potential','has-cinematic-runway','has-cinematic-hero','home-hero-runway-locked','home-hero-lock-visible');document.documentElement.classList.add('home-hero-fallback-ready');document.querySelector('.home-hero').classList.add('is-revealed')"></script>
+<script src="assets/hero-story-motion.js" defer></script>
+<!-- Section reveal observers (add .is-revealed when the section enters
+     the viewport). Without these, sections that start at opacity: 0
+     stay invisible. -->
+<script src="assets/work-trace.js" defer></script>
+<script src="assets/possibility-motion.js" defer></script>
+<script src="assets/integration-flow.js" defer></script>
+<script src="assets/home-security-reveal.js" defer></script>
+<script src="assets/usecase-live.js" defer></script>
+<script src="assets/security-art-motion.js" defer></script>
+</body>
+</html>

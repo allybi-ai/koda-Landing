@@ -1,0 +1,51 @@
+{
+  "contact": {
+    "page": {
+      "copied": "Copiado.",
+      "copy_email": "Copiar endereço de e-mail",
+      "copy_error": "Não foi possível copiar. Selecione o texto e copie manualmente.",
+      "direct": "Prefere escrever direto?",
+      "email": "Seu e-mail",
+      "error": "Não foi possível enviar agora. Seu texto continua aqui para você tentar novamente.",
+      "handoff": "A resposta chega no e-mail que você informar.",
+      "intro": "Uma dúvida, uma ideia ou algo que não funcionou como você esperava. Conte para a gente.",
+      "message": "Sua mensagem",
+      "message_placeholder": "Pode começar pelo que você precisa.",
+      "optional": "opcional",
+      "rate": "Você já tentou algumas vezes. Aguarde alguns minutos antes de enviar novamente.",
+      "sending": "Enviando…",
+      "subject": "Assunto",
+      "subject_placeholder": "Sobre o que você quer conversar?",
+      "submit": "Enviar mensagem",
+      "success": "Sua mensagem foi enviada. Vamos responder no e-mail que você informou.",
+      "team": "Equipe Allybi",
+      "title": "Vamos conversar.",
+      "to": "Para"
+    }
+  },
+  "home": {
+    "faq": {
+      "a1": "Crie sua conta, envie um arquivo e faça uma pergunta sobre ele. Se preferir, comece conectando seu e-mail ou seus arquivos na nuvem.",
+      "a2": "Sim. Você pode conectar Gmail, Outlook, Google Drive, OneDrive e SharePoint. Também pode enviar arquivos direto para o Allybi.",
+      "a3": "Junto da resposta, o Allybi mostra de onde tirou a informação. Você pode abrir o arquivo ou o e-mail e conferir o trecho no contexto.",
+      "a4": "Não. No Outlook, você revisa e confirma antes do envio. No WhatsApp, o Allybi abre a mensagem pronta no app, e você decide se quer enviar.",
+      "a5": "Não. Seus arquivos, perguntas e respostas não são usados para treinar modelos de inteligência artificial.",
+      "a6": "Sim, você tem 30 dias grátis para usar o Allybi. Depois, a assinatura custa R$ 170 por mês. Você pode cancelar quando quiser.",
+      "contact": "Fale com a gente",
+      "q1": "Como faço para começar?",
+      "q2": "Funciona com Gmail, Outlook e Google Drive?",
+      "q3": "Como eu sei se a resposta está certa?",
+      "q4": "Ele envia mensagens sem me perguntar?",
+      "q5": "O Allybi usa meus arquivos para treinar IA?",
+      "q6": "Posso testar antes de pagar?",
+      "support": "Ficou alguma dúvida?",
+      "title": "Perguntas frequentes"
+    },
+    "final_cta": {
+      "cta": "Experimentar grátis por 30 dias",
+      "micro": "Depois, R$ 170/mês. Cancele quando quiser.",
+      "support": "Traga aquela tarefa que ficou para depois. Experimente resolvê-la com o Allybi — e tire suas próprias conclusões.",
+      "title": "Vai querer trabalhar como antes?"
+    }
+  }
+}

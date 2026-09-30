@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
+  <title>Pol&#237;tica de Privacidade &#8212; Allybi</title>
+  <meta name="description" content="Como o Allybi coleta, usa, protege e ret&#233;m informa&#231;&#245;es quando voc&#234; usa o site, cria uma conta, conecta fontes ou faz upload de documentos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="allybi-tokens.css">
+  <link rel="stylesheet" href="allybi-base.css">
+  <link rel="stylesheet" href="allybi-components.css">
+  <link rel="stylesheet" href="allybi-header.css">
+  <link rel="stylesheet" href="allybi-footer.css">
+  <link rel="stylesheet" href="allybi-responsive.css">
+  <style>
+    .legal-hero { padding: 140px 0 40px; }
+    .legal-eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--allybi-text-muted); margin-bottom: 16px; }
+    .legal-h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 700; letter-spacing: -0.02em; color: var(--allybi-text-strongest); margin-bottom: 16px; }
+    .legal-summary { font-size: 16px; color: var(--allybi-text-secondary); line-height: 1.6; max-width: 640px; margin-bottom: 20px; }
+    .legal-meta { font-size: 13px; color: var(--allybi-text-muted); display: flex; gap: 24px; flex-wrap: wrap; }
+    .legal-body { padding: 48px 0 80px; }
+    .legal-content { max-width: 760px; margin: 0 auto; font-size: 15px; line-height: 1.7; color: var(--allybi-text-primary); }
+    .legal-content h2 { font-size: 22px; font-weight: 700; color: var(--allybi-text-strongest); margin: 48px 0 16px; padding-top: 24px; border-top: 1px solid var(--allybi-border-default); }
+    .legal-content h3 { font-size: 18px; font-weight: 600; color: var(--allybi-text-strongest); margin: 32px 0 12px; }
+    .legal-content p { margin: 0 0 16px; }
+    .legal-content ul, .legal-content ol { margin: 0 0 16px; padding-left: 24px; }
+    .legal-content li { margin-bottom: 8px; }
+    .legal-content a { color: var(--allybi-accent); text-decoration: underline; }
+    .legal-notice { padding: 16px 20px; background: var(--allybi-bg-alt-1); border-radius: var(--allybi-radius-md); font-size: 14px; color: var(--allybi-text-secondary); margin-bottom: 32px; border-left: 3px solid var(--allybi-accent); }
+    .legal-back-top { text-align: center; padding: 32px 0; }
+    .legal-back-top a { font-size: 14px; color: var(--allybi-text-muted); text-decoration: none; }
+    .legal-back-top a:hover { color: var(--allybi-text-strongest); }
+    @media (max-width: 768px) { .legal-hero { padding: 110px 0 32px; } .legal-content { font-size: 16px; } }
+  </style>
+</head>
+<body>
+<!-- HEADER -->
+<header class="site-header" data-site-header>
+  <div class="site-header__inner">
+
+    <a class="site-header__logo" href="/" aria-label="Allybi">
+      <img src="assets/images/allybi-logo.svg" alt="Allybi" width="42" height="42">
+    </a>
+
+    <nav class="site-header__desktop-nav" aria-label="Navegação principal">
+      <a href="/how-it-works.html" class="site-header__nav-link">Como funciona</a>
+      <a href="/security-overview.html" class="site-header__nav-link">Segurança</a>
+
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-ferramentas" aria-haspopup="true">Ferramentas<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-ferramentas" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/tempo.html"><span class="site-header__dropdown-title">Tempo perdido</span><span class="site-header__dropdown-desc">Calcule o tempo invisível.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/diagnostico.html"><span class="site-header__dropdown-title">Diagnóstico do fluxo</span><span class="site-header__dropdown-desc">Mapeie onde o time trava.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/metodologia.html"><span class="site-header__dropdown-title">Metodologia</span><span class="site-header__dropdown-desc">Como calculamos.</span></a>
+        </div>
+      </div>
+      <a href="/pricing.html" class="site-header__nav-link">Preços</a>
+      <a href="/about.html" class="site-header__nav-link">Sobre</a>
+    </nav>
+
+    <div class="site-header__desktop-actions">
+      <a href="https://app.allybi.com.br" class="site-header__signin">Entrar</a>
+      <a href="https://app.allybi.com.br" class="site-header__cta">Começar grátis</a>
+    </div>
+
+    <button class="site-header__menu-button" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" data-mobile-menu-toggle>
+      <span class="site-header__menu-line"></span>
+      <span class="site-header__menu-line"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true" inert>
+  <div class="mobile-menu__top">
+    <a class="mobile-menu__logo" href="/" aria-label="Allybi"><img src="assets/images/allybi-logo.svg" alt="Allybi" width="38" height="38"></a>
+    <button class="mobile-menu__close" type="button" aria-label="Fechar menu" data-mobile-menu-close>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu__body">
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">O Allybi</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/how-it-works.html">Como funciona<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/security-overview.html">Segurança<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Ferramentas</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/tempo.html">Tempo perdido<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/diagnostico.html">Diagnóstico do fluxo<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/metodologia.html">Metodologia<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Empresa</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/pricing.html">Preços<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/about.html">Sobre<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/pricing.html#faq">FAQ<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/contact.html">Contato<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <div class="mobile-menu__actions">
+      <a href="https://app.allybi.com.br" class="mobile-menu__primary">Começar grátis</a>
+      <a href="https://app.allybi.com.br" class="mobile-menu__secondary">Entrar</a>
+    </div>
+    <p class="mobile-menu__note">30 dias grátis. Depois R$170/mês. Cancele quando quiser.</p>
+  </div>
+</div>
+<script src="allybi-header.js"></script>
+<script src="allybi-animations.js"></script>
+
+<main id="privacy-page">
+<section class="legal-hero">
+  <div class="allybi-container">
+    <div class="legal-eyebrow">Jur&#237;dico</div>
+    <h1 class="legal-h1">Pol&#237;tica de Privacidade</h1>
+    <p class="legal-summary">Como o Allybi coleta, usa, protege e ret&#233;m informa&#231;&#245;es quando voc&#234; usa o site, cria uma conta, conecta fontes ou faz upload de documentos.</p>
+    <div class="legal-meta">
+      <span>&#218;ltima atualiza&#231;&#227;o: April 30, 2026</span>
+      <span>Vers&#227;o: 2.0</span>
+    </div>
+  </div>
+</section>
+
+<section class="legal-body">
+  <div class="allybi-container">
+    <div class="legal-content">
+      <div class="legal-notice">
+        Esta p&#225;gina cont&#233;m texto jur&#237;dico em ingl&#234;s enquanto a vers&#227;o em portugu&#234;s passa por revis&#227;o. Em caso de d&#250;vida, entre em contato com o Allybi.
+      </div>
+
+      <h2 id="section-1">1. Introduction</h2>
+      <p>Welcome to Allybi, a secure document management and AI assistant platform operated by Camasmie Gillet Inc., a Delaware corporation ("Company," "we," "us," or "our").
+      This Privacy Policy describes how we collect, use, disclose, and protect your personal information when you use our web platform and related services (collectively, the "Service" or "Platform").</p>
+      <p>Your privacy is fundamental to our mission of providing secure, intelligent document management solutions. We are committed to transparency about our data practices and to giving you meaningful control over your personal information. This Privacy Policy explains what information we collect, why we collect it, how we use it, and the choices you have regarding your personal data.</p>
+      <p>This Privacy Policy applies to all users of the Allybi Service, regardless of how you access or use our Platform. By using our Service, you acknowledge that you have read and understood this Privacy Policy and agree to the collection, use, and disclosure of your information as described herein. If you do not agree with our practices, please do not use our Service.</p>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make material changes, we will notify you through the Service, via email, or through other reasonable means. Your continued use of the Service after such notice constitutes acceptance of the updated Privacy Policy.</p>
+      <p>For questions about this Privacy Policy or our privacy practices, please contact us at info@allybi.co or through the contact information provided at the end of this document.</p>
+
+      <h2 id="section-2">2. Information We Collect</h2>
+      <p>We collect information to provide, improve, and protect our Service. The information we collect falls into several categories, each serving specific purposes in delivering our document management and AI assistant capabilities.</p>
+
+      <h3>2.1 Information You Provide Directly</h3>
+      <p><strong>Account Information:</strong> When you create an Allybi account, we collect information necessary to establish and maintain your account, including your full name, email address, phone number (if provided), and password. If you subscribe to a paid plan, we also collect billing information such as your payment method details, billing address, and transaction history. This information is essential for account authentication, service provision, and billing purposes.</p>
+      <p><strong>Profile Information:</strong> You may choose to provide additional profile information to enhance your experience with our Service, such as a profile picture, job title, organization name, and preferences for notifications and Service features. This information helps personalize your experience and facilitates collaboration with other users when you choose to share documents or insights.</p>
+      <p><strong>User Content and Documents:</strong> Our Service is designed to help you manage, organize, and analyze your documents and files. When you upload, create, or store content through our Service ("Your Content"), we collect and store this information to provide our core functionality. This includes documents in various formats (PDF, Word, Excel, PowerPoint, images, and others), any text or data you input into our Service, comments and annotations you make on documents, and metadata associated with your files such as creation dates, file sizes, and modification history. Allybi processes the documents, files, prompts, and outputs you provide or import so we can deliver the Service, including search, retrieval, summarization, comparison, source-cited answers, response preparation, and review-before-send workflows.</p>
+      <p><strong>Communications:</strong> When you contact us for support, provide feedback, or communicate with us through any channel, we collect the information you provide in these communications, including your contact details, the content of your messages, and any attachments you send. We use this information to respond to your inquiries, provide support, and improve our Service.</p>
+
+      <h3>2.2 Information We Collect Automatically</h3>
+      <p><strong>Usage Information:</strong> We automatically collect information about how you interact with our Service to understand usage patterns, improve functionality, and ensure security. This includes details about the actions you take within your account, such as uploading, viewing, editing, sharing, and organizing documents; search queries and results within the Service; features and tools you use most frequently; time spent using various aspects of the Service; and patterns of collaboration and document sharing.</p>
+      <p><strong>Device and Technical Information:</strong> To provide a secure and optimized experience across different devices and platforms, we collect technical information about the devices and software you use to access our Service. This includes your device's Internet Protocol (IP) address, which helps us understand your general location and detect potential security threats; browser type and version, operating system, and device identifiers; screen resolution and device capabilities to optimize our user interface; referral URLs and the pages you visit within our Service; and timestamps and duration of your sessions.</p>
+      <p><strong>Location Information:</strong> Depending on your device settings and permissions, we may collect general location information derived from your IP address to provide location-relevant features, comply with legal requirements, and enhance security by detecting unusual access patterns. We do not collect precise geolocation data unless you explicitly grant permission for specific features that require it.</p>
+      <p><strong>Cookies and Similar Technologies:</strong> We use cookies, web beacons, and similar tracking technologies to enhance your experience with our Service, remember your preferences, and analyze usage patterns. Essential cookies are necessary for basic Service functionality, such as maintaining your login session and remembering your language preferences. Analytics cookies help us understand how users interact with our Service, which features are most valuable, and where we can make improvements. You can control cookie settings through your browser, though disabling certain cookies may limit some Service functionality.</p>
+
+      <h3>2.3 Information from Third Parties</h3>
+      <p><strong>Integration Data:</strong> If you choose to connect third-party services or applications to your Allybi account, we may receive information from those services in accordance with their terms and your authorization. This could include documents or data from cloud storage services, productivity applications, or other tools you use in conjunction with our Service.</p>
+      <p><strong>Slack Integration Data:</strong> Slack is not currently available as an Allybi integration. If enabled in future versions, Allybi will disclose the scopes, data use, retention, and deletion terms before connection.</p>
+      <p><strong>Gmail Integration Data:</strong> Gmail integration is currently marked as coming soon. When Gmail is enabled and you authorize Allybi to integrate with Gmail, we may receive the following information as permitted by Gmail's authorization scopes:</p>
+      <ul>
+        <li>Email headers (from, to, date, subject) and message content only as authorized by you</li>
+        <li>Email attachments, only as authorized and necessary for the integration features</li>
+        <li>Labels and folder metadata if used for organization and retrieval purposes</li>
+        <li>We process Gmail data only within your individual account environment and only for the specific integration features you enable.</li>
+      </ul>
+      <p><strong>Outlook / Microsoft Integration Data:</strong> When you authorize Allybi to integrate with Outlook or other Microsoft services, we may receive the following information as permitted by Microsoft's authorization scopes:</p>
+      <ul>
+        <li>Email headers, content, and attachments, only as authorized</li>
+        <li>If applicable, calendar metadata used for productivity and scheduling features</li>
+        <li>We maintain strict data minimization practices and only access data necessary for the requested integration features.</li>
+      </ul>
+      <p><strong>OneDrive Integration Data:</strong> When you connect OneDrive, Allybi may access selected files, folders, and file metadata so you can import them into the chat.</p>
+      <p><strong>SharePoint Integration Data:</strong> When you connect SharePoint, Allybi may access selected sites, libraries, folders, and files you are authorized to use.</p>
+      <p><strong>WhatsApp Handoff and Contacts:</strong> Allybi's WhatsApp workflow prepares a message for user review and handoff. Allybi may store contact name, nickname, phone number, optional email, message draft, and selected files or references. Allybi does not automatically send WhatsApp messages. You review before opening WhatsApp. WhatsApp is not a full synced inbox integration.</p>
+      <p><strong>Integration Authentication Tokens:</strong> To maintain the connection between Allybi and third-party services, we store and use OAuth tokens and refresh tokens. These tokens allow Allybi to access your authorized data on your behalf. You can revoke access at any time by disconnecting the integration through your Allybi account settings, which will prevent further data access and syncing.</p>
+      <p>Disconnect language: When you disconnect an integration, Allybi stops using that connection to access new data from that service. Previously imported files, message drafts, metadata, or cached items may remain in Allybi until you delete them, your workspace settings delete them, or our retention rules require deletion. Disconnecting an integration does not automatically delete files or content already imported into Allybi unless the product specifically says so.</p>
+      <p><strong>Authentication Services:</strong> If you choose to create an account or log in using third-party authentication services (such as Google or Microsoft), we receive basic profile information from those services, typically including your name, email address, and profile picture, as permitted by your privacy settings with those services.</p>
+      <p><strong>Referral Information:</strong> If someone refers you to our Service or shares content with you through our Platform, we may receive your contact information from that person to facilitate the sharing or invitation process.</p>
+
+      <h2 id="section-3">3. How We Use Your Information</h2>
+      <p>We use the information we collect for specific, legitimate purposes that enable us to provide, improve, and protect our Service while respecting your privacy rights. Our use of your information is guided by the principles of data minimization, purpose limitation, and transparency.</p>
+
+      <h3>3.1 Service Provision and Core Functionality</h3>
+      <p><strong>Document Management:</strong> We use your account information and uploaded content to provide our core document management services, including secure storage of your files, organization and categorization tools, search functionality across your document library, version control and document history tracking, and collaboration features that allow you to share and work on documents with others.</p>
+      <p><strong>AI Assistant Services:</strong> Our AI Assistant processes your documents and content to provide intelligent insights, summaries, and assistance. This processing occurs within your individual account environment and is performed on-demand when you request AI assistance. The AI Assistant analyzes document content to generate summaries and key insights, answers questions about your documents and their contents, provides recommendations for document organization and workflow optimization, and extracts relevant information to help you work more efficiently. Importantly, we do not use your documents or content to train our AI models or to benefit other users or third parties.</p>
+      <p><strong>Integration Services:</strong> We use integration data to deliver the features you request when you connect Outlook, OneDrive, SharePoint, Google Drive, WhatsApp, or other connected sources. This includes importing data from connected services, analyzing connected data to provide insights and summaries, helping you find and organize information across integrated platforms, and maintaining the connection through authentication tokens. Data from integrations is analyzed only when you connect them and request assistance, and only within your individual account environment.</p>
+      <p><strong>Account Management:</strong> We use your account information to maintain your user profile, authenticate your access to the Service, manage your subscription and billing (for paid plans), provide customer support and technical assistance, and communicate important account-related information.</p>
+
+      <h3>3.2 Service Improvement and Development</h3>
+      <p><strong>Analytics and Performance:</strong> We analyze usage patterns and technical data to understand how our Service is used, identify areas for improvement, optimize performance and reliability, develop new features and capabilities, and ensure our Service meets the evolving needs of our users. This analysis is conducted using aggregated and anonymized data whenever possible.</p>
+      <p><strong>Quality Assurance:</strong> We use information about Service performance, error reports, and user feedback to identify and resolve technical issues, improve the accuracy and reliability of our AI Assistant, enhance security measures and fraud detection, and maintain high standards of Service quality.</p>
+
+      <h3>3.3 Communication and Support</h3>
+      <p><strong>Customer Support:</strong> When you contact us for assistance, we use your communication and account information to respond to your inquiries, troubleshoot technical issues, provide guidance on Service features and best practices, and follow up on support requests to ensure resolution.</p>
+      <p><strong>Service Communications:</strong> We may use your contact information to send important notifications about your account, Service updates and new features, security alerts and maintenance notifications, and changes to our terms or policies. You can control the types of communications you receive through your account settings.</p>
+      <p><strong>Marketing Communications:</strong> With your consent, we may send you information about Service upgrades, new features that might interest you, educational content and best practices, and special offers or promotions. You can opt out of marketing communications at any time through the unsubscribe links in our emails or by updating your preferences in your account settings. Note that even if you opt out of marketing communications, we may still send you essential service-related communications.</p>
+
+      <h3>3.4 Legal and Security Purposes</h3>
+      <p><strong>Legal Compliance:</strong> We may use your information to comply with applicable laws, regulations, and legal processes; respond to lawful requests from government authorities; enforce our Terms of Service and other agreements; and protect our legal rights and interests.</p>
+      <p><strong>Security and Fraud Prevention:</strong> We use various types of information to protect our Service and users from security threats, including detecting and preventing unauthorized access to accounts; identifying and blocking malicious activities or abuse; monitoring for unusual usage patterns that might indicate security risks; and maintaining the integrity and availability of our Service infrastructure.</p>
+
+      <h3>3.5 Business Operations</h3>
+      <p><strong>Business Analysis:</strong> We use aggregated and anonymized information to understand market trends, evaluate business performance, make strategic decisions about Service development, and assess the effectiveness of our operations and marketing efforts.</p>
+      <p><strong>Research and Development:</strong> We may use anonymized and aggregated data to conduct research that helps us improve our AI technologies, develop new features and services, and advance the field of document management and artificial intelligence, always in ways that do not identify individual users or compromise privacy.</p>
+
+      <h2 id="section-4">4. Legal Basis for Processing</h2>
+      <p>Under applicable data protection laws, including the General Data Protection Regulation (GDPR), we must have a lawful basis for processing your personal information. We rely on several legal bases depending on the type of information and the purpose of processing.</p>
+
+      <h3>4.1 Contract Performance</h3>
+      <p>We process much of your personal information because it is necessary for the performance of our contract with you (our Terms of Service) or to take steps at your request before entering into a contract. This includes processing your account information to provide access to the Service, storing and managing your documents as part of our core service offering, processing payment information for paid subscriptions, and providing customer support and technical assistance.</p>
+
+      <h3>4.2 Legitimate Interests</h3>
+      <p>We rely on our legitimate interests (or those of third parties) as a legal basis for processing in certain circumstances, provided these interests are not overridden by your fundamental rights and freedoms. Our legitimate interests include operating and improving our Service, ensuring the security and integrity of our Platform, preventing fraud and abuse, conducting business analytics with anonymized data, and developing new features and capabilities that benefit our users.</p>
+      <p>When we rely on legitimate interests, we have conducted balancing tests to ensure that our interests do not override your privacy rights. You have the right to object to processing based on legitimate interests, and we will cease such processing unless we can demonstrate compelling legitimate grounds that override your interests, rights, and freedoms.</p>
+
+      <h3>4.3 Consent</h3>
+      <p>For certain types of processing, we rely on your explicit consent, including marketing communications beyond essential service notifications, optional data collection for enhanced features, integration with third-party services, and any processing that is not covered by contract performance or legitimate interests. You have the right to withdraw your consent at any time, and we will provide clear mechanisms for doing so.</p>
+
+      <h3>4.4 Legal Obligations</h3>
+      <p>We may process your personal information when necessary to comply with legal obligations, such as responding to lawful requests from law enforcement or regulatory authorities, complying with tax and accounting requirements, and meeting data retention obligations under applicable laws.</p>
+
+      <h3>4.5 Vital Interests</h3>
+      <p>In rare circumstances, we may process personal information to protect the vital interests of you or another person, such as in emergency situations where immediate action is necessary to prevent serious harm.</p>
+
+      <h2 id="section-5">5. How We Share Your Information</h2>
+      <p>We do not sell your personal information to third parties. We only share your information in specific circumstances that are necessary for providing our Service, protecting our users, or complying with legal obligations. When we do share information, we implement appropriate safeguards to protect your privacy and ensure that recipients handle your data responsibly.</p>
+
+      <h3>5.1 Service Providers and Business Partners</h3>
+      <p><strong>Trusted Third-Party Providers:</strong> We work with carefully selected service providers who help us operate and improve our Service. These providers may have access to your personal information only to the extent necessary to perform their functions on our behalf, and they are contractually obligated to protect your information and use it only for the purposes we specify. Categories of service providers include:</p>
+      <ul>
+        <li>Cloud infrastructure and hosting providers who help us store and deliver our Service securely</li>
+        <li>Payment processors who handle billing and subscription management for paid plans</li>
+        <li>Customer support platforms that help us provide assistance and resolve issues</li>
+        <li>Analytics services that help us understand Service usage and performance (using anonymized data when possible)</li>
+        <li>Security services that help us protect against threats and maintain Service integrity</li>
+      </ul>
+      <p><strong>Data Processing Agreements:</strong> All service providers who may have access to personal information are required to enter into data processing agreements that include strict data protection obligations, limitations on data use and retention, security requirements and audit rights, and compliance with applicable privacy laws and regulations.</p>
+
+      <h3>5.2 Other Users and Collaboration</h3>
+      <p><strong>Collaboration Features:</strong> When you choose to use our collaboration features, certain information may be shared with other users as necessary to enable the functionality you've requested. This includes sharing documents or folders with specific users or teams, displaying your name and profile information to collaborators, showing activity and edit history for shared documents, and providing contact information when you invite others to collaborate. You have full control over what you share and with whom, and you can modify or revoke sharing permissions at any time.</p>
+      <p><strong>Team and Organization Accounts:</strong> If you join a team or organization account, certain information may be visible to team administrators and other team members as necessary for collaboration and account management. This typically includes your name, email address, and role within the organization; documents and folders you've shared with the team; and activity related to team documents and projects.</p>
+
+      <h3>5.3 Legal Requirements and Safety</h3>
+      <p><strong>Legal Compliance:</strong> We may disclose your information when required by law or when we have a good faith belief that disclosure is necessary to comply with legal processes, such as court orders, subpoenas, or other lawful requests from government authorities; comply with applicable laws and regulations; enforce our Terms of Service and other agreements; and protect the rights, property, or safety of our company, users, or the public.</p>
+      <p><strong>Emergency Situations:</strong> In rare circumstances, we may disclose personal information without your consent if we believe it is necessary to prevent serious harm, such as threats to physical safety, child abuse or exploitation, or other emergency situations where immediate action is required.</p>
+
+      <h3>5.4 Business Transfers</h3>
+      <p><strong>Corporate Transactions:</strong> If we are involved in a merger, acquisition, bankruptcy, sale of assets, or other corporate transaction, your personal information may be transferred as part of that transaction. In such cases, we will provide notice before your personal information is transferred and becomes subject to a different privacy policy. We will ensure that any acquiring party agrees to protect your information in accordance with this Privacy Policy until they provide you with notice of changes to their privacy practices.</p>
+
+      <h3>5.5 Aggregated and Anonymized Information</h3>
+      <p><strong>Research and Analytics:</strong> We may share aggregated, anonymized, or de-identified information that cannot reasonably be used to identify you. This information may be used for research, analytics, marketing, or other business purposes. For example, we might share statistics about Service usage trends or document management best practices, provided such information does not identify individual users or reveal personal information.</p>
+
+      <h2 id="section-6">6. Data Security and Protection</h2>
+      <p>Protecting your personal information is a fundamental responsibility that we take seriously. We implement comprehensive security measures designed to safeguard your data against unauthorized access, disclosure, alteration, and destruction.</p>
+
+      <h3>6.1 Technical Safeguards</h3>
+      <p><strong>Encryption:</strong> We use industry-standard encryption to protect your data both in transit and at rest. All data transmitted between your device and our servers is protected using Transport Layer Security (TLS) encryption with strong cipher suites. Your documents and personal information are encrypted when stored on our servers using Advanced Encryption Standard (AES) 256-bit encryption. Encryption keys are managed using secure key management systems with appropriate access controls and rotation policies.</p>
+      <p><strong>Access Controls:</strong> We implement strict access controls to ensure that only authorized personnel can access your personal information, and only when necessary for legitimate business purposes. This includes multi-factor authentication requirements for all employee accounts, role-based access controls that limit access based on job responsibilities, regular access reviews and prompt removal of access when no longer needed, and comprehensive audit logging of all access to personal information.</p>
+      <p><strong>Infrastructure Security:</strong> Our technical infrastructure is designed with security as a foundational principle. We use secure cloud hosting environments with robust physical and logical security controls, network segmentation and firewalls to protect against unauthorized access, intrusion detection and prevention systems to monitor for threats, and regular security assessments and penetration testing to identify and address vulnerabilities.</p>
+
+      <h3>6.2 Organizational Safeguards</h3>
+      <p><strong>Employee Training and Policies:</strong> All employees who may have access to personal information receive comprehensive training on data protection principles, privacy laws and regulations, security best practices and incident response procedures, and their responsibilities for protecting user data. We maintain strict policies governing employee access to and handling of personal information.</p>
+      <p><strong>Vendor Management:</strong> We carefully evaluate the security practices of all service providers and require them to implement appropriate technical and organizational measures to protect personal information. This includes conducting security assessments before engaging new providers, requiring contractual commitments to data protection standards, and ongoing monitoring of vendor security practices.</p>
+      <p><strong>Incident Response:</strong> We maintain a comprehensive incident response plan to quickly identify, contain, and remediate any security incidents. This includes procedures for detecting and responding to potential data breaches, notification protocols for affected users and regulatory authorities, and post-incident analysis to prevent similar occurrences.</p>
+
+      <h3>6.3 Data Minimization and Retention</h3>
+      <p><strong>Data Minimization:</strong> We collect and process only the personal information that is necessary for the purposes described in this Privacy Policy. We regularly review our data collection practices to ensure we are not collecting excessive information and implement privacy-by-design principles in the development of new features and services.</p>
+      <p><strong>Retention Policies:</strong> We retain personal information only for as long as necessary to fulfill the purposes for which it was collected, comply with legal obligations, resolve disputes, and enforce our agreements. Specific retention periods vary depending on the type of information and the purpose for which it was collected. Account information is retained for the duration of your account and for a limited period after account closure to comply with legal obligations. Document content is retained according to your instructions and account settings, with the ability to delete content at any time. Usage and analytics data is typically retained for shorter periods and is anonymized when possible.</p>
+
+      <h3>6.4 International Data Transfers</h3>
+      <p>As a global service, we may transfer your personal information to countries other than your country of residence, including the United States where our primary servers are located. When we transfer personal information internationally, we implement appropriate safeguards to ensure adequate protection, including using Standard Contractual Clauses (SCCs) approved by the European Commission for transfers from the European Economic Area, conducting adequacy assessments for destination countries, and implementing additional technical and organizational measures when necessary.</p>
+      <p>We are committed to complying with applicable data protection laws in all jurisdictions where we operate, including the General Data Protection Regulation (GDPR) in the European Union, the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA) in California, and other regional privacy laws. We maintain processes to ensure ongoing compliance as laws evolve and new regulations are enacted.</p>
+
+      <h2 id="section-7">7. Your Privacy Rights and Choices</h2>
+      <p>We believe you should have meaningful control over your personal information. Depending on your location and applicable laws, you may have various rights regarding your personal data. We are committed to facilitating the exercise of these rights and providing clear mechanisms for you to control your information.</p>
+
+      <h3>7.1 Access and Portability Rights</h3>
+      <p><strong>Right to Access:</strong> You have the right to know what personal information we have about you and how we use it. You can access most of your personal information directly through your account settings and dashboard. For additional information or if you need assistance accessing your data, you can contact us using the information provided at the end of this Privacy Policy. We will respond to access requests within the timeframes required by applicable law, typically within 30 days.</p>
+      <p><strong>Data Portability:</strong> You have the right to receive your personal information in a structured, commonly used, and machine-readable format, and to transmit that data to another service provider. We provide tools within your account to export your documents and data, and we can assist with additional data portability requests when technically feasible.</p>
+
+      <h3>7.2 Correction and Update Rights</h3>
+      <p><strong>Right to Rectification:</strong> You have the right to correct inaccurate or incomplete personal information. You can update most of your account information directly through your account settings. For other corrections or if you need assistance, please contact us and we will work to correct any inaccuracies promptly.</p>
+
+      <h3>7.3 Deletion Rights</h3>
+      <p><strong>Right to Erasure:</strong> You have the right to request deletion of your personal information in certain circumstances, including when the information is no longer necessary for the purposes for which it was collected, when you withdraw consent and there is no other legal basis for processing, when you object to processing based on legitimate interests and there are no overriding legitimate grounds, or when the information has been unlawfully processed.</p>
+      <p><strong>Account Deletion:</strong> You can delete your account at any time through your account settings. When you delete your account, we will delete your personal information and documents in accordance with our retention policies, though some information may be retained for legal compliance, security, or fraud prevention purposes for a limited time.</p>
+      <p><strong>Document Deletion:</strong> You have full control over your documents and can delete them at any time. Deleted documents are permanently removed from our active systems, though backup copies may be retained for a short period to protect against accidental deletion.</p>
+
+      <h3>7.4 Objection and Restriction Rights</h3>
+      <p><strong>Right to Object:</strong> You have the right to object to processing of your personal information in certain circumstances, particularly when we rely on legitimate interests as the legal basis for processing. If you object, we will cease processing unless we can demonstrate compelling legitimate grounds that override your interests, rights, and freedoms.</p>
+      <p><strong>Right to Restrict Processing:</strong> You have the right to request restriction of processing in certain circumstances, such as when you contest the accuracy of personal information while we verify its accuracy, when processing is unlawful but you prefer restriction over deletion, or when you need the information for legal claims even though we no longer need it for our purposes.</p>
+
+      <h3>7.5 Consent Management</h3>
+      <p><strong>Withdrawal of Consent:</strong> Where we rely on your consent as the legal basis for processing, you have the right to withdraw that consent at any time. Withdrawal of consent will not affect the lawfulness of processing based on consent before its withdrawal. You can manage your consent preferences through your account settings or by contacting us directly.</p>
+
+      <h3>7.6 Automated Decision-Making and AI Processing</h3>
+      <p><strong>Right to Human Review:</strong> Our AI Assistant processes your documents to provide insights and assistance, but these processes do not involve automated decision-making that produces legal effects or similarly significant effects concerning you. However, if you have concerns about any AI processing of your information, you have the right to request human review and to challenge any AI-generated results.</p>
+      <p><strong>AI Transparency:</strong> We are committed to transparency about how our AI systems work. While we protect proprietary algorithmic details, we provide general information about our AI processing methods and are available to answer questions about how your documents are analyzed and what safeguards are in place to protect your privacy.</p>
+
+      <h3>7.7 Complaint Rights</h3>
+      <p><strong>Supervisory Authorities:</strong> If you believe we have not adequately addressed your privacy concerns, you have the right to lodge a complaint with the relevant data protection supervisory authority in your jurisdiction. For users in the European Union, this would be the supervisory authority in your member state. For users in California, you can contact the California Privacy Protection Agency.</p>
+      <p><strong>Internal Complaints:</strong> We encourage you to contact us first with any privacy concerns so we can work to resolve them directly. We take all privacy complaints seriously and will investigate and respond promptly to any issues you raise.</p>
+
+      <h2 id="section-8">8. Artificial Intelligence and Automated Processing</h2>
+      <p>Our AI Assistant is a core feature of the Allybi Service, designed to help you analyze, understand, and work more efficiently with your documents. We are committed to transparent and responsible AI practices that respect your privacy and give you control over how AI processes your information.</p>
+
+      <h3>8.1 How Our AI Works</h3>
+      <p><strong>Document Analysis:</strong> Our AI Assistant analyzes the content of documents you upload to provide summaries, extract key information, answer questions about document contents, and offer insights to help you work more efficiently. This analysis occurs within your individual account environment and is performed on-demand when you specifically request AI assistance.</p>
+      <p><strong>Privacy-Preserving Processing:</strong> We have designed our AI systems with privacy as a fundamental principle. Your documents and the insights generated from them remain private to your account. We do not use your documents or content to train our AI models, improve our algorithms for other users, or create any shared knowledge base that could benefit other users or third parties.</p>
+      <p><strong>Local Processing:</strong> Where technically feasible, AI processing occurs within secure, isolated environments dedicated to your account. This ensures that your document content is not mixed with or exposed to other users' data during processing.</p>
+
+      <h3>8.2 AI Transparency and Explainability</h3>
+      <p><strong>Processing Transparency:</strong> We provide clear information about what our AI Assistant does with your documents, including the types of analysis performed, the information extracted or generated, and how results are presented to you. While we protect proprietary algorithmic details, we are committed to helping you understand how our AI works at a functional level.</p>
+      <p><strong>Accuracy and Limitations:</strong> AI-generated insights and summaries are provided for informational purposes and should not be considered professional advice. AI systems can make errors or have biases, and we encourage you to review and verify AI-generated content before relying on it for important decisions. We continuously work to improve the accuracy and reliability of our AI systems.</p>
+      <p><strong>User Control:</strong> You have complete control over when and how AI processes your documents. AI analysis only occurs when you specifically request it, and you can choose which documents to analyze and what types of insights to generate. You can also provide feedback on AI results to help us improve the service for your individual use.</p>
+
+      <h3>8.3 Automated Decision-Making Safeguards</h3>
+      <p><strong>No Automated Decisions:</strong> Our AI Assistant does not make automated decisions that produce legal effects or similarly significant effects concerning you. The AI provides information and insights to support your decision-making, but all final decisions remain with you.</p>
+      <p><strong>Human Oversight:</strong> Our AI systems are designed with meaningful human oversight. You can always review, modify, or disregard AI-generated insights, and our support team is available to assist with any questions or concerns about AI processing.</p>
+      <p><strong>Bias Prevention:</strong> We implement measures to identify and mitigate potential biases in our AI systems, including regular testing and evaluation of AI outputs, diverse training data and development practices, and ongoing monitoring for unfair or discriminatory results.</p>
+
+      <h3>8.4 AI Data Governance</h3>
+      <p><strong>Data Minimization:</strong> Our AI systems process only the information necessary to provide the requested insights or assistance. We do not collect additional data specifically for AI training purposes, and we minimize the retention of AI processing logs and temporary data.</p>
+      <p><strong>Security Measures:</strong> AI processing is subject to the same rigorous security measures as all other aspects of our Service, including encryption of data in transit and at rest, access controls and audit logging, and secure infrastructure and processing environments.</p>
+
+      <h2 id="section-9">9. Children's Privacy</h2>
+      <p>Protecting the privacy of children is particularly important to us. Our Service is not intended for use by children under the age of 13 (or the applicable age of digital consent in your jurisdiction), and we do not knowingly collect personal information from children under this age.</p>
+
+      <h3>9.1 Age Restrictions</h3>
+      <p><strong>Minimum Age Requirements:</strong> You must be at least 13 years old (or the applicable age of digital consent in your jurisdiction) to create an account and use our Service. In some jurisdictions, the minimum age may be higher (such as 16 in some European Union countries), and we comply with the higher age requirement where applicable.</p>
+      <p><strong>Parental Consent:</strong> If you are between the ages of 13 and 18 (or the age of majority in your jurisdiction), you should review this Privacy Policy with your parent or guardian and ensure you have their permission to use our Service and provide personal information.</p>
+
+      <h3>9.2 Inadvertent Collection</h3>
+      <p><strong>Detection and Deletion:</strong> If we become aware that we have inadvertently collected personal information from a child under the applicable minimum age, we will take immediate steps to delete that information from our systems. We also implement measures to prevent such collection, including age verification during account creation and regular reviews of our user base.</p>
+      <p><strong>Parental Rights:</strong> Parents or guardians who believe their child has provided personal information to us can contact us to request access to, correction of, or deletion of that information. We will respond promptly to such requests and take appropriate action to protect the child's privacy.</p>
+
+      <h2 id="section-10">10. International Data Transfers and Regional Compliance</h2>
+      <p>As a global service, we may process and store your personal information in various countries around the world. We are committed to ensuring that your personal information receives adequate protection regardless of where it is processed.</p>
+
+      <h3>10.1 Cross-Border Data Transfers</h3>
+      <p><strong>Transfer Mechanisms:</strong> When we transfer personal information from the European Economic Area, United Kingdom, or other regions with data protection laws to countries that may not provide an adequate level of protection, we implement appropriate safeguards to ensure adequate protection. These safeguards include using Standard Contractual Clauses (SCCs) approved by the European Commission, conducting adequacy assessments for destination countries, conducting transfer impact assessments where appropriate, and implementing additional technical and organizational measures when necessary.</p>
+      <p><strong>Data Localization:</strong> Where required by applicable law, we implement data localization measures to ensure that certain types of personal information remain within specific geographic boundaries. We continuously monitor legal requirements and adjust our data handling practices accordingly.</p>
+
+      <h3>10.2 Regional Privacy Law Compliance</h3>
+      <p><strong>European Union (GDPR):</strong> For users in the European Union, we comply with the General Data Protection Regulation (GDPR) and provide all rights and protections required under this regulation, including the rights described in Section 7 of this Privacy Policy. Our legal basis for processing is described in Section 4, and we maintain records of processing activities as required by GDPR.</p>
+      <p><strong>California (CCPA/CPRA):</strong> For California residents, we comply with the California Consumer Privacy Act (CCPA) and the California Privacy Rights Act (CPRA). This includes providing specific disclosures about personal information collection and use, implementing consumer rights for access, deletion, and opt-out, and maintaining non-discrimination policies for users who exercise their privacy rights.</p>
+      <p><strong>Other Jurisdictions:</strong> We monitor privacy law developments in all jurisdictions where we operate and implement necessary measures to ensure compliance with applicable requirements, including Canada's Personal Information Protection and Electronic Documents Act (PIPEDA), Brazil's Lei Geral de Prote&ccedil;&atilde;o de Dados (LGPD), and other regional privacy laws.</p>
+
+      <h3>10.3 Privacy Contact</h3>
+      <p>We have appointed a Privacy Contact to oversee our privacy compliance efforts and serve as a point of contact for privacy-related inquiries. You can contact our Privacy Contact at info@allybi.co for questions about data protection, privacy rights, or compliance matters.</p>
+      <p>Our Privacy Contact can help with questions about data protection, privacy rights, or compliance matters.</p>
+
+      <h2 id="section-11">11. Cookies and Tracking Technologies</h2>
+      <p>We use cookies and similar tracking technologies to provide, improve, and protect our Service. This section provides detailed information about the types of technologies we use and how you can control them.</p>
+
+      <h3>11.1 Types of Cookies and Technologies</h3>
+      <p><strong>Essential Cookies:</strong> These cookies are necessary for the basic functionality of our Service and cannot be disabled without affecting core features. They include authentication cookies that keep you logged in, security cookies that protect against fraud and abuse, and preference cookies that remember your language and display settings.</p>
+      <p><strong>Analytics Cookies:</strong> We use analytics cookies to understand how users interact with our Service, which features are most valuable, and where we can make improvements. These cookies collect information about page views, user flows, and feature usage, typically in an anonymized or aggregated form.</p>
+      <p><strong>Performance Cookies:</strong> These cookies help us monitor and improve the performance of our Service by collecting information about loading times, error rates, and system performance. This information helps us identify and resolve technical issues.</p>
+      <p><strong>Functional Cookies:</strong> We use functional cookies to enhance your experience with additional features and personalization, such as remembering your preferences and settings, providing personalized content recommendations, and enabling social sharing features.</p>
+
+      <h3>11.2 Third-Party Technologies</h3>
+      <p><strong>Service Provider Cookies:</strong> Some cookies are set by third-party service providers that help us operate our Service, such as analytics providers, customer support platforms, and payment processors. These providers are contractually required to use cookies only for the purposes we specify and to protect your privacy.</p>
+      <p><strong>Integration Cookies:</strong> If you choose to integrate third-party services with your Allybi account, those services may set their own cookies in accordance with their privacy policies. We encourage you to review the privacy policies of any third-party services you choose to use.</p>
+
+      <h3>11.3 Cookie Control and Opt-Out</h3>
+      <p><strong>Browser Settings:</strong> You can control cookies through your browser settings, including blocking all cookies, blocking third-party cookies, or deleting existing cookies. However, disabling certain cookies may limit the functionality of our Service.</p>
+      <p><strong>Opt-Out Tools:</strong> We provide tools within your account settings to control certain types of cookies and tracking, particularly those used for analytics and performance monitoring. You can also use industry opt-out tools for advertising cookies, though we do not use cookies for targeted advertising.</p>
+      <p><strong>Do Not Track:</strong> We respect Do Not Track (DNT) signals from browsers and will honor these preferences where technically feasible. When we receive a DNT signal, we limit the use of tracking technologies for analytics and performance monitoring.</p>
+
+      <h2 id="section-12">12. Data Retention</h2>
+      <p>We retain personal information only for as long as necessary to fulfill the purposes for which it was collected, comply with legal obligations, resolve disputes, and enforce our agreements. Our retention practices are designed to balance your privacy rights with legitimate business and legal requirements.</p>
+
+      <h3>12.1 Retention Periods by Data Type</h3>
+      <p><strong>Account Information:</strong> We retain your account information for the duration of your account and for up to three years after account closure to comply with legal obligations, resolve disputes, and prevent fraud. You can request earlier deletion of your account information, subject to legal retention requirements.</p>
+      <p><strong>Document Content:</strong> Your documents and files are retained according to your instructions and account settings. You have full control over your content and can delete it at any time. When you delete content, it is permanently removed from our active systems, though backup copies may be retained for up to 90 days to protect against accidental deletion.</p>
+      <p><strong>Usage and Analytics Data:</strong> We typically retain usage and analytics data for up to two years to understand Service trends and improve functionality. This data is anonymized when possible and is subject to regular review and deletion.</p>
+      <p><strong>Communication Records:</strong> Records of your communications with our support team are retained for up to five years to provide consistent support and resolve ongoing issues. You can request deletion of communication records that are not required for legal compliance.</p>
+      <p><strong>Integration Data:</strong> Data collected from integrations (Outlook, OneDrive, SharePoint, Google Drive, WhatsApp, Gmail when available, etc.) is retained according to the retention policies for the specific integration feature. When you disconnect an integration, Allybi stops accessing new data. Previously imported content remains until you delete it or retention rules apply.</p>
+
+      <h3>12.2 Automated Deletion</h3>
+      <p><strong>Scheduled Deletion:</strong> We implement automated systems to delete personal information when retention periods expire, ensuring that data is not kept longer than necessary. These systems are regularly audited to ensure proper functioning.</p>
+      <p><strong>User-Initiated Deletion:</strong> When you delete your account or specific information, our systems are designed to process these deletions promptly and completely. We provide confirmation when deletion is complete and maintain audit logs of deletion activities for security and compliance purposes.</p>
+
+      <h3>12.3 Legal and Regulatory Retention</h3>
+      <p><strong>Compliance Requirements:</strong> Some information may be retained longer than our standard retention periods to comply with legal obligations, such as tax and accounting requirements, regulatory investigations, or court orders. We will inform you if we are required to retain your information for legal reasons.</p>
+      <p><strong>Litigation Hold:</strong> In the event of litigation or regulatory investigation, we may suspend normal deletion processes for relevant information until the matter is resolved. We will resume normal retention practices once legal holds are lifted.</p>
+
+      <h2 id="section-13">13. Privacy Policy Updates</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. We are committed to providing clear notice of any material changes and ensuring that you have the opportunity to review and understand any updates.</p>
+
+      <h3>13.1 Types of Updates</h3>
+      <p><strong>Material Changes:</strong> Material changes include modifications to the types of personal information we collect, significant changes to how we use or share information, changes to your rights or our legal obligations, and updates to our data retention or security practices. We will provide prominent notice of material changes and may require your consent for certain types of changes.</p>
+      <p><strong>Non-Material Changes:</strong> Non-material changes include clarifications to existing practices, updates to contact information, minor technical corrections, and changes required by law that do not affect your rights or our core practices. We will update the "Last Updated" date at the top of this Privacy Policy for all changes.</p>
+
+      <h3>13.2 Notification Methods</h3>
+      <p><strong>Email Notification:</strong> For material changes, we will send email notifications to the address associated with your account at least 30 days before the changes take effect. These notifications will include a summary of the changes and a link to the updated Privacy Policy.</p>
+      <p><strong>In-Service Notifications:</strong> We may also provide notice through our Service interface, such as banner notifications or account dashboard alerts, to ensure you are aware of important updates.</p>
+      <p><strong>Website Publication:</strong> All Privacy Policy updates will be published on our website with clear version information and effective dates. We maintain an archive of previous versions for reference.</p>
+
+      <h3>13.3 Your Choices After Updates</h3>
+      <p><strong>Continued Use:</strong> Your continued use of our Service after the effective date of Privacy Policy updates constitutes acceptance of the changes. If you do not agree with the updated Privacy Policy, you may discontinue use of the Service and delete your account.</p>
+      <p><strong>Withdrawal of Consent:</strong> If updates require new consent for certain processing activities, we will provide clear mechanisms for you to provide or withhold consent. You can also withdraw previously given consent at any time.</p>
+
+      <h2 id="section-14">14. Contact Information</h2>
+      <p>We are committed to addressing your privacy questions and concerns promptly and thoroughly.</p>
+
+      <h3>14.1 Privacy Inquiries</h3>
+      <p><strong>General Privacy Questions:</strong> For general questions about this Privacy Policy or our privacy practices, please email us at info@allybi.co. We will respond to privacy inquiries within 5 business days.</p>
+      <p><strong>Privacy Contact:</strong> For specific questions about data protection compliance or to exercise your privacy rights, you can contact our Privacy Contact directly at info@allybi.co.</p>
+      <p><strong>Privacy Rights Requests:</strong> To exercise your privacy rights (access, correction, deletion, etc.), you can submit requests through your account settings or by emailing info@allybi.co. Please include sufficient information to verify your identity and specify the nature of your request.</p>
+
+      <h3>14.2 Company Contact Information</h3>
+      <p><strong>Allybi (Camasmie Gillet Inc.)</strong><br>Email: info@allybi.co<br>Address: Delaware, United States</p>
+      <p><strong>Response Times:</strong> We strive to respond to all privacy inquiries within 5 business days and to complete privacy rights requests within 30 days (or as required by applicable law). For complex requests, we may need additional time and will keep you informed of our progress.</p>
+
+      <h3>14.3 Regulatory Contacts</h3>
+      <p><strong>Supervisory Authorities:</strong> If you believe we have not adequately addressed your privacy concerns, you have the right to contact the relevant data protection supervisory authority in your jurisdiction. For users in the European Union, this would be the supervisory authority in your member state. For users in California, you can contact the California Privacy Protection Agency.</p>
+
+      <h2 id="section-15">15. Google API Services User Data Disclosure</h2>
+      <p>Allybi uses Google API Services only when a user chooses to connect a Google account or use a Google-powered feature. Google Drive is a live integration and is available now. Gmail is currently marked as coming soon and is not treated as a live integration unless enabled in your workspace.</p>
+      <p>When enabled, Allybi may access: name, email, profile identifier (Google Sign-In); email headers, selected threads, message content, attachments, labels (Gmail); file/folder metadata, selected files, file content (Google Drive).</p>
+      <p>Allybi uses Google data to: authenticate users, let users search and import selected content, generate source-cited answers, prepare user-reviewed drafts, maintain security and audit logs.</p>
+      <p>Allybi does not: sell Google user data, use it for advertising, use it for creditworthiness decisions, use it to train general AI models unless explicitly agreed in writing, allow humans to read it except for user-approved support, security, legal compliance, or aggregated operations.</p>
+      <p>OAuth tokens are encrypted at rest. Imported content may be stored to provide the workspace. Users can delete imported content. Disconnecting stops new access; imported content remains until deleted or retention rules apply.</p>
+      <p>Allybi shares Google user data only with subprocessors needed to provide the service, for security, legal compliance, or as permitted by the Google API Services User Data Policy.</p>
+      <p>Allybi requests only the Google scopes needed for the feature the user enables.</p>
+
+      <h2 id="section-final">Final Statement</h2>
+      <p>This Privacy Policy represents our commitment to protecting your personal information while providing innovative document management and AI assistance services. We encourage you to read this policy carefully and contact us with any questions or concerns. Your privacy matters to us, and we are dedicated to maintaining your trust through transparent and responsible data practices.</p>
+      <p><strong>Effective Date:</strong> April 30, 2026<br><strong>Last Updated:</strong> April 30, 2026<br><strong>Version:</strong> 2.0</p>
+    </div>
+    <div class="legal-back-top">
+      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">&#8593; Voltar ao topo</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="site-footer__wordmark-link" href="/"><span class="site-footer__wordmark">Allybi</span></a>
+      <p class="site-footer__tagline">Um chat para encontrar, confirmar e enviar o documento certo.</p>
+    </div>
+    <nav class="site-footer__nav" aria-label="Rodapé">
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">O Allybi</h3>
+        <div class="site-footer__links">
+          <a href="/how-it-works.html">Como funciona</a>
+          <a href="/security-overview.html">Segurança</a>
+        </div>
+      </div>
+
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Ferramentas</h3>
+        <div class="site-footer__links">
+          <a href="/tempo.html">Tempo perdido</a>
+          <a href="/diagnostico.html">Diagnóstico do fluxo</a>
+          <a href="/metodologia.html">Metodologia</a>
+        </div>
+      </div>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Empresa</h3>
+        <div class="site-footer__links">
+          <a href="/pricing.html">Preços</a>
+          <a href="/about.html">Sobre</a>
+          <a href="/pricing.html#faq">FAQ</a>
+          <a href="/contact.html">Contato</a>
+        </div>
+      </div>
+    </nav>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">© 2026 Allybi. Todos os direitos reservados.</p>
+      <div class="site-footer__legal">
+        <a href="/terms.html">Termos</a>
+        <a href="/privacy.html">Privacidade</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

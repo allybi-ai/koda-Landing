@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+ <defs>
+  <linearGradient id="pdf-material" x1="18" y1="12" x2="47" y2="52" gradientUnits="userSpaceOnUse"><stop stop-color="#d14750"/><stop offset=".48" stop-color="#b52c3b"/><stop offset="1" stop-color="#8f2430"/></linearGradient>
+  <filter id="depth" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="1.4" stdDeviation="1.2" flood-color="#45323a" flood-opacity=".13"/></filter>
+ </defs>
+ <!-- A freestanding PDF ribbon: no document, backing tile or outline container. -->
+ <path d="M19 43C23 37 29 26 31 18C33 10 27 11 28 19C29 29 38 38 46 39C53 40 51 35 44 35C34 35 21 39 15 44C10 49 13 51 19 43Z" stroke="url(#pdf-material)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#depth)"/>
+</svg>

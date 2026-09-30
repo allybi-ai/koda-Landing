@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f2f4f6">
+  <title>Fale com a gente — Allybi</title>
+  <meta name="description" content="Uma dúvida, uma ideia ou algo que não funcionou como você esperava. Converse com a equipe do Allybi.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fale com a gente — Allybi">
+  <meta property="og:description" content="Uma conversa com a equipe do Allybi começa pelo que você precisa.">
+  <meta property="og:site_name" content="Allybi">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="allybi-tokens.css">
+  <link rel="stylesheet" href="allybi-base.css">
+  <link rel="stylesheet" href="allybi-components.css">
+  <link rel="stylesheet" href="allybi-header.css">
+  <link rel="stylesheet" href="allybi-footer.css">
+  <link rel="stylesheet" href="allybi-responsive.css">
+  <link rel="stylesheet" href="assets/webapp-spatial-system.css">
+  <link rel="stylesheet" href="assets/workspace-dropdown.css">
+  <link rel="stylesheet" href="assets/home-header-material.css">
+  <link rel="stylesheet" href="assets/site-footer-light.css">
+  <link rel="stylesheet" href="pages/contact.css">
+</head>
+<body class="contact-page">
+<header class="site-header" data-site-header>
+  <div class="site-header__inner">
+
+    <a class="site-header__logo" href="/" aria-label="Allybi">
+      <img src="assets/images/allybi-workspace-knot.svg" alt="Allybi" width="32" height="32">
+    </a>
+
+    <nav class="site-header__desktop-nav" aria-label="Navegação principal">
+      <a href="/how-it-works.html" class="site-header__nav-link">Como funciona</a>
+      <a href="/security-overview.html" class="site-header__nav-link">Segurança</a>
+
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-ferramentas" aria-haspopup="true">Ferramentas</button>
+        <div class="site-header__dropdown-panel" id="dd-ferramentas" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/tempo.html"><span class="site-header__dropdown-title">Tempo perdido</span><span class="site-header__dropdown-desc">Calcule o tempo invisível.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/diagnostico.html"><span class="site-header__dropdown-title">Diagnóstico do fluxo</span><span class="site-header__dropdown-desc">Mapeie onde o time trava.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/metodologia.html"><span class="site-header__dropdown-title">Metodologia</span><span class="site-header__dropdown-desc">Como calculamos.</span></a>
+        </div>
+      </div>
+      <a href="/pricing.html" class="site-header__nav-link">Preços</a>
+      <a href="/about.html" class="site-header__nav-link">Sobre</a>
+    </nav>
+
+    <div class="site-header__desktop-actions">
+      <a href="https://app.allybi.com.br/" class="site-header__signin">Entrar</a>
+      <a href="https://app.allybi.com.br/" class="site-header__cta">Começar grátis</a>
+    </div>
+
+    <button class="site-header__menu-button" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" data-mobile-menu-toggle>
+      <span class="site-header__menu-line"></span>
+      <span class="site-header__menu-line"></span>
+    </button>
+
+  </div>
+  <noscript>
+    <nav class="site-header__nojs-nav" aria-label="Navegação principal">
+      <a href="/how-it-works.html">Como funciona</a>
+      <a href="/security-overview.html">Segurança</a>
+      <a href="/pricing.html">Preços</a>
+      <a href="https://app.allybi.com.br/">Começar grátis</a>
+    </nav>
+  </noscript>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true" inert>
+  <div class="mobile-menu__top">
+    <a class="mobile-menu__logo" href="/" aria-label="Allybi"><img src="assets/images/allybi-workspace-knot.svg" alt="Allybi" width="32" height="32"></a>
+    <button class="mobile-menu__close" type="button" aria-label="Fechar menu" data-mobile-menu-close>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu__body">
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">O Allybi</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/how-it-works.html">Como funciona<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/security-overview.html">Segurança<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+
+  </section>
+
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Ferramentas</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/tempo.html">Tempo perdido<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/diagnostico.html">Diagnóstico do fluxo<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/metodologia.html">Metodologia<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Empresa</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/pricing.html">Preços<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/about.html">Sobre<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/pricing.html#faq">FAQ<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/contact.html">Contato<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <div class="mobile-menu__actions">
+      <a href="https://app.allybi.com.br/" class="mobile-menu__primary">Começar grátis</a>
+      <a href="https://app.allybi.com.br/" class="mobile-menu__secondary">Entrar</a>
+    </div>
+    <p class="mobile-menu__note">30 dias grátis. Depois R$170/mês. Cancele quando quiser.</p>
+  </div>
+</div>
+
+<main id="contact-page">
+  <section class="contact-conversation" aria-labelledby="contact-title">
+    <div class="contact-intro">
+      <h1 id="contact-title" data-i18n-key="contact.page.title">Vamos conversar.</h1>
+      <p class="contact-intro__text" data-i18n-key="contact.page.intro">Uma dúvida, uma ideia ou algo que não funcionou como você esperava. Conte para a gente.</p>
+    </div>
+
+    <div class="contact-writing">
+      <div class="contact-letter" id="contact-form">
+        <div class="contact-team">
+          <img src="assets/images/allybi-workspace-knot.svg" alt="" width="28" height="28">
+          <p data-i18n-key="contact.page.team">Equipe Allybi</p>
+        </div>
+        <div class="contact-recipient">
+          <span class="contact-recipient__label" data-i18n-key="contact.page.to">Para</span>
+          <span class="contact-recipient__address">info@allybi.com.br</span>
+        </div>
+        <form class="contact-compose" action="/api/contact" method="post">
+          <div class="contact-field">
+            <label for="contact-email" data-i18n-key="contact.page.email">Seu e-mail</label>
+            <input id="contact-email" name="email" type="email" maxlength="254" autocomplete="email" required>
+          </div>
+          <div class="contact-trap" aria-hidden="true"><label for="contact-website">Website</label><input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+          <div class="contact-field contact-field--subject">
+            <label for="contact-subject"><span data-i18n-key="contact.page.subject">Assunto</span><span class="contact-optional" data-i18n-key="contact.page.optional">opcional</span></label>
+            <input id="contact-subject" name="subject" type="text" maxlength="160" placeholder="Sobre o que você quer conversar?" autocomplete="off">
+          </div>
+          <div class="contact-field contact-field--message">
+            <label for="contact-message" data-i18n-key="contact.page.message">Sua mensagem</label>
+            <textarea id="contact-message" name="message" rows="5" maxlength="3000" required placeholder="Pode começar pelo que você precisa."></textarea>
+          </div>
+          <div class="contact-compose__actions">
+            <button class="contact-send" type="submit"><span data-i18n-key="contact.page.submit">Enviar mensagem</span><svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+            <p data-i18n-key="contact.page.handoff">A resposta chega no e-mail que você informar.</p>
+          </div>
+          <p class="contact-form-status" role="status" aria-live="polite" tabindex="-1"></p>
+        </form>
+      </div>
+      <div class="contact-direct">
+        <p data-i18n-key="contact.page.direct">Prefere escrever direto?</p>
+        <div class="contact-direct__address">
+          <a href="mailto:info@allybi.com.br">info@allybi.com.br</a>
+          <button class="contact-copy" type="button" data-copy-email>
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg>
+            <span class="contact-sr-only" data-i18n-key="contact.page.copy_email">Copiar endereço de e-mail</span>
+          </button>
+        </div>
+        <p class="contact-copy-status" role="status" aria-live="polite"></p>
+      </div>
+      <noscript><p>Para enviar por este formulário, ative o JavaScript no navegador.</p><style>.contact-compose{display:none}</style></noscript>
+    </div>
+  </section>
+  <div hidden id="contact-messages">
+    <span data-message="copied" data-i18n-key="contact.page.copied">Copiado.</span>
+    <span data-message="copy-error" data-i18n-key="contact.page.copy_error">Não foi possível copiar. Selecione o texto e copie manualmente.</span>
+    <span data-message="subject-placeholder" data-i18n-key="contact.page.subject_placeholder">Sobre o que você quer conversar?</span>
+    <span data-message="message-placeholder" data-i18n-key="contact.page.message_placeholder">Pode começar pelo que você precisa.</span>
+    <span data-message="sending" data-i18n-key="contact.page.sending">Enviando…</span>
+    <span data-message="success" data-i18n-key="contact.page.success">Sua mensagem foi enviada. Vamos responder no e-mail que você informou.</span>
+    <span data-message="error" data-i18n-key="contact.page.error">Não foi possível enviar agora. Seu texto continua aqui para você tentar novamente.</span>
+    <span data-message="rate" data-i18n-key="contact.page.rate">Você já tentou algumas vezes. Aguarde alguns minutos antes de enviar novamente.</span>
+  </div>
+</main>
+
+<footer class="site-footer" id="contact-footer" data-surface="light">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="site-footer__wordmark-link" href="/" aria-label="Allybi — início"><img src="assets/images/allybi-workspace-knot.svg" alt="" width="44" height="44"><span class="site-footer__wordmark">Allybi</span></a>
+    </div>
+    <nav class="site-footer__nav" aria-label="Rodapé">
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">O Allybi</h3>
+        <div class="site-footer__links">
+          <a href="/how-it-works.html">Como funciona</a>
+          <a href="/security-overview.html">Segurança</a>
+          <a href="/pricing.html">Preços</a>
+        </div>
+      </div>
+
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Ferramentas</h3>
+        <div class="site-footer__links">
+          <a href="/tempo.html">Tempo perdido</a>
+          <a href="/diagnostico.html">Diagnóstico do fluxo</a>
+          <a href="/metodologia.html">Metodologia</a>
+        </div>
+      </div>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Empresa</h3>
+        <div class="site-footer__links">
+          <a href="/about.html">Sobre</a>
+          <a href="/#faq">Perguntas frequentes</a>
+          <a href="/contact.html">Contato</a>
+        </div>
+      </div>
+    </nav>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">© 2026 Allybi. Todos os direitos reservados.</p>
+      <div class="site-footer__legal">
+        <a href="/terms.html">Termos</a>
+        <a href="/privacy.html">Privacidade</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="allybi-header.js"></script>
+<script src="assets/workspace-menu-motion.js"></script>
+<script src="assets/home-header-workspace.js"></script>
+<script src="assets/home-header-scroll.js"></script>
+<script src="assets/contact-message.js"></script>
+</body>
+</html>

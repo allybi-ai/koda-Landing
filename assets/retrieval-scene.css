@@ -1,0 +1,123 @@
+/* Independent conversations share the app's material and reading scale.
+   Source extracts explain where the answer came from, without another label layer. */
+#use-cases.retrieval-section {--file:1;--mail:1;--leave:0;--copy:1;--sheet:1;--whatsapp:1;--secondExit:0;--follow:1;--thread-travel:0px;position:relative;isolation:isolate;overflow:clip;color:#252d36;font-family:'Plus Jakarta Sans',sans-serif;}
+.retrieval-section * {box-sizing:border-box;}
+.retrieval__pin {max-width:1440px;margin:auto;padding:116px 40px 88px;}
+.retrieval__copy {position:relative;z-index:2;opacity:var(--copy);transform:translateY(calc(22px * (1 - var(--copy))));}
+.retrieval__copy h2 {margin:0;font-size:clamp(34px,3.15vw,48px);font-weight:500;line-height:1.15;letter-spacing:-.045em;color:#252d36;}
+.retrieval__copy>p {max-width:760px;margin:16px 0 0;color:#626d7a;font-size:17px;line-height:1.55;letter-spacing:-.01em;}
+.retrieval__stage {position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:start;gap:40px;padding:44px 0 0;perspective:1800px;}
+.retrieval__stage::before {opacity:calc((1 - var(--copyLeave,0))*max(0,1 - var(--privacy-dark,0)*8));content:'';position:absolute;z-index:-1;inset:25% -6% -12%;background:radial-gradient(ellipse at 50% 75%,rgba(160,178,200,.20),rgba(255,255,255,.54) 42%,transparent 72%);pointer-events:none;}
+.retrieval__case {--exit:var(--leave);--enter:var(--file);--direction:-1;display:flex;flex-direction:column;min-width:0;height:500px;position:relative;padding:0 28px 22px;border:1px solid rgba(95,108,125,.12);border-radius:20px;background:linear-gradient(155deg,#fff,#fafbfd);box-shadow:inset 0 1px 0 #fff,0 2px 4px rgba(32,47,68,.035),0 14px 38px -22px rgba(35,52,76,.28);opacity:calc(var(--enter) * (1 - var(--exit)));transform:translate3d(calc(var(--direction) * (1 - var(--enter)) * 70vw + var(--direction) * var(--exit) * 34vw),calc((1 - var(--enter)) * 36px + var(--exit) * -26px),0) rotateY(calc(var(--direction) * (1 - var(--enter)) * -7deg)) scale(calc(.96 + var(--enter) * .04));transform-origin:50% 45%;}
+.retrieval__case--mail {--enter:var(--mail);--direction:1;margin-top:28px;}
+.retrieval__case--sheet {--enter:var(--sheet);--exit:var(--secondExit);}
+.retrieval__case--whatsapp {--enter:var(--whatsapp);--exit:var(--secondExit);--direction:1;margin-top:28px;}
+.retrieval__case-head {height:58px;display:flex;align-items:center;gap:12px;flex:none;color:#69727f;}
+.retrieval__case-head h3 {flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin:0;color:#303641;font-size:13px;font-weight:600;line-height:1.5;letter-spacing:0;}
+.retrieval__case-head svg {width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
+.retrieval__conversation {padding-top:14px;flex:1;min-height:0;}
+.retrieval__question {max-width:88%;width:fit-content;margin:0 0 24px auto;padding:12px 18px;background:#f0f2f5;border-radius:18px;color:#303641;font-size:16px;font-weight:500;line-height:1.5;}
+.retrieval__answer {margin:0 0 12px;font-size:16px;line-height:1.65;color:#303641;}.retrieval__answer strong {font-weight:650;}
+.retrieval__citation {display:flex;align-items:center;gap:8px;min-height:32px;font-size:13px;color:#303641;font-weight:500;}.retrieval__citation img,.retrieval__origin img {display:block;flex:none;object-fit:contain;}.retrieval__citation>span>span {font-weight:400;color:#69727f;}
+.retrieval__source {margin-top:18px;border-top:1px solid #e2e7ed;padding-top:13px;}
+.retrieval__origin {display:flex;align-items:center;gap:8px;font-size:12px;line-height:18px;color:#414955;}.retrieval__origin>span>span {color:#737e8c;}
+.retrieval-section mark {background:rgba(245,220,133,.34);color:inherit;padding:1px 0;box-decoration-break:clone;-webkit-box-decoration-break:clone;}
+.retrieval__mail-message {padding-top:12px;}.retrieval__mail-message h4 {font-size:13px;font-weight:600;line-height:1.4;letter-spacing:0;margin:0 0 12px;color:#303641;}.retrieval__sender {display:flex;align-items:center;gap:10px;}.retrieval__avatar {width:28px;height:28px;display:grid;place-items:center;flex:none;border-radius:50%;background:linear-gradient(145deg,#fff,#dce3ed);color:#586678;font-size:11px;font-weight:650;box-shadow:0 1px 3px rgba(32,40,52,.08);}.retrieval__sender>div {display:grid;gap:1px;}.retrieval__sender strong {font-size:12px;font-weight:600;color:#303641;}.retrieval__sender>div>span {font-size:11px;color:#7a8390;}.retrieval__sender time {margin-left:auto;align-self:flex-start;font-size:11px;color:#7a8390;white-space:nowrap;}.retrieval__mail-message p {font-size:14px;line-height:1.65;margin:12px 0 0;color:#414955;}
+.retrieval__composer {display:flex;align-items:center;gap:14px;min-height:38px;margin-top:18px;border-bottom:1px solid #bfc6d0;color:#7a8390;font-size:14px;}.retrieval__composer>span:first-child {font-size:23px;line-height:1;}.retrieval__composer>span:last-child {margin-left:auto;font-size:22px;color:#b1b8c1;}
+@media(min-width:1151px) and (min-height:760px){
+ #use-cases[data-motion="true"] {height:480svh;}
+ [data-motion="true"] .retrieval__pin {position:sticky;top:0;height:100svh;}
+ [data-motion="true"] .retrieval__case {grid-row:1;grid-column:1;}
+ [data-motion="true"] :is(.retrieval__case--mail,.retrieval__case--whatsapp) {grid-column:2;}
+ [data-motion="true"] .retrieval__conversation--comparison {overflow:hidden;mask-image:linear-gradient(to bottom,rgba(0,0,0,calc(1 - var(--follow))),#000 20px,#000 calc(100% - 8px),transparent);}
+ [data-motion="true"] .retrieval__thread {transform:translateY(calc(-1 * var(--follow) * var(--thread-travel)));}
+ [data-motion="true"] .retrieval__followup {opacity:var(--follow);}
+}
+@media(min-width:1151px) and (max-height:860px){
+ .retrieval__pin {padding-top:108px;padding-bottom:48px;}
+ .retrieval__stage {padding-top:32px;gap:28px;}
+ .retrieval__case {height:470px;padding-inline:24px;}
+ .retrieval__case--mail,.retrieval__case--whatsapp {margin-top:24px;}
+ .retrieval__question {font-size:15px;margin-bottom:18px;}
+ .retrieval__answer {font-size:15px;}
+ .retrieval__mail-message p {font-size:13px;}
+ .retrieval__copy h2 {font-size:40px;}
+}
+
+@media(max-width:1150px){
+ .retrieval__pin {padding:96px 24px 80px;}
+ .retrieval__copy h2 {font-size:clamp(30px,5vw,42px);}
+ .retrieval__copy>p {font-size:16px;max-width:540px;}
+ .retrieval__stage {grid-template-columns:1fr;max-width:620px;margin:0 auto;gap:24px;padding-top:40px;}
+ .retrieval__case {height:auto;min-height:490px;padding:0 24px 22px;transform:translate3d(calc(var(--direction) * (1 - var(--enter)) * 30px),calc((1 - var(--enter)) * 24px),0);}
+ .retrieval__case--mail,.retrieval__case--whatsapp {margin-top:0;}
+ .retrieval__conversation {flex:1;padding-bottom:12px;}
+ .retrieval__question {max-width:92%;}
+ .retrieval__copy {transform:none;opacity:1;}
+}
+@media(max-width:420px){
+ .retrieval__pin {padding:88px 16px 64px;}
+ .retrieval__copy h2 {font-size:30px;}
+ .retrieval__copy>p {font-size:15px;}
+ .retrieval__case {padding-inline:20px;min-height:540px;}
+ .retrieval__case-head h3 {font-size:12px;}
+ .retrieval__question {font-size:15px;padding:12px 14px;max-width:100%;}
+ .retrieval__answer {font-size:15px;}
+ .retrieval__origin {font-size:11px;}
+ .retrieval__citation {font-size:12px;}
+}
+@media(prefers-reduced-motion:reduce){
+ .retrieval__case,.retrieval__copy {transform:none!important;opacity:1!important;}
+}
+
+/* One comparison, then its financial consequence within the same conversation. */
+.retrieval__case--file .retrieval__question {margin-bottom:18px;}
+.retrieval__thread {position:relative;padding-bottom:8px;}
+.retrieval__comparison,.retrieval__ledger {width:100%;border-collapse:collapse;table-layout:fixed;margin-top:14px;color:#303641;font-size:13px;line-height:1.45;}
+.retrieval__comparison th,.retrieval__comparison td,.retrieval__ledger th,.retrieval__ledger td {text-align:left;vertical-align:middle;padding:10px 8px;border-bottom:1px solid #e5e9ef;font-weight:500;}
+.retrieval__comparison th,.retrieval__comparison td {padding-block:8px;}
+.retrieval__comparison thead td {width:28%;}
+.retrieval__comparison thead th {font-size:12px;padding-top:2px;color:#626d7a;}
+.retrieval__comparison small {display:block;font-size:10px;font-weight:400;color:#7a8390;margin-top:3px;}
+.retrieval__comparison tbody th {font-size:12px;font-weight:500;color:#626d7a;padding-left:0;}
+.retrieval__comparison tbody tr:last-child>* {border-bottom:0;}
+.retrieval__former {color:#7a8390;}
+.retrieval__followup {margin-top:24px;}
+.retrieval__followup .retrieval__question {margin-bottom:16px;}
+.retrieval__followup .retrieval__answer {margin-bottom:0;}
+/* The spreadsheet keeps its rows, reference and numeric alignment. */
+.retrieval__source--sheet {margin-top:14px;padding-top:10px;}
+.retrieval__ledger {font-variant-numeric:tabular-nums;margin-top:8px;}
+.retrieval__ledger th,.retrieval__ledger td {padding-block:8px;}
+.retrieval__ledger thead th {font-size:11px;color:#69727f;font-weight:500;}
+.retrieval__ledger th:first-child {width:14%;padding-left:0;color:#87909c;font-size:11px;font-weight:400;}
+.retrieval__ledger th:last-child,.retrieval__ledger td:last-child {text-align:right;white-space:nowrap;padding-right:0;}
+.retrieval__ledger td:nth-child(3) {font-weight:600;}
+.retrieval__insight {font-size:13px;line-height:1.6;color:#626d7a;margin:12px 0 0;max-width:440px;}
+/* From WorkspaceDraftFrame and the app's hosted WhatsApp draft fields/actions. */
+.retrieval__draft {padding-top:2px;color:#303641;}
+.retrieval__draft-head {display:flex;align-items:center;gap:9px;margin-bottom:10px;}
+.retrieval__draft-head img {object-fit:contain;}
+.retrieval__draft-head strong {font-size:13px;font-weight:650;}
+.retrieval__draft-to {display:flex;align-items:baseline;gap:14px;padding:6px 0 10px;border-bottom:1px solid #e5e9ef;font-size:13px;}
+.retrieval__draft-to>span {color:#737e8c;}.retrieval__draft-to strong {font-weight:500;}
+.retrieval__draft-body {font-size:14px;line-height:1.65;margin:14px 0;}
+.retrieval__draft-source {font-size:11px;line-height:1.6;color:#7a8390;margin-bottom:10px;}
+.retrieval__draft-source>span {color:#626d7a;}
+.retrieval__draft-footer {display:flex;flex-wrap:wrap;align-items:center;gap:2px 8px;padding-top:8px;border-top:1px solid #e5e9ef;}
+.retrieval__draft-footer>span {font-size:10px;color:#7a8390;}
+.retrieval__draft-actions {display:flex;align-items:center;gap:4px;margin-left:auto;}
+.retrieval__draft-actions button {display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 12px;background:transparent;border:0;border-radius:8px;color:#6c6b6e;font-family:inherit;font-size:12px;font-weight:600;line-height:1.4;cursor:default;}
+.retrieval__draft-actions .retrieval__draft-send {color:#242933;}
+
+@media(max-width:420px){
+ .retrieval__comparison,.retrieval__ledger {font-size:12px;}
+ .retrieval__comparison th,.retrieval__comparison td {padding-inline:4px;}
+ .retrieval__comparison tbody th {font-size:11px;}
+ .retrieval__comparison thead th {font-size:11px;}
+ .retrieval__ledger th,.retrieval__ledger td {padding-inline:3px;}
+ .retrieval__draft-footer>span {width:100%;font-size:11px;}
+ .retrieval__draft-actions button {font-size:12px;padding-inline:10px;}
+}
+
+.retrieval-section:not([data-motion="true"]) .retrieval__case {height:auto;min-height:500px;}

@@ -1,0 +1,69 @@
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:400 800;font-display:swap;src:url('../assets/fonts/plus-jakarta-sans-latin.woff2') format('woff2')}
+body.about-page{background:#f2f4f6;color:#28323c;font-family:'Plus Jakarta Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+#about-page{--about-ink:#28323c;--about-muted:#596a78;--about-line:#cfd9e2;--about-motion:0;overflow:clip;background:radial-gradient(ellipse at 100% 0,#e3ebf2,transparent 28%)}
+#about-page h1,#about-page h2,#about-page h3{font-weight:500;letter-spacing:-.05em;text-wrap:balance}
+#about-page h2{font-size:clamp(34px,3.4vw,49px);line-height:1.18}
+#about-page p{font-weight:400;text-wrap:pretty}
+#about-page [id]{scroll-margin-top:128px}
+.about-width{width:min(100% - 112px,1240px);margin-inline:auto}
+.about-skip{position:fixed;z-index:1200;top:12px;left:20px;transform:translateY(-150%);background:#fff;color:#28323c;border-radius:8px;padding:12px 20px}
+.about-skip:focus{transform:none}
+.about-page :is(a,button):focus-visible{outline:2px solid #557b9d;outline-offset:6px}
+.about-eyebrow{font-size:13px;line-height:1.65;letter-spacing:.015em;color:var(--about-muted);margin:0 0 24px}
+.about-opening{display:grid;grid-template-columns:1.15fr 1fr;align-items:center;position:relative;padding-top:80px;isolation:isolate}
+.about-opening__copy{z-index:1;transform:translateY(calc(var(--about-motion)*-28px));opacity:calc(1 - var(--about-motion)*.15)}
+#about-title{font-size:clamp(52px,5.7vw,82px);line-height:1.085;letter-spacing:-.065em;margin:0;font-weight:500;text-wrap:initial}
+#about-title>span{color:#627789}
+.about-opening__text{font-size:17px;line-height:1.9;color:var(--about-muted);max-width:460px;margin:28px 0 0}
+.about-emblem{position:relative;height:490px;margin-right:-62px;isolation:isolate;transform:translateY(calc(var(--about-motion)*30px))}
+.about-emblem__threads{position:absolute;width:calc(100% + 60px);height:100%;left:-30px;top:0;overflow:visible;opacity:.75}
+.about-emblem__threads path{stroke:url(#about-thread);stroke-width:1;vector-effect:non-scaling-stroke}
+.about-emblem__halo{position:absolute;inset:30px -40px 0;background:radial-gradient(ellipse,#fff 0,#e3ebf2a0 35%,transparent 69%);z-index:-1}
+.about-emblem__mark{position:absolute;left:50%;top:85px;width:272px;height:272px;transform:translateX(-50%) perspective(800px) rotateX(calc(11deg - var(--about-motion)*5deg)) rotateZ(calc(-7deg + var(--about-motion)*7deg));filter:drop-shadow(0 22px 13px #41586d25)}
+.about-emblem__mark::before,.about-emblem__mark>span{position:absolute;inset:0;mask:url('../assets/images/allybi-workspace-knot.svg') center/contain no-repeat;-webkit-mask:url('../assets/images/allybi-workspace-knot.svg') center/contain no-repeat}
+.about-emblem__mark::before{content:'';background:linear-gradient(130deg,#b3c2cf,#425567 48%,#9aafc1);transform:translate(3px,5px)}
+.about-emblem__mark>span{background:linear-gradient(126deg,#fff 1%,#c5d3de 15%,#8d9faf 27%,#eef4f9 39%,#516777 50%,#99abbc 62%,#e8f0f7 73%,#7c92a5 84%,#c4d3de 94%)}
+.about-emblem__ground{position:absolute;left:50%;top:405px;width:285px;height:24px;border-radius:50%;transform:translateX(-50%);background:radial-gradient(ellipse,#576d8130,transparent 70%);filter:blur(7px)}
+.about-story-link{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;padding:26px 0;border-top:1px solid var(--about-line);margin-top:56px;color:var(--about-muted);font-size:13px;line-height:1.6;text-decoration:none}
+.about-story-link svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.3;transition:transform .25s}
+.about-story-link:hover svg{transform:translateY(3px)}
+.about-letter{display:grid;grid-template-columns:.7fr 1.3fr;gap:100px;padding-block:112px 130px}
+.about-letter__margin h2{font-size:clamp(32px,3.05vw,44px)!important;margin:21px 0 0}
+.about-letter__rule{display:block;height:1px;width:52px;background:#9badbd;margin-top:30px}
+.about-letter__body{max-width:680px;font-size:18px;line-height:1.95;color:var(--about-muted)}
+.about-letter__body p+p{margin-top:24px}
+.about-letter__body .about-letter__lead{font-size:24px;line-height:1.65;letter-spacing:-.025em;color:var(--about-ink);margin:0 0 32px}
+.about-letter__body .about-letter__conviction{font-size:22px;line-height:1.65;letter-spacing:-.025em;color:var(--about-ink);margin-block:36px}
+.about-belief{background:linear-gradient(130deg,#e2eaf1,#ebf0f5 56%,#e2eaf1);position:relative;isolation:isolate;overflow:hidden}
+.about-belief__inner{padding-block:92px 104px;position:relative}
+#about-belief-title{font-size:clamp(35px,4.1vw,60px);line-height:1.25;max-width:1100px;margin:0;letter-spacing:-.055em}
+#about-belief-title>span{color:#627789}
+.about-belief__inner>p:not(.about-eyebrow){font-size:17px;line-height:1.9;color:var(--about-muted);margin-top:28px}
+.about-belief__horizon{height:1px;position:absolute;bottom:35px;left:-8%;right:-8%;background:linear-gradient(90deg,transparent,#9eb0c0 35%,#9eb0c0 60%,transparent)}
+.about-belief__horizon::after{content:'';position:absolute;inset:-55px 10% -18px;background:radial-gradient(ellipse at 50% 100%,#ffffffc0,transparent 67%);z-index:-1}
+.about-responsibility{display:grid;grid-template-columns:.82fr 1.18fr;gap:105px;padding-block:124px 130px}
+.about-responsibility__intro>p:last-child{font-size:16px;line-height:1.9;max-width:340px;color:var(--about-muted);margin-top:25px}
+.about-commitment{display:grid;grid-template-columns:24px 1fr;gap:20px;padding:30px 0;border-top:1px solid var(--about-line)}
+.about-commitment:first-child{padding-top:0;border-top:0}
+.about-commitment:last-child{padding-bottom:0}
+.about-commitment__number{font-size:11px;color:#6d7c88;line-height:2.7;font-variant-numeric:tabular-nums}
+#about-page .about-commitment h3{font-size:23px;line-height:1.35;letter-spacing:-.035em;margin:0 0 16px}
+.about-commitment p{font-size:16px;line-height:1.85;color:var(--about-muted);margin:0}
+.about-text-link{display:inline-flex;align-items:center;gap:14px;font-size:13px;line-height:1.7;color:#354d61;text-decoration:none;padding:3px 0;border-bottom:1px solid #b2c0cb;margin-top:22px}
+.about-text-link svg,.about-button svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.4;flex-shrink:0;transition:transform .25s}
+.about-text-link:hover svg,.about-button:hover svg{transform:translateX(3px)}
+.about-invitation{display:grid;grid-template-columns:1.15fr .85fr;gap:100px;align-items:end;border-top:1px solid var(--about-line);padding-block:70px 105px}
+#about-invitation-title{font-size:clamp(32px,3.3vw,47px);line-height:1.2;margin:0}
+.about-invitation__copy>p{font-size:16px;line-height:1.85;color:var(--about-muted);margin:24px 0 28px;max-width:540px}
+.about-button{display:inline-flex;align-items:center;gap:28px;border-radius:9px;padding:15px 22px;background:linear-gradient(130deg,#405362,#2d3e4b);color:#fff;text-decoration:none;font-size:14px;line-height:1.6;box-shadow:0 5px 12px #35435416;transition:background .2s,box-shadow .2s}
+.about-button:hover{box-shadow:0 7px 18px #35435425}
+.about-invitation__signature{display:flex;align-items:flex-start;gap:18px;justify-content:flex-end;padding-bottom:4px;font-size:16px;color:var(--about-ink)}
+.about-invitation__signature img{width:44px;height:44px;opacity:.82}
+.about-invitation__signature small{display:block;font-size:12px;line-height:1.9;color:var(--about-muted);margin-top:9px}
+@media(prefers-reduced-motion:no-preference){.about-opening__copy{animation:about-copy-in .85s cubic-bezier(.2,.7,.3,1) both}.about-emblem__mark>span{animation:about-mark-in 1.1s cubic-bezier(.2,.7,.3,1) both}@keyframes about-copy-in{from{opacity:0;translate:0 18px}to{opacity:1;translate:0 0}}@keyframes about-mark-in{from{opacity:0;translate:0 22px}to{opacity:1;translate:0 0}}}
+@media(max-width:1050px){.about-width{width:calc(100% - 72px)}.about-opening{padding-top:64px;grid-template-columns:1.25fr 1fr}#about-title{font-size:clamp(51px,6.4vw,66px)}.about-emblem{height:440px;margin-right:-38px}.about-emblem__mark{width:215px;height:215px;top:95px}.about-emblem__ground{top:360px;width:235px}.about-letter{gap:58px;grid-template-columns:.65fr 1.35fr}.about-responsibility{gap:65px;grid-template-columns:.85fr 1.15fr}.about-invitation{gap:60px}.about-responsibility__intro h2 br{display:none}}
+@media(max-width:760px){.about-width{width:calc(100% - 48px)}.about-opening{padding-top:38px;grid-template-columns:1fr}.about-eyebrow{font-size:12px;margin-bottom:20px}#about-title{font-size:clamp(42px,8.5vw,60px);line-height:1.12}#about-title br:nth-of-type(1){display:none}.about-opening__text{font-size:16px;line-height:1.85;max-width:420px;margin-top:23px}.about-emblem{height:285px;width:100%;max-width:490px;justify-self:center;margin:5px 0 0}.about-emblem__mark{width:172px;height:172px;top:38px}.about-emblem__threads{width:calc(100% + 140px);left:-70px}.about-emblem__ground{top:239px;width:185px;height:18px}.about-emblem__halo{inset:0 -50px -10px}.about-story-link{margin-top:0;padding-block:23px;font-size:12px}.about-letter{grid-template-columns:1fr;gap:36px;padding-block:67px 80px}.about-letter__margin h2{font-size:36px!important;margin:0}.about-letter__margin h2 br{display:none}.about-letter__rule{display:none}.about-letter__body{font-size:16px;line-height:1.9}.about-letter__body .about-letter__lead{font-size:21px;line-height:1.7;margin-bottom:24px}.about-letter__body .about-letter__conviction{font-size:20px;margin-block:29px}.about-letter__body p+p{margin-top:23px}.about-belief__inner{padding-block:62px 85px}#about-belief-title{font-size:35px;line-height:1.25}#about-belief-title br{display:none}.about-belief__inner>p:not(.about-eyebrow){font-size:16px;margin-top:23px}.about-belief__inner>p br{display:none}.about-responsibility{grid-template-columns:1fr;gap:45px;padding-block:76px 80px}.about-responsibility__intro>p:last-child{max-width:500px;margin-top:23px}.about-commitment{gap:14px;padding-block:28px}.about-commitment p{font-size:15px}.about-text-link{font-size:12px;gap:10px}.about-invitation{grid-template-columns:1fr;gap:40px;padding-block:57px 65px}#about-invitation-title{font-size:35px}.about-invitation__signature{justify-content:flex-start}.about-invitation__signature small br{display:none}}
+@media(max-width:360px){.about-width{width:calc(100% - 40px)}#about-title{font-size:37px}.about-eyebrow{font-size:11px}.about-story-link{font-size:11px}.about-letter__margin h2{font-size:32px!important}#about-belief-title,#about-invitation-title{font-size:31px}#about-page .about-commitment h3{font-size:21px}.about-invitation__signature small{font-size:11px}.about-button{gap:20px}}
+@media(prefers-reduced-motion:reduce){.about-opening__copy,.about-emblem,.about-emblem__mark{transform:none!important;opacity:1!important}.about-emblem__mark{left:calc(50% - 136px)}.about-page *, .about-page *::before,.about-page *::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+@media(prefers-reduced-motion:reduce) and (max-width:1050px){.about-emblem__mark{left:calc(50% - 107.5px)}}
+@media(prefers-reduced-motion:reduce) and (max-width:760px){.about-emblem__mark{left:calc(50% - 86px)}}

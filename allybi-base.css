@@ -1,0 +1,353 @@
+/* ==========================================================================
+   Allybi Base v2.0
+   Global reset, typography, layout, section spacing, reveal animations.
+   Requires: allybi-tokens.css
+   ========================================================================== */
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+html, body {
+  max-width: 100vw;
+}
+
+body {
+  font-family: var(--allybi-font);
+  font-size: var(--allybi-body-size);
+  line-height: var(--allybi-body-lh);
+  color: var(--allybi-text-primary);
+  background-color: var(--allybi-bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* ---------- Typography classes ---------- */
+.allybi-eyebrow {
+  font-size: var(--allybi-eyebrow-size);
+  line-height: var(--allybi-eyebrow-lh);
+  font-weight: var(--allybi-eyebrow-weight);
+  letter-spacing: var(--allybi-tracking-wide);
+  text-transform: uppercase;
+  color: var(--allybi-text-muted);
+}
+
+.allybi-hero-eyebrow {
+  font-size: var(--allybi-hero-eyebrow-size);
+  line-height: var(--allybi-hero-eyebrow-lh);
+  font-weight: var(--allybi-hero-eyebrow-weight);
+  letter-spacing: var(--allybi-tracking-wide);
+  text-transform: uppercase;
+  color: var(--allybi-accent);
+}
+
+.allybi-h1 {
+  font-size: var(--allybi-hero-h1-size);
+  line-height: var(--allybi-hero-h1-lh);
+  font-weight: var(--allybi-hero-h1-weight);
+  letter-spacing: var(--allybi-tracking-tighter);
+  color: var(--allybi-text-strongest);
+}
+
+.allybi-h2 {
+  font-size: var(--allybi-section-h2-size);
+  line-height: var(--allybi-section-h2-lh);
+  font-weight: var(--allybi-weight-bold);
+  letter-spacing: var(--allybi-tracking-tighter);
+  color: var(--allybi-text-strongest);
+}
+
+.allybi-h3 {
+  font-size: var(--allybi-card-title-size);
+  line-height: var(--allybi-card-title-lh);
+  font-weight: var(--allybi-weight-semibold);
+  letter-spacing: var(--allybi-tracking-tight);
+  color: var(--allybi-text-strongest);
+}
+
+.allybi-body-lg {
+  font-size: var(--allybi-section-intro-size);
+  line-height: var(--allybi-section-intro-lh);
+  font-weight: var(--allybi-weight-regular);
+  color: var(--allybi-text-secondary);
+}
+
+.allybi-body {
+  font-size: var(--allybi-body-size);
+  line-height: var(--allybi-body-lh);
+  font-weight: var(--allybi-weight-regular);
+  color: var(--allybi-text-secondary);
+}
+
+.allybi-body-sm {
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  color: var(--allybi-text-muted);
+}
+
+.allybi-meta {
+  font-size: var(--allybi-meta-size);
+  line-height: var(--allybi-meta-lh);
+  font-weight: var(--allybi-meta-weight);
+  color: var(--allybi-text-muted);
+}
+
+/* ---------- Layout containers ---------- */
+.allybi-container {
+  width: 100%;
+  max-width: var(--allybi-max-page);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--allybi-gutter);
+  padding-right: var(--allybi-gutter);
+}
+
+.allybi-content {
+  width: 100%;
+  max-width: var(--allybi-max-content);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--allybi-gutter);
+  padding-right: var(--allybi-gutter);
+}
+
+.allybi-narrow {
+  width: 100%;
+  max-width: var(--allybi-max-reading);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--allybi-gutter);
+  padding-right: var(--allybi-gutter);
+}
+
+/* ---------- Section spacing ---------- */
+.allybi-section {
+  padding-top: var(--allybi-section-py);
+  padding-bottom: var(--allybi-section-py);
+  position: relative;
+}
+
+.allybi-section--dense {
+  padding-top: var(--allybi-section-py-dense);
+  padding-bottom: var(--allybi-section-py-dense);
+}
+
+.allybi-section--flush-top {
+  padding-top: 0;
+}
+
+@media (max-width: 768px) {
+  .allybi-section {
+    padding-top: var(--allybi-section-py-mobile);
+    padding-bottom: var(--allybi-section-py-mobile);
+  }
+
+  .allybi-section--dense {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .allybi-container {
+    padding-left: var(--allybi-gutter-mobile);
+    padding-right: var(--allybi-gutter-mobile);
+  }
+}
+
+@supports (padding: env(safe-area-inset-top)) {
+  body {
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
+  }
+}
+
+/* ---------- Responsive utilities ---------- */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+/* ---------- Scroll-reveal animations ---------- */
+.allybi-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity var(--allybi-duration-section) var(--allybi-ease-out),
+    transform var(--allybi-duration-section) var(--allybi-ease-out);
+}
+
+.allybi-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide from left */
+.allybi-reveal--left {
+  transform: translateX(-32px) translateY(0);
+}
+.allybi-reveal--left.is-visible {
+  transform: translateX(0) translateY(0);
+}
+
+/* Slide from right */
+.allybi-reveal--right {
+  transform: translateX(32px) translateY(0);
+}
+.allybi-reveal--right.is-visible {
+  transform: translateX(0) translateY(0);
+}
+
+/* Scale up */
+.allybi-reveal--scale {
+  transform: scale(0.95) translateY(0);
+}
+.allybi-reveal--scale.is-visible {
+  transform: scale(1) translateY(0);
+}
+
+/* Stagger children — up to 8 */
+.allybi-stagger > :nth-child(1) { transition-delay: 0ms; }
+.allybi-stagger > :nth-child(2) { transition-delay: 80ms; }
+.allybi-stagger > :nth-child(3) { transition-delay: 160ms; }
+.allybi-stagger > :nth-child(4) { transition-delay: 240ms; }
+.allybi-stagger > :nth-child(5) { transition-delay: 320ms; }
+.allybi-stagger > :nth-child(6) { transition-delay: 400ms; }
+.allybi-stagger > :nth-child(7) { transition-delay: 480ms; }
+.allybi-stagger > :nth-child(8) { transition-delay: 560ms; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .allybi-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .allybi-stagger > * {
+    transition-delay: 0ms !important;
+  }
+}
+
+/* ---------- Text utilities ---------- */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-balance { text-wrap: balance; }
+.no-break { white-space: nowrap; }
+.hero-title-wrap {
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
+  text-wrap: balance;
+}
+
+/* ---------- Gradient text ---------- */
+.allybi-gradient-text {
+  background: linear-gradient(135deg, var(--allybi-text-strongest) 0%, var(--allybi-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   Focus-visible (universal a11y)
+   Keyboard users get a clear focus ring on every interactive element.
+   ============================================ */
+.allybi-btn:focus-visible,
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 2px solid var(--allybi-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Visually-hidden helper for screen-reader-only content */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* ============================================
+   Reduced motion (universal)
+   Applies across every page that loads this stylesheet.
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Force-reveal all opacity-hidden reveal patterns so reduced-motion users
+     never get stuck on an invisible section. */
+  .allybi-reveal,
+  .hiw-reveal,
+  .integ-reveal,
+  .sec-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
